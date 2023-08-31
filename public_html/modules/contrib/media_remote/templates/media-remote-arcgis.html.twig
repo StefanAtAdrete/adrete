@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Template implementation for the media_remote_arcgis theme hook.
+ *
+ * Available variables:
+ * - url: (string) The full URL to this arcgis app or map.
+ * - name: (string) The name of the media entity.
+ * - width: (string) The width of the iframe, in pixels or as a percentage.
+ * - height: (string) The height of the iframe, in pixels or as a percentage.
+ */
+#}
+<iframe title="{{ 'ArcGIS iframe for @name'|t({'@name': name }) }}" width="{{ width }}" height="{{ height }}" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        src="{{ url }}"></iframe>

@@ -1,0 +1,4 @@
+administer amazon paapi:
+  title: 'Administer Amazon Paapi'
+  description: 'Allow administration of the Amazon Product API settings.'
+  restrict access: true

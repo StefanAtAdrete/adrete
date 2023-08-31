@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * Template implementation for the media_remote_buzzsprout theme hook.
+ *
+ * Available variables:
+ * - episode_id: (string) The episode ID.
+ * - podcast_id: (string) The podcast ID.
+ */
+#}
+<div id="buzzsprout-player-{{ episode_id }}"></div>
+<script src="https://www.buzzsprout.com/{{ podcast_id }}/{{ episode_id }}.js?container_id=buzzsprout-player-{{ episode_id }}&amp;player=small" type="text/javascript" charset="utf-8"></script>

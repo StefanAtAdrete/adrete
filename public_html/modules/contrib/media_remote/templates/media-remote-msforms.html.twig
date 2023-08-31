@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Template implementation for the media_remote_msforms theme hook.
+ *
+ * Available variables:
+ * - url: (string) The form url (starting with https://forms.office.com).
+ * - width: (string) The width of the iframe, in pixels or as a percentage.
+ * - height: (string) The height of the iframe, in pixels or as a percentage.
+ */
+#}
+<iframe
+  width="{{ width }}"
+  height="{{ height }}"
+  src="{{ url }}"
+  allow="fullscreen"
+  style="border: none; max-width:100%; max-height:100vh"
+  allowfullscreen> </iframe>

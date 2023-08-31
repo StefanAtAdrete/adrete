@@ -1,0 +1,32 @@
+<article class="amazon-product">
+  <div class="amazon-product__image" style="background-image: url('{{medium_image.URL}}');"></div>
+  <div class="amazon-product__content">
+    <header class="amazon-product__details">
+      <div class="amazon-product__brand">
+          {{ manufacturer }}
+      </div>
+      <div class="amazon-product__name">
+          {{ title }}
+      </div>
+      {% if not suggested_price is empty %}
+      <div class="amazon-product__suggested-price">
+        {{ currency_symbol }} {{ suggested_price }}
+      </div>
+      {% endif %}
+      <div class="amazon-product__price">
+          {{ currency_symbol }} {{ price }}
+      </div>
+      {% if is_eligible_for_prime %}
+        <div class="amazon-product__prime"></div>
+      {% endif %}
+      {% if customer_reviews.count %}
+        <div class="amazon-product__customer-reviews__count">{{ customer_reviews.count }}</div>
+        <div class="amazon-product__customer-reviews__star_rating">{{ customer_reviews.star_rating }}</div>
+      {% endif %}
+    </header>
+    <a class="amazon-product__link" target="_blank" rel="noopener nofollow" href="{{ url }}">
+      <span class="amazon-product__link__icon"></span>
+      <span class="amazon-product__link__text">{{ call_to_action_text }}</span>
+    </a>
+  </div>
+</article>

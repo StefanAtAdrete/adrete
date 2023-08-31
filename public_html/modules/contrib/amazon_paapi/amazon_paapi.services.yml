@@ -1,0 +1,4 @@
+services:
+  amazon_paapi.amazon_paapi:
+    class: Drupal\amazon_paapi\AmazonPaapi
+    arguments: []

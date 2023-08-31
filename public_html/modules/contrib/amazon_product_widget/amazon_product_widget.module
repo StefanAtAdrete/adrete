@@ -1,0 +1,245 @@
+<?php
+
+/**
+ * @file
+ * Module file.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Site\Settings;
+
+/**
+ * Implements hook_theme().
+ */
+function amazon_product_widget_theme($existing, $type, $theme, $path) {
+  return [
+    'amazon_product_widget' => [
+      'variables' => [
+        'label' => '',
+        'entity_id' => '',
+        'entity_type' => '',
+        'node_id' => '',
+        'field' => '',
+        'products' => [],
+      ],
+    ],
+    'amazon_product_widget_shopping' => [
+      'variables' => [
+        'title' => '',
+        'products' => [],
+      ],
+    ],
+    'amazon_product_widget_product' => [
+      'variables' => [
+        'medium_image' => [
+          'URL' => '',
+          'Height' => NULL,
+          'Width' => NULL,
+        ],
+        'large_image' => [
+          'URL' => '',
+          'Height' => NULL,
+          'Width' => NULL,
+        ],
+        'asin' => '',
+        'name' => '',
+        'title' => '',
+        'url' => '',
+        'call_to_action_text' => '',
+        'currency_symbol' => '',
+        'manufacturer' => '',
+        'price' => '',
+        'suggested_price' => '',
+        'product_available' => FALSE,
+        'is_eligible_for_prime' => FALSE,
+        'is_search_result_fallback' => FALSE,
+        'overrides' => [],
+        'customer_reviews' => [
+          'count' => 0,
+          'star_rating' => 0,
+        ],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_cron().
+ */
+function amazon_product_widget_cron() {
+  /** @var \Drupal\amazon_product_widget\ProductService $product_service */
+  $product_service = Drupal::service('amazon_product_widget.product_service');
+  try {
+    $product_service->queueSearchResults();
+    $product_service->queueProductRenewal();
+  }
+  catch (Exception $e) {
+    watchdog_exception('amazon_product_widget', $e);
+  }
+
+  _amazon_product_widget_deals_cron_update();
+  _amazon_product_widget_asin_map_cron_optimize();
+}
+
+/**
+ * Check whether the provided ASIN is valid.
+ *
+ * @param string $asin
+ *   Amazon standard identification number.
+ *
+ * @return bool
+ *   TRUE if valid.
+ */
+function amazon_product_widget_is_valid_asin($asin) {
+  $asin = trim($asin);
+  if (strlen($asin) == 10 && !preg_match('/\s/', $asin)) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+/**
+ * Get all ASINS which are stored in product widgets.
+ */
+function amazon_product_widget_get_all_asins() {
+  /** @var \Drupal\Core\Entity\EntityFieldManagerInterface $field_manager */
+  $field_manager = Drupal::service('entity_field.manager');
+  $fields_map = $field_manager->getFieldMapByFieldType('amazon_product_widget_field_type');
+  $asins = [];
+  foreach ($fields_map as $entity_type => $fields) {
+    foreach ($fields as $fieldname => $field) {
+      $result = Drupal::database()->query("SELECT {$fieldname}_asins FROM {$entity_type}__{$fieldname}")->fetchCol();
+      foreach ($result as $asin_list) {
+        $asin_ids = explode(",", $asin_list);
+        $asins += array_combine($asin_ids, $asin_ids);
+      }
+    }
+  }
+  return $asins;
+}
+
+/**
+ * Called when cron is run.
+ */
+function _amazon_product_widget_deals_cron_update() {
+  /** @var \Drupal\Core\State\StateInterface $state */
+  $state = Drupal::state();
+  /** @var \Drupal\amazon_product_widget\DealFeedService $dealFeedService */
+  $dealFeedService = Drupal::service('amazon_product_widget.deal_feed_service');
+
+  if (!$dealFeedService->isActivated()) {
+    return;
+  }
+
+  if (!$dealFeedService->getCronActive()) {
+    return;
+  }
+
+  // Is there a process already running?
+  $running = $state->get('amazon_product_widget.deal_cron_running', FALSE);
+  if (!$running) {
+    $currentTime = time();
+    $lastRun = $state->get('amazon_product_widget.deal_cron_last_run', 0);
+    $nextRun = $lastRun + $dealFeedService->getCronInterval() * 60;
+
+    if ($currentTime < $nextRun) {
+      return;
+    }
+
+    $importFilename = NULL;
+    try {
+      $importFilename = $dealFeedService->downloadDealsCsv();
+    }
+    catch (\Throwable $exception) {
+      watchdog_exception('amazon_product_widget', $exception);
+      return;
+    }
+
+    $state->set('amazon_product_widget.deal_cron_running', TRUE);
+    $dealsCronState = [
+      'file' => $importFilename,
+      'processed' => 0,
+      'errors' => 0,
+    ];
+    $state->set('amazon_product_widget.deal_cron_state', $dealsCronState);
+    goto startCron;
+  }
+  else {
+    startCron:
+    $importsPerRound = Settings::get('amazon_product_widget.deals.imports_per_round', -1);
+    $importState     = $state->get('amazon_product_widget.deal_cron_state');
+
+    $roundState = $dealFeedService->import(
+      $importState['file'],
+      $importState['processed'],
+      $importsPerRound
+    );
+
+    $importState['processed'] += $roundState->processed;
+    $importState['errors']    += $roundState->errors;
+
+    $state->set('amazon_product_widget.deal_cron_state', $importState);
+
+    if ($roundState->finished || $importState['errors'] >= $dealFeedService->getMaxDealImportErrors()) {
+      _amazon_product_widget_deals_reset_state();
+    }
+  }
+}
+
+/**
+ * Resets the deal cron state.
+ */
+function _amazon_product_widget_deals_reset_state() {
+  $state = Drupal::state();
+
+  $state->set('amazon_product_widget.deal_cron_running', FALSE);
+  $state->set('amazon_product_widget.deal_cron_last_run', time());
+  $state->delete('amazon_product_widget.deal_cron_state');
+}
+
+/**
+ * Validates product data.
+ *
+ * @param array $data
+ *   The product data to check.
+ *
+ * @return bool
+ *   The validity.
+ */
+function amazon_product_widget_validate_product_data(array $data) : bool {
+  if (!empty($data['medium_image'])
+    && !empty($data['large_image'])
+    && !empty($data['title'])
+    && !empty($data['price'])
+    && !empty($data['product_available'])) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function amazon_product_widget_entity_presave(EntityInterface $entity) {
+  /** @var \Drupal\amazon_product_widget\ProductUsageService $productUsage */
+  $productUsage = Drupal::service('amazon_product_widget.usage');
+  $productUsage->update($entity);
+}
+
+/**
+ * Optimizes the ASIN map table weekly.
+ */
+function _amazon_product_widget_asin_map_cron_optimize() {
+  $state = Drupal::state();
+  /** @var \Drupal\amazon_product_widget\ProductUsageService $usageService */
+  $usageService = Drupal::service('amazon_product_widget.usage');
+  $currentTime = time();
+  $lastRunTime = $state->get('amazon_product_widget.asin_map_last_optimize', 0);
+  $difference = $currentTime - $lastRunTime;
+
+  // Optimize ASIN map table on a weekly basis.
+  if ($difference >= (60 * 60 * 24 * 7)) {
+    $usageService->optimize();
+    $state->set('amazon_product_widget.asin_map_last_optimize', time());
+  }
+}

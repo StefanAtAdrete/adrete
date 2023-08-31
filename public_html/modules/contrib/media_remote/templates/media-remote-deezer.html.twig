@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Template implementation for the media_remote_deezer theme hook.
+ *
+ * Available variables:
+ * - episode_id: (string) The episode ID.
+ */
+#}
+<iframe title="deezer-widget"
+  src="https://widget.deezer.com/widget/auto/episode/{{ episode_id }}?tracklist=false"
+  width="100%"
+  height="300"
+  frameborder="0"
+  allowtransparency="true"
+  allow="encrypted-media; clipboard-write"></iframe>

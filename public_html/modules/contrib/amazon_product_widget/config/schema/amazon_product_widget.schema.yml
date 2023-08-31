@@ -1,0 +1,54 @@
+amazon_product_widget.settings:
+  type: config_object
+  label: 'Amazon product widget settings'
+  mapping:
+    max_requests_per_day:
+      type: integer
+      label: Max requests per day
+    max_requests_per_second:
+      type: integer
+      label: Max requests per second
+    render_max_age:
+      type: integer
+      label: Render max age
+    call_to_action_text:
+      type: string
+      label: Call to action text
+    price_decimal_separator:
+      type: string
+      label: Price decimal separator
+    price_thousand_separator:
+      type: string
+      label: Price thousand separator
+    fill_up_with_fallback:
+      type: boolean
+      label: Fill up with fallback search term
+    amazon_api_disabled:
+      type: boolean
+      label: Disable Amazon API
+
+amazon_product_widget.deal_settings:
+  type: config_object
+  label: 'Amazon product widget Deal Feed settings'
+  mapping:
+    max_csv_processing_time:
+      type: integer
+      label: Max CSV processing time
+    deal_cron_interval:
+      type: integer
+      label: Deal cron interval
+    deal_feed_url:
+      type: string
+      label: Deal Feed URL
+    deal_feed_username:
+      type: string
+      label: Deal Feed username
+    deal_feed_password:
+      type: string
+      label: Deal Feed password
+    deal_feed_active:
+      type: boolean
+      label: Activate Deal Feed
+    deal_cron_active:
+      type: boolean
+      label: Activate Deal cron

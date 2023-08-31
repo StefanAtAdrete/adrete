@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Template implementation for the media_remote_dropbox theme hook.
+ *
+ * Available variables:
+ * - app_key: (string) The App key to be used for this Dropbox embed.
+ * - url: (string) The share URL of this document.
+ * - width: (int) The width of the iframe, in pixels.
+ * - height: (int) The height of the iframe, in pixels.
+ */
+#}
+<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="{{ app_key }}"></script>
+<a href="{{ url }}" class="dropbox-embed" data-height="{{ height }}px" data-width="{{ width }}px"></a>

@@ -1,0 +1,12 @@
+amazon_paapi.settings_form:
+  title: 'Amazon PA API'
+  route_name: amazon_paapi.settings_form
+  description: 'Amazon Product Advertising API settings'
+  parent: system.admin_config_services
+  weight: 99
+
+amazon_paapi.test_asin_form:
+  title: 'Test ASIN number'
+  route_name: amazon_paapi.test_asin_form
+  description: 'Shows data from Amazon for a given ASIN using the PA API settings.'
+  parent: amazon_paapi.settings_form

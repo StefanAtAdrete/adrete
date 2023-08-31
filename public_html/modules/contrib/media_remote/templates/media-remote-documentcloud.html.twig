@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Template implementation for the media_remote_documentcloud theme hook.
+ *
+ * Available variables:
+ * - document_id: (string) The document ID.
+ * - slug: (string) The document slug.
+ */
+#}
+<div id="DV-viewer-{{ document_id }}-{{ slug }}" class="DV-container"></div>
+<script src="https://assets.documentcloud.org/viewer/loader.js"></script>
+<script>
+  DV.load("https://www.documentcloud.org/documents/{{ document_id }}-{{ slug }}.js", {
+    sidebar: false,
+    text: false,
+    height: 1200,
+    container: "#DV-viewer-{{ document_id }}-{{ slug }}"
+  });
+</script>

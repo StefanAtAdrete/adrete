@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Template implementation for the media_remote_google theme hook.
+ *
+ * Available variables:
+ * - type: (string) The type of this content: document, spreadsheets or
+ *   presentation.
+ * - url: (string) The full URL to this document.
+ * - width: (int) The width of the iframe, in pixels.
+ * - height: (int) The height of the iframe, in pixels.
+ */
+#}
+{% if type == 'document' %}
+  <iframe src="{{ url }}?embedded=true" width="{{ width }}" height="{{ height }}"></iframe>
+{% elseif type == 'spreadsheets' %}
+  <iframe src="{{ url }}?widget=true&amp;headers=false" width="{{ width }}" height="{{ height }}"></iframe>
+{% elseif type == 'presentation' %}
+  {% set url = url|replace({'/pub?': '/embed?'}) %}
+  <iframe src="{{ url }}" frameborder="0" width="{{ width }}" height="{{ height }}" allow="fullscreen"></iframe>
+{% endif %}

@@ -1,0 +1,31 @@
+name: Adrete
+recipe: lamp
+config:
+  webroot: public_html
+  xdebug: false
+  conf:
+    php: .vscode/php.ini
+  php: "8.1"
+services:
+  mailhog:
+    type: "mailhog:v1.0.0"
+    portforward: true
+    hogfrom:
+      - appserver
+  phpmyadmin:
+    type: phpmyadmin
+    hosts:
+      - database
+  appserver:
+    build:
+      - composer install
+proxy:
+  mailhog:
+    - mail.adrete.lndo.site
+  phpmyadmin:
+    - phpmyadmin.adrete.lndo.site
+tooling:
+  drush:
+    service: appserver
+    env:
+      DRUSH_OPTIONS_URI: "https://adrete.lndo.site"

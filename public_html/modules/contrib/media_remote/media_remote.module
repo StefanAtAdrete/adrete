@@ -1,0 +1,186 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations and global functions for media_remote.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\media\MediaTypeInterface;
+use Drupal\media_remote\Plugin\media\Source\MediaRemoteSource;
+
+/**
+ * Formats a set of strings with an Oxford comma.
+ *
+ * @param string[] $items
+ *   The set of strings to format.
+ * @param string $conjunction
+ *   (optional) The translated conjunction to insert before the final item.
+ *   Defaults to 'and'.
+ *
+ * @return string
+ *   The single Oxford-ized string.
+ */
+function media_remote_oxford_join(array $items, $conjunction = 'and') {
+  $count = count($items);
+
+  if ($count < 2) {
+    return (string) reset($items);
+  }
+  elseif ($count === 2) {
+    return reset($items) . ' ' . $conjunction . ' ' . end($items);
+  }
+  else {
+    $items[] = $conjunction . ' ' . array_pop($items);
+    return implode(', ', $items);
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function media_remote_form_media_type_add_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $type = $form_state->getFormObject()->getEntity();
+  assert($type instanceof MediaTypeInterface);
+  // Inject an additional submit function to allow us to redirect users to the
+  // manage display after creating a media type with our source.
+  if ($type->isNew() && !in_array('_media_remote_media_type_form_submit', $form['actions']['submit']['#submit'])) {
+    $form['actions']['submit']['#submit'][] = '_media_remote_media_type_form_submit';
+  }
+}
+
+/**
+ * Submit callback for media type form.
+ */
+function _media_remote_media_type_form_submit(array &$form, FormStateInterface $form_state) {
+  $form_object = $form_state->getFormObject();
+  if ($form_object->getOperation() === 'add') {
+    $type = $form_object->getEntity();
+    assert($type instanceof MediaTypeInterface);
+    // After adding a Media type that uses our source, instruct editors to
+    // select the formatter now.
+    if ($type->getSource() instanceof MediaRemoteSource) {
+      $source_field_definition = $type->getSource()->getSourceFieldDefinition($type);
+      \Drupal::messenger()->addWarning(t('In order to correctly display %type_label media items, you need to configure a Remote Media formatter in the <b>%source_field</b> field.', [
+        '%type_label' => $type->label(),
+        '%source_field' => $source_field_definition->getLabel(),
+      ]));
+      $form_state->setRedirect('entity.entity_view_display.media.default', [
+        'view_mode_name' => 'default',
+        'entity_type_id' => 'media',
+        'media_type' => $type->id(),
+      ]);
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function media_remote_theme($existing, $type, $theme, $path) {
+  return [
+    'media_remote_apple_podcasts' => [
+      'variables' => [
+        'slug' => NULL,
+        'token' => NULL,
+      ],
+    ],
+    'media_remote_arcgis' => [
+      'variables' => [
+        'url' => NULL,
+        'name' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+      ],
+    ],
+    'media_remote_box' => [
+      'variables' => [
+        'hash' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+      ],
+    ],
+    'media_remote_brightcove' => [
+      'variables' => [
+        'url' => NULL,
+      ],
+    ],
+    'media_remote_buzzsprout' => [
+      'variables' => [
+        'episode_id' => NULL,
+        'podcast_id' => NULL,
+      ],
+    ],
+    'media_remote_dacast' => [
+      'variables' => [
+        'url' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+      ],
+    ],
+    'media_remote_deezer' => [
+      'variables' => [
+        'episode_id' => NULL,
+      ],
+    ],
+    'media_remote_documentcloud' => [
+      'variables' => [
+        'document_id' => NULL,
+        'slug' => NULL,
+      ],
+    ],
+    'media_remote_dropbox' => [
+      'variables' => [
+        'app_key' => NULL,
+        'url' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+      ],
+    ],
+    'media_remote_google' => [
+      'variables' => [
+        'type' => NULL,
+        'url' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+      ],
+    ],
+    'media_remote_libsyn' => [
+      'variables' => [
+        'episode_id' => NULL,
+      ],
+    ],
+    'media_remote_loom' => [
+      'variables' => [
+        'video_id' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+      ],
+    ],
+    'media_remote_msforms' => [
+      'variables' => [
+        'url' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+      ],
+    ],
+    'media_remote_npr' => [
+      'variables' => [
+        'url' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+      ],
+    ],
+    'media_remote_quickbase' => [
+      'variables' => [
+        'url' => NULL,
+      ],
+    ],
+    'media_remote_stitcher' => [
+      'variables' => [
+        'url' => NULL,
+      ],
+    ],
+  ];
+}
+

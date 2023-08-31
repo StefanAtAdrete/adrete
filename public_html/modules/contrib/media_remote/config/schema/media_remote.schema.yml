@@ -1,0 +1,184 @@
+media.source.media_remote:
+  type: media.source.field_aware
+  label: '"Media Remote" media source configuration'
+
+field.formatter.settings.media_remote_apple_podcasts:
+  type: mapping
+  label: 'Apple Podcasts display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+
+field.formatter.settings.media_remote_arcgis:
+  type: mapping
+  label: 'ArcGIS display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+    width:
+      type: string
+      label: 'Iframe width'
+    height:
+      type: string
+      label: 'Iframe height'
+
+
+field.formatter.settings.media_remote_box:
+  type: mapping
+  label: 'Box display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+    width:
+      type: string
+      label: 'Iframe width'
+    height:
+      type: string
+      label: 'Iframe height'
+
+field.formatter.settings.media_remote_brightcove:
+  type: mapping
+  label: 'Brightcove display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+
+field.formatter.settings.media_remote_buzzsprout:
+  type: mapping
+  label: 'Buzzsprout display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+
+field.formatter.settings.media_remote_dacast:
+  type: mapping
+  label: 'Dacast display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+    width:
+      type: string
+      label: 'Iframe width'
+    height:
+      type: string
+      label: 'Iframe height'
+
+field.formatter.settings.media_remote_deezer:
+  type: mapping
+  label: 'Deezer display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+
+field.formatter.settings.media_remote_documentcloud:
+  type: mapping
+  label: 'Documentcloud display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+
+field.formatter.settings.media_remote_dropbox:
+  type: mapping
+  label: 'Dropbox display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+    app_key:
+      type: string
+      label: 'Dropbox app key'
+    width:
+      type: string
+      label: 'Iframe width'
+    height:
+      type: string
+      label: 'Iframe height'
+
+field.formatter.settings.media_remote_google:
+  type: mapping
+  label: 'Google display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+    width:
+      type: string
+      label: 'Iframe width'
+    height:
+      type: string
+      label: 'Iframe height'
+
+field.formatter.settings.media_remote_libsyn:
+  type: mapping
+  label: 'Libsyn display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+
+field.formatter.settings.media_remote_loom:
+  type: mapping
+  label: 'Loom display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+    width:
+      type: string
+      label: 'Iframe width'
+    height:
+      type: string
+      label: 'Iframe height'
+
+field.formatter.settings.media_remote_msforms:
+  type: mapping
+  label: 'Microsoft Forms display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+    width:
+      type: string
+      label: 'Iframe width'
+    height:
+      type: string
+      label: 'Iframe height'
+
+field.formatter.settings.media_remote_npr:
+  type: mapping
+  label: 'NPR display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+    width:
+      type: string
+      label: 'Iframe width'
+    height:
+      type: string
+      label: 'Iframe height'
+
+
+field.formatter.settings.media_remote_quickbase:
+  type: mapping
+  label: 'Quickbase display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'
+
+field.formatter.settings.media_remote_stitcher:
+  type: mapping
+  label: 'Stitcher display format settings'
+  mapping:
+    formatter_class:
+      type: string
+      label: 'Formatter class name'

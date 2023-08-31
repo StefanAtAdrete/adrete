@@ -1,0 +1,15 @@
+{
+  "name": "drupal/amazon_product_widget",
+  "description": "A field widget to render amazon products.",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "drunomics",
+      "email": "hello@drunomics.com"
+    }
+  ],
+  "require": {
+    "drupal/amazon_paapi": "^1.1"
+  }
+}

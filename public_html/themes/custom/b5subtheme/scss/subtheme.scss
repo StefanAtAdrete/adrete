@@ -1,0 +1,248 @@
+/* Fit all images */
+img {
+    width: fit-content;
+}
+
+#embeded img {
+    max-width: 90%;
+}
+
+
+/* Cookie concent banner */
+.eu-cookie-compliance-content {
+    margin: 0 auto;
+    max-width: 80%;
+    display: inline-block;
+    text-align: left;
+    /* width: 100%; */
+}
+
+div#sliding-popup {
+    background: #222222;
+    border-radius: 0 0 5px 0;
+    width: 100%;
+    height: auto;
+}
+
+button.decline-button.eu-cookie-compliance-default-button {
+    border: 0;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+button.agree-button.eu-cookie-compliance-secondary-button {
+    border: 0;
+    margin: 1em;
+    padding: 1em;
+    background: #76cb76;
+    border-radius: 5px;
+}
+
+button.find-more-button.eu-cookie-compliance-more-button.find-more-button-processed {
+    border: 0;
+    padding: 1% 5%;
+    /* margin: 1em; */
+    /* width: 90%; */
+    font-size: 0.8rem;
+    background: #dcdcdc;
+    border-radius: 5px;
+}
+
+button.eu-cookie-withdraw-tab {
+    border-radius: 0 0 5px 5px;
+    border: 0;
+    background: #ccc;
+}
+
+div#popup-text h2 {
+    font-size: 1.5rem;
+    margin-top: 1em;
+}
+/* Usernav */
+
+.navbar {
+    background: #8cc2ec;
+}
+
+.tbm {
+    background: #8cc2ec;
+}
+
+.tbm.tbm--mobile.tbm--mobile-show .tbm-collapse {
+    display: block;
+    width: 90vw;
+    margin-left: -75vw;
+    background-color: #8bc3ec;
+}
+
+.tbm.tbm--mobile .tbm-nav {
+    background: #8cc2ec;
+    border: 2px solid;
+}
+
+/*
+ul.nav.navbar-nav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.region.region-usernav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+} */
+
+.navbar-brand a.site-title {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.tbm.tbm--mobile .tbm-button {
+    display: block;
+    background-color: #8cc2ec;
+}
+
+div#block-cartflyout {
+    width: auto;
+    margin: auto 0;
+}
+
+.dropdown-menu {
+    --bs-dropdown-color: #212529;
+    --bs-dropdown-bg: #fff;
+    --bs-dropdown-link-color: #212529;
+    --bs-dropdown-link-hover-color: #1e2125;
+    --bs-dropdown-link-hover-bg: #e9ecef;
+    --bs-dropdown-link-active-color: #fff;
+    --bs-dropdown-link-active-bg: #4b4c4d;
+    --bs-dropdown-header-color: #6c757d;
+    background-color: #737373;
+    background-clip: padding-box;
+    border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
+    border-radius: var(--bs-dropdown-border-radius);
+}
+
+/* Taxonomy page */
+
+article.contextual-region.node.node--type-article.node--view-mode-teaser h2 {
+    display: none;
+}
+
+article.contextual-region.node.node--type-article.node--view-mode-teaser h2.card-title  {
+    display: inline-block;
+}
+
+/* Productpage */
+.node--view-mode-symbol-referens {
+
+}
+
+.node--view-mode-symbol-referens h2 {
+    display: none;
+}
+
+#ikoner img {
+    /* border: 1px solid; */
+    width: 30%;
+    float: left;
+    margin: 0 5% 5% 0;
+}
+
+
+/* slidesshow thumbnails */
+
+.views-content-field-produkt-bilder {
+    float: left;
+}
+
+
+/* Add to cart form */
+input.button--add-to-cart {
+    display: none;
+}
+
+.cart-block--contents.is-outside-horizontal.cart-block--contents__expanded {
+    z-index: 9999;
+}
+
+/* Superfish */
+a#superfish-main-toggle span {
+    color: #fff;
+    font-size: 44px;
+}
+
+#superfish-main-toggle {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+a#superfish-main-toggle {
+text-decoration: none;
+color: #fff;
+}
+
+a#superfish-main-toggle.sf-expanded {
+    /* float: right; */
+    /* display: block; */
+    margin-top: -60px;
+    /* padding: 0px; */
+    z-index: 9999;
+    left: 90%;
+}
+
+/* Article */
+
+figure.caption {
+    margin: 5%;
+    font-style: italic;
+}
+
+/* video 100% */
+
+.field.field--name-field-media-oembed-video.field--type-string.field--label-hidden.field__item {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.media-oembed-content {
+    /* width: 100%; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* caption background */
+.caption > figcaption {
+    display: table-caption;
+    max-width: none;
+    caption-side: bottom;
+    background-color: #f2f2f2;
+    padding: 4px;
+}
+
+/* Card */
+
+.card-img-top img {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 5px;
+}
+
+article.node.node--type-article.node--promoted.node--view-mode-teaser h2 {
+    display: none;
+}
+
+#cardtitle  {
+    display: block;
+}

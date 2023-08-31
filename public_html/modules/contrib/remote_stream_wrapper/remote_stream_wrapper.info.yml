@@ -1,0 +1,9 @@
+name: Remote Stream Wrapper
+type: module
+description: Provides the ability to create Drupal file entities with HTTP and HTTPS URIs without saving them to the local filesystem.
+core_version_requirement: ^9.2 || ^10
+
+# Information added by Drupal.org packaging script on 2022-05-04
+version: '2.0.0'
+project: 'remote_stream_wrapper'
+datestamp: 1651689548
