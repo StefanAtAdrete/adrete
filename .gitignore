@@ -1,14 +1,14 @@
 # Drupal 9 specific files
-/web/core/
-/web/modules/contrib/
-/web/themes/contrib/
-/web/profiles/contrib/
-/web/libraries/
-/web/sites/*/files/
-/web/sites/*/settings.php
-/web/sites/*/services.yml
-/web/sites/*/settings.local.php
-/web/sites/*/settings.testing.php
+/public_html/core/
+/public_html/modules/contrib/
+/public_html/themes/contrib/
+/public_html/profiles/contrib/
+/public_html/libraries/
+/public_html/sites/*/files/
+/public_html/sites/*/settings.php
+/public_html/sites/*/services.yml
+/public_html/sites/*/settings.local.php
+/public_html/sites/*/settings.testing.php
 
 # Drupal 9 files to ignore
 *.log
@@ -67,8 +67,6 @@
 /.gitattributes
 /.htaccess
 /autoload.php
-/composer.json
-/composer.lock
 /example.gitignore
 /index.php
 /LICENSE.txt
