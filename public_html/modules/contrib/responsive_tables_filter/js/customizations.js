@@ -35,9 +35,11 @@
    */
   Drupal.responsive_tables_filter.makeElementAccessible = function () {
     var replacement = document.createElement('strong');
-    replacement.innerHTML = $(this).text();
+    replacement.innerHTML = $(this).html();
     replacement.setAttribute('class', $(this).attr('class'));
-    replacement.setAttribute('aria-hidden', true);
+    if ($(this).parent().is("th")) {
+      replacement.setAttribute('aria-hidden', true);
+    }
     $(this).replaceWith(replacement);
   };
 

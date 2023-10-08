@@ -1,0 +1,22 @@
+name: nyttochsmart
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - nyttochsmart/base
+  - nyttochsmart/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - nyttochsmart/user
+  core/drupal.dropbutton:
+    - nyttochsmart/dropbutton
+  core/drupal.dialog:
+    - nyttochsmart/dialog
+  file/drupal.file:
+    - nyttochsmart/file
+  core/drupal.progress:
+    - nyttochsmart/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.0.4'
