@@ -21,7 +21,7 @@ class ProductHasData extends FieldPluginBase {
    * {@inheritDoc}
    */
   public function render(ResultRow $values) {
-    $data = unserialize($this->getValue($values), ['allowed_classes' => FALSE]);
+    $data = !empty($this->getValue($values)) ? unserialize($this->getValue($values), ['allowed_classes' => FALSE]) : [];
     if ($data === NULL || $data === FALSE) {
       return [
         '#markup' => '<span class="color-warning">' . $this->t('No') . '</span>',

@@ -4,6 +4,7 @@ namespace Drupal\amazon_product_widget;
 
 use Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetItemsRequest;
 use Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\GetItemsResource;
+use Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\MultiValuedAttribute as MultiValuedAttribute;
 use Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\PartnerType;
 use Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\SearchItemsRequest;
 use Drupal\amazon_paapi\AmazonPaapi;
@@ -30,6 +31,15 @@ class ProductService {
    * Search index default category.
    */
   const AMAZON_CATEGORY_DEFAULT = 'All';
+
+  /**
+   * External IDs that will be fetched from Amazon.
+   */
+  const AMAZON_EXTERNAL_IDS = [
+    'EAN',
+    'UPC',
+    'ISBN',
+  ];
 
   /**
    * The entity type manager.
@@ -456,6 +466,7 @@ class ProductService {
       GetItemsResource::OFFERSLISTINGSDELIVERY_INFOIS_PRIME_ELIGIBLE,
       GetItemsResource::CUSTOMER_REVIEWSCOUNT,
       GetItemsResource::CUSTOMER_REVIEWSSTAR_RATING,
+      GetItemsResource::ITEM_INFOEXTERNAL_IDS,
     ];
 
     $partner_tag = AmazonPaapi::getPartnerTag();
@@ -490,21 +501,16 @@ class ProductService {
             'count' => 0,
             'star_rating' => 0,
           ],
+          'external_ids' => [],
         ];
 
         // Fetch the previous item info (if any) so we can set the
         // last_available_price.
         $previousItemInfo = $this->productStore->get($item->getASIN());
-        if (
-          isset($previousItemInfo['price']) &&
-          $previousItemInfo['price'] !== NULL
-        ) {
+        if (isset($previousItemInfo['price'])) {
           $item_data['last_available_price'] = $previousItemInfo['price'];
         }
-        elseif (
-          isset($previousItemInfo['last_available_price']) &&
-          $previousItemInfo['last_available_price'] !== NULL
-        ) {
+        elseif (isset($previousItemInfo['last_available_price'])) {
           $item_data['last_available_price'] = $previousItemInfo['last_available_price'];
         }
 
@@ -524,6 +530,27 @@ class ProductService {
             $item_data['manufacturer'] = $item_info->getByLineInfo()
               ->getManufacturer()
               ->getDisplayValue();
+          }
+
+          if ($externalIdList = $item_info->getExternalIds()) {
+
+            foreach (self::AMAZON_EXTERNAL_IDS as $idName) {
+              $methodName = "get{$idName}s";
+              $externalIdLower = strtolower($idName);
+
+              if (!method_exists($externalIdList, $methodName)) {
+                continue;
+              }
+
+              if (!isset($item_data['external_ids'][$externalIdLower])) {
+                $item_data['external_ids'][$externalIdLower] = [];
+              }
+
+              $idValues = $externalIdList->{$methodName}();
+              if ($idValues instanceof MultiValuedAttribute && !empty($idValues->getDisplayValues())) {
+                $item_data['external_ids'][$externalIdLower] = $idValues->getDisplayValues();
+              }
+            }
           }
         }
 

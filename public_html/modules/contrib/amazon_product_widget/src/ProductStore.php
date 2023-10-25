@@ -163,7 +163,7 @@ class ProductStore extends DatabaseStorage {
       )->fetchAllAssoc('name');
       foreach ($asins as $asin) {
         if (isset($result[$asin])) {
-          $values[$asin] = $this->serializer->decode($result[$asin]->overrides);
+          $values[$asin] = $this->serializer->decode((string) $result[$asin]->overrides);
         }
       }
     }
@@ -189,8 +189,8 @@ class ProductStore extends DatabaseStorage {
       )->fetchAllAssoc('name');
       foreach ($keys as $key) {
         if (isset($result[$key])) {
-          $values[$key] = $this->serializer->decode($result[$key]->value);
-          if ($overrides = $this->serializer->decode($result[$key]->overrides)) {
+          $values[$key] = $this->serializer->decode((string) $result[$key]->value);
+          if ($overrides = $this->serializer->decode((string) $result[$key]->overrides)) {
             $values[$key]['overrides'] = $overrides;
           }
         }

@@ -2,6 +2,7 @@
 
 namespace Drupal\amazon_product_widget\EventSubscriber;
 
+use Symfony\Component\HttpKernel\Event\KernelEvent;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\Event\ResponseEvent;
 use Drupal\Core\Cache\CacheableResponseInterface;
@@ -63,9 +64,10 @@ class AmazonApiSubscriber implements EventSubscriberInterface {
    * @see \Drupal\Core\EventSubscriber\FinishResponseSubscriber::onRespond()
    */
   public function onRequest(RequestEvent $event) {
-    if (!$event->isMasterRequest()) {
+    if (!$this->isMainRequest($event)) {
       return;
     }
+
     $request = $event->getRequest();
     // No route match at this point, so match with regular expression.
     $pathInfo = $request->getPathInfo();
@@ -89,9 +91,10 @@ class AmazonApiSubscriber implements EventSubscriberInterface {
    * @see \Drupal\Core\EventSubscriber\FinishResponseSubscriber::onRespond()
    */
   public function onRespond(ResponseEvent $event) {
-    if (!$event->isMasterRequest()) {
+    if (!$this->isMainRequest($event)) {
       return;
     }
+
     if ($this->routeMatch->getRouteName() == 'amazon_product_widget.product_api') {
       /** @var \Drupal\Core\Cache\CacheableJsonResponse $response */
       $response = $event->getResponse();
@@ -113,6 +116,27 @@ class AmazonApiSubscriber implements EventSubscriberInterface {
       $response->setMaxAge($max_age);
       $response->setPublic();
     }
+  }
+
+  /**
+   * Checks if the event is a main request.
+   *
+   * @param \Symfony\Component\HttpKernel\Event\KernelEvent $event
+   *   The event to process.
+   *
+   * @return bool
+   *   TRUE if the event is a main request, FALSE otherwise.
+   */
+  protected function isMainRequest(KernelEvent $event): bool {
+    if (method_exists($event, 'isMainRequest')) {
+      return $event->isMainRequest();
+    }
+    elseif (method_exists($event, 'isMasterRequest')) {
+      return $event->isMasterRequest();
+    }
+
+    // Or throw exception here?
+    return FALSE;
   }
 
 }

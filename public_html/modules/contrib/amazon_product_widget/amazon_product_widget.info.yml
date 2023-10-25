@@ -4,9 +4,9 @@ description: Customization to Amazon Product widgets.
 package: Amazon
 core_version_requirement: ^8 || ^9 || ^10
 dependencies:
-  - drupal:amazon_paapi
+  - amazon_paapi:amazon_paapi
 
-# Information added by Drupal.org packaging script on 2023-05-25
-version: '1.5.9'
+# Information added by Drupal.org packaging script on 2023-10-25
+version: '1.5.10'
 project: 'amazon_product_widget'
-datestamp: 1685017677
+datestamp: 1698212326
