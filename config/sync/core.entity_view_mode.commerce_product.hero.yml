@@ -1,0 +1,10 @@
+uuid: 003dada5-71cb-4033-8e54-925e7268b3e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.hero
+label: Hero
+targetEntityType: commerce_product
+cache: true

@@ -1,0 +1,26 @@
+uuid: 064a9bc1-35cd-44fa-9d64-72ef2dbf214f
+langcode: sv
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - b5subtheme
+third_party_settings:
+  block_class:
+    classes: container
+_core:
+  default_config_hash: 9oMZHR0012mNxwKlK2ipktgt7CWVlJLimMsqvka24BQ
+id: b5subtheme_breadcrumbs
+theme: b5subtheme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Länkstigar
+  label_display: '0'
+  provider: system
+visibility: {  }

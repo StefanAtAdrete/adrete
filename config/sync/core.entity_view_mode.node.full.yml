@@ -1,0 +1,12 @@
+uuid: e785e9be-26c1-4420-9150-291c280ab503
+langcode: sv
+status: false
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: ElrtInxGjZd7GaapJ5O9n-ugi2hG2IxFivtgn0tHOsk
+id: node.full
+label: 'Fullständigt innehåll'
+targetEntityType: node
+cache: true

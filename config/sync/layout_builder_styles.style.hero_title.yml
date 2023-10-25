@@ -1,0 +1,12 @@
+uuid: 74c09273-1ade-4c74-b0cf-d549483cf83f
+langcode: en
+status: true
+dependencies: {  }
+id: hero_title
+label: 'Hero title'
+classes: 'position-absolute bottom-50 end-50 text-center text-secondary fs-3 fw-bold lh-1 p-4'
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

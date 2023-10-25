@@ -1,0 +1,34 @@
+uuid: 6321fe02-2949-4386-9844-cf93fbac1744
+langcode: sv
+status: true
+dependencies:
+  module:
+    - language
+_core:
+  default_config_hash: vcDd9H0uIlyOQGoVAJuD3ADMnQeRR_X3B-ojyb8Cbnc
+id: language-add
+label: 'Adding languages'
+module: language
+routes:
+  -
+    route_name: language.add
+tips:
+  language-add-overview:
+    id: language-add-overview
+    plugin: text
+    label: 'Adding languages'
+    weight: 1
+    body: '<p>Den här sidan ger möjligheten att lägga till vanliga språk på din webbplats.</p><p>Om det önskade språket inte är tillgängligt kan du lägga till ett anpassat språk.</p>'
+  language-add-choose:
+    id: language-add-choose
+    plugin: text
+    label: 'Välj språk'
+    weight: 2
+    selector: '#edit-predefined-langcode'
+    body: '<p>Välj ett språk från listan, eller välj "Anpassat språk..." i slutet av listan.</p><p>Klicka på knappen "Lägg till språk" när du har valt ditt språk.</p><p>När du lägger till ett anpassat språk får du ytterligare ett formulär där du kan ange namn, kod och riktning för språket.</p>'
+  language-add-continue:
+    id: language-add-continue
+    plugin: text
+    label: 'Fortsätter på'
+    weight: 3
+    body: '<p>Nu när du har en översikt över funktionen "Lägg till språk" kan du fortsätta genom att:<ul><li>Lägga till ett språk</li><li>Lägga till ett anpassat språk</li><li><a href="[site:url]admin/config/regional/language">Visa konfigurerade språk</a></li></ul></p>'

@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: cpiebjeL5BJQM1KnuVUE-HxHiY-5OM6jfuhD1-SLNU0
+langcode: sv
+show_node: true
+show_block: true
+placement: replace
+size: 16x16
+path: '/libraries/languageicons/flags/*.png'

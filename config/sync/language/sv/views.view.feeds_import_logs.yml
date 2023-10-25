@@ -1,0 +1,46 @@
+display:
+  default:
+    display_title: Huvud
+    display_options:
+      title: Loggar
+      fields:
+        import_id:
+          label: ID
+          separator: ', '
+        start:
+          separator: ', '
+        end:
+          separator: ', '
+        uid:
+          label: Användare
+          separator: ', '
+        sources_value:
+          label: Källor
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Inlägg per sida'
+            items_per_page_options_all_label: '- Alla -'
+            offset_label: Kompensera
+      exposed_form:
+        options:
+          submit_button: Applicera
+          reset_button_label: Återställ
+          exposed_sorts_label: 'Sortera efter'
+          sort_asc_label: Stigande
+          sort_desc_label: Fallande
+      arguments:
+        feed:
+          exception:
+            title: Alla
+  page_1:
+    display_title: Sida
+    display_options:
+      menu:
+        title: Översikt
+      tab_options:
+        title: Loggar

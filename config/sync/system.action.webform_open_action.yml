@@ -1,0 +1,13 @@
+uuid: b3c4087e-1935-4c77-a03a-bc902cce5443
+langcode: sv
+status: true
+dependencies:
+  module:
+    - webform
+_core:
+  default_config_hash: AK83C-dOZEPruvi6GbkuhihWLnO4VtrbesqSC6izf4o
+id: webform_open_action
+label: 'Öppna webbformulär'
+type: webform
+plugin: webform_open_action
+configuration: {  }

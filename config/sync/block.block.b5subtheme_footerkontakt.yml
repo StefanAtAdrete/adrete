@@ -1,0 +1,25 @@
+uuid: 06ea71c2-3dec-46d6-ac55-eec4d398c9ac
+langcode: sv
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3bbe57d1-cd1a-4a1e-9e62-16bf353d89a9'
+  module:
+    - block_content
+  theme:
+    - b5subtheme
+id: b5subtheme_footerkontakt
+theme: b5subtheme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:3bbe57d1-cd1a-4a1e-9e62-16bf353d89a9'
+settings:
+  id: 'block_content:3bbe57d1-cd1a-4a1e-9e62-16bf353d89a9'
+  label: 'Footer kontakt'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

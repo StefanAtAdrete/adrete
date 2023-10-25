@@ -1,7 +1,124 @@
+/* Checkout */
+span.order-total-line-label {
+    padding-right: 10px;
+}
+
+.node--view-mode-card-design h2 {
+    display: none;
+}
+
+/* Webform result page (main block)s */
+
+.webform-confirmation {
+    width: 80%;
+    /* padding-right: 5%; */
+    /* padding-left: 5%; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Language switcher */
+div#block-b5subtheme-languageswitcher ul li {
+    float: left;
+    margin-right: 10px;
+    list-style-type: none;
+}
+
+div#block-b5subtheme-languageswitcher ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Breadcrumb niceness */
+.region-breadcrumb {
+    padding: 5px 0 5px 0;
+}
+
+.breadcrumb {
+    --bs-breadcrumb-margin-bottom: 0rem;
+}
+
+li.breadcrumb-item a {
+    color: #a6a6a6;
+    text-decoration: none;
+}
+
+li.breadcrumb-item {
+    color: #a6a6a6;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    float: left;
+    padding-right: var(--bs-breadcrumb-item-padding-x);
+    color: rgb(202 202 202 / 75%);
+    content: var(--bs-breadcrumb-divider,">");
+}
+
+/* Hero fixes */
+
+.block-field-blockcommerce-productservicestitle a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    z-index: 999;
+}
+
+.flex-control-paging li a.flex-active {
+    background: #ffffff;
+    background: rgb(255 255 255 / 90%);
+    cursor: default;
+}
+
+.flex-control-paging li a {
+    width: 32px;
+    height: 6px;
+    display: block;
+    background: #ffffff;
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+    -o-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0px rgba(0,0,0,0.3);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 20px;
+    border-radius: 0px;
+}
+
+
+
+.flexslider {
+    margin: 0 0 0px;
+    background: transparent; 
+    border: 0px solid #fff;
+    position: relative;
+    zoom: 1;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: '' 0 0p 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: '' 0 0px 0px rgba(0,0,0,0.2);
+    -o-box-shadow: '' 0 0px 0px rgba(0,0,0,0.2);
+    box-shadow: '' 0 0px 0px rgba(0,0,0,0.2);
+}
+
+
 /* Fit all images */
 
 /* imported Meta RSS instory images */
 img.alignnone.size-large {
+    width: 100%;
+    height: auto;
+}
+
+img.alignnone.size-full {
     width: 100%;
     height: auto;
 }
@@ -69,40 +186,19 @@ div#popup-text h2 {
 }
 /* Usernav */
 
-.navbar {
-    background: #8cc2ec;
-}
-
-.tbm {
-    background: #8cc2ec;
-}
-
 .tbm.tbm--mobile.tbm--mobile-show .tbm-collapse {
     display: block;
     width: 90vw;
     margin-left: -75vw;
-    background-color: #8bc3ec;
 }
 
 .tbm.tbm--mobile .tbm-nav {
-    background: #8cc2ec;
     border: 2px solid;
 }
 
-/*
-ul.nav.navbar-nav {
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+.site-logo.d-block img {
+    height: auto;
 }
-
-.region.region-usernav {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
-} */
 
 .navbar-brand a.site-title {
     color: #ffffff;
@@ -110,9 +206,20 @@ ul.nav.navbar-nav {
     font-size: 10px;
 }
 
+.tbm-item.level-1 {
+    border-right: 0px solid rgba(0,0,0,0);
+}
+
 .tbm.tbm--mobile .tbm-button {
     display: block;
-    background-color: #8cc2ec;
+}
+
+.tbm-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 0px solid rgba(0, 0, 0, 0);
 }
 
 div#block-cartflyout {
@@ -135,7 +242,7 @@ div#block-cartflyout {
     border-radius: var(--bs-dropdown-border-radius);
 }
 
-/* Taxonomy page */
+/* Taxonomy page 
 
 article.contextual-region.node.node--type-article.node--view-mode-teaser h2 {
     display: none;
@@ -143,12 +250,10 @@ article.contextual-region.node.node--type-article.node--view-mode-teaser h2 {
 
 article.contextual-region.node.node--type-article.node--view-mode-teaser h2.card-title  {
     display: inline-block;
-}
+}*/
 
 /* Productpage */
-.node--view-mode-symbol-referens {
 
-}
 
 .node--view-mode-symbol-referens h2 {
     display: none;
@@ -169,42 +274,30 @@ article.contextual-region.node.node--type-article.node--view-mode-teaser h2.card
 }
 
 
-/* Add to cart form */
+/* Add to cart form 
 input.button--add-to-cart {
     display: none;
+}*/
+
+/*.cart.cart-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80vw;
+}*/
+
+.cart-block--contents {
+    width: 320px;
+    background: white;
+    color: black;
 }
 
 .cart-block--contents.is-outside-horizontal.cart-block--contents__expanded {
     z-index: 9999;
 }
 
-/* Superfish */
-a#superfish-main-toggle span {
-    color: #fff;
-    font-size: 44px;
-}
-
-#superfish-main-toggle {
-    margin: 0;
-    padding: 0;
-    float: right;
-}
-
-a#superfish-main-toggle {
-text-decoration: none;
-color: #fff;
-}
-
-a#superfish-main-toggle.sf-expanded {
-    /* float: right; */
-    /* display: block; */
-    margin-top: -60px;
-    /* padding: 0px; */
-    z-index: 9999;
-    left: 90%;
-}
-
 /* Article */
+
+
 
 figure.caption {
     margin: 5%;
@@ -213,6 +306,12 @@ figure.caption {
 
 /* video 100% */
 
+video {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/*
 .field.field--name-field-media-oembed-video.field--type-string.field--label-hidden.field__item {
     position: relative;
     padding-bottom: 56.25%;
@@ -222,13 +321,14 @@ figure.caption {
 }
 
 .media-oembed-content {
-    /* width: 100%; */
+    /* width: 100%; 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
+*/
 
 /* caption background */
 .caption > figcaption {
@@ -241,16 +341,28 @@ figure.caption {
 
 /* Card */
 
-.card-img-top img {
-    width: 100% !important;
-    max-width: 100% !important;
-    border-radius: 5px;
-}
-
-article.node.node--type-article.node--promoted.node--view-mode-teaser h2 {
+/* article.node.node--type-article.node--promoted.node--view-mode-teaser h2 {
     display: none;
-}
+} */
 
 #cardtitle  {
     display: block;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: #6C757D;
+}
+
+
+/* Header stuff Bootstrap */
+
+img.language-icon.img-fluid {
+    width: 32px;
+}
+
+
+/* Super remove paddings and margins */
+.region.region-content {
+    padding: 0;
 }

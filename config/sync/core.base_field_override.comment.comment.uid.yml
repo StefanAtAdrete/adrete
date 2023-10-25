@@ -1,0 +1,20 @@
+uuid: 7d1c220d-44ee-497d-862d-c7750d493a61
+langcode: sv
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+id: comment.comment.uid
+field_name: uid
+entity_type: comment
+bundle: comment
+label: Användar-ID
+description: 'Författarens användar-ID för kommentaren.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\comment\Entity\Comment::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

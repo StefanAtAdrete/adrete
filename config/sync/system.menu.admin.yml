@@ -1,0 +1,10 @@
+uuid: 56a13a74-016e-44eb-8eb2-0bc65801b645
+langcode: sv
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sapEi2YDGoI9yQIT_WgIV2vUdQ6DScH0V3fAyTadAL0
+id: admin
+label: Administration
+description: 'Länkar för administrativa uppgifter'
+locked: true

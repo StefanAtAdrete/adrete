@@ -1,0 +1,76 @@
+uuid: f752b7cd-4e0d-43e9-8573-108556600509
+langcode: sv
+status: true
+dependencies:
+  module:
+    - honeypot
+_core:
+  default_config_hash: A_dlRbNEX9_hOqUkQ5m4AskEmat7VEA8qvFt7tVeufQ
+id: honeypot
+label: Honeypot
+module: honeypot
+routes:
+  -
+    route_name: honeypot.config
+tips:
+  honeypot-configuration:
+    id: honeypot-configuration
+    plugin: text
+    label: Honeypot
+    weight: -10
+    position: top-start
+    body: |-
+      Grattis till installationen av Honeypot på din webbplats! Med bara några få klick kan du ha din webbplats väl skyddad mot automatiska skräppostrobotar.
+
+      Klicka på Nästa för att vägledas genom den här konfigurationssidan.
+  protect-all-forms:
+    id: protect-all-forms
+    plugin: text
+    label: 'Skydda alla formulär'
+    weight: -9
+    position: bottom-start
+    selector: '#edit-protect-all-forms'
+    body: |-
+      Att skydda alla formulär är det enklaste sättet att snabbt skära ned skräppost på din webbplats, men att göra detta avaktiverar Drupals cachning för varje sida där ett formulär visas.
+
+      Observa!: Om du har aktiverat tidsbegränsningen för honungsfälla kan det här alternativet orsaka problem med produktformulär för Drupal Commerce eller liknande kringspridda formulär som kan fyllas i på mycket kort tid.
+  log-blocked-form-submissions:
+    id: log-blocked-form-submissions
+    plugin: text
+    label: 'Logga spärrade formulärsinlägg'
+    weight: -8
+    position: bottom-start
+    selector: '#edit-log'
+    body: 'Markera den här rutan för att logga varje formulärsinlägg med övervakning. Om du har databasloggning aktiverad kan du visa dessa loggposter på sidan Senaste loggmeddelanden under Rapporter.'
+  honeypot-element-name:
+    id: honeypot-element-name
+    plugin: text
+    label: 'Elementnamn för Honeypot'
+    weight: -7
+    position: top-start
+    selector: '#edit-element-name'
+    body: 'Skräppostrobotar fyller vanligtvis i alla fält som de tror kommer att hjälpa till att få länkar tillbaka till deras webbplats. Så att fresta dem med ett fält som heter något som "url", "homepage" eller "link" gör det svårt för dem att motstå att fylla i fältet - och lätt att fånga dem i fällan och avvisa deras inlägg!'
+  honeypot-time-limit:
+    id: honeypot-time-limit
+    plugin: text
+    label: 'Tidsbegränsning för Honepot'
+    weight: -6
+    position: top-start
+    selector: '#edit-time-limit'
+    body: 'Om du anger ett positivt värde kräver Honeypot att alla skyddade formulär tar minst så många sekunder att fylla i. De flesta formulär tar minst 5-10 sekunder att slutföra (om du är en människa), så att sätta detta till ett värde <5 hjälper till att skydda mot spamrobotar. Ställ in detta 0 för att inaktivera.'
+  honeypot-expire:
+    id: honeypot-expire
+    plugin: text
+    label: 'Honeypot Expire'
+    weight: -5
+    position: top-start
+    selector: '#edit-expire'
+    body: 'Om du anger ett positivt värde kräver Honeypot att alla skyddade formulär tar minst så många sekunder att fylla i. De flesta formulär tar minst 5-10 sekunder att slutföra (om du är en människa), så att sätta detta till ett värde <5 hjälper till att skydda mot spamrobotar. Ställ in detta 0 för att inaktivera.'
+  honeypot-form-specific-settings:
+    id: honeypot-form-specific-settings
+    plugin: text
+    label: 'Inställningar för specifika formulär i Honepot'
+    weight: -4
+    position: top-start
+    selector: '#edit-form-settings'
+    body: 'Om du vill välja vissa formulär som skall skyddas av Honeypot, kontrollera de formulär du vill skydda i det här avsnittet. De vanligaste typerna av formulär är tillgängliga för skydd.'

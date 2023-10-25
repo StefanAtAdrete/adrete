@@ -1,0 +1,45 @@
+uuid: 06eb422a-8a9e-40ac-b660-db720b0e7c2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.responsive_adrete
+    - field.field.media.image.field_media_image
+    - image.style.1_1_crop
+    - media.type.image
+  module:
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.responsive_adrete
+targetEntityType: media
+bundle: image
+mode: responsive_adrete
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: 1_1_crop
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,25 @@
+uuid: f0519b8e-08b4-4fd1-a2a0-c7980e6bed5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_cropped_1200_
+    - image.style.hero_xs_portrait
+    - image.style.medium
+  theme:
+    - b5subtheme
+id: hero_responsive
+label: 'Hero responsive'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_cropped_1200_
+    breakpoint_id: b5subtheme.screen.xl-min
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_xs_portrait
+    breakpoint_id: b5subtheme.screen.xs-max
+    multiplier: 1x
+breakpoint_group: b5subtheme.screen
+fallback_image_style: medium

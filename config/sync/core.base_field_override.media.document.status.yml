@@ -1,0 +1,22 @@
+uuid: 8bf6ae87-9667-4661-8dc0-12db0f04027a
+langcode: sv
+status: true
+dependencies:
+  config:
+    - media.type.document
+id: media.document.status
+field_name: status
+entity_type: media
+bundle: document
+label: Publicerad
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: På
+  off_label: Av
+field_type: boolean

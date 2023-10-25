@@ -1,0 +1,5 @@
+label: '3 populära produkter'
+display:
+  default:
+    display_options:
+      title: '3 populära produkter'

@@ -1,0 +1,24 @@
+uuid: 70f2acb1-e762-41c6-809a-380b2e184969
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.product_level
+    - commerce_product.commerce_product_variation_type.services
+    - field.storage.commerce_product_variation.attribute_product_level
+id: commerce_product_variation.services.attribute_product_level
+field_name: attribute_product_level
+entity_type: commerce_product_variation
+bundle: services
+label: 'Product level'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product_attribute_value'
+  handler_settings:
+    target_bundles:
+      - product_level
+field_type: entity_reference

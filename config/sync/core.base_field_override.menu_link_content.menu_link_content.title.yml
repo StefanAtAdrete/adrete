@@ -1,0 +1,18 @@
+uuid: 53615172-e3da-4476-bb6f-2b889d5dfa32
+langcode: sv
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.menu_link_content.title
+field_name: title
+entity_type: menu_link_content
+bundle: menu_link_content
+label: 'Titel på menylänken'
+description: 'Texten som skall användas för denna länken i menyn.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

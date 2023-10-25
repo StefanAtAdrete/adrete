@@ -1,0 +1,22 @@
+uuid: b93737a5-523d-4970-b907-e4def67d6594
+langcode: sv
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+id: comment.comment.status
+field_name: status
+entity_type: comment
+bundle: comment
+label: Publicerad
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: 'Drupal\comment\Entity\Comment::getDefaultStatus'
+settings:
+  on_label: På
+  off_label: Av
+field_type: boolean

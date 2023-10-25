@@ -1,0 +1,23 @@
+uuid: 6107366d-4d2a-4872-8a9f-65c6de5f5011
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 1_1_crop
+label: '1:1 Crop 640x640'
+effects:
+  dfdf2243-ba92-4f93-8bb7-067f70ee4c09:
+    uuid: dfdf2243-ba92-4f93-8bb7-067f70ee4c09
+    id: image_convert
+    weight: -9
+    data:
+      extension: webp
+  47aea683-ab34-4f67-9ec2-57fbf506e8e2:
+    uuid: 47aea683-ab34-4f67-9ec2-57fbf506e8e2
+    id: focal_point_scale_and_crop
+    weight: -10
+    data:
+      width: 640
+      height: 640
+      crop_type: focal_point

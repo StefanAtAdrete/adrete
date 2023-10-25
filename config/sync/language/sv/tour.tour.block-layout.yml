@@ -1,0 +1,13 @@
+label: 'Block Layout Sida'
+tips:
+  block-layout:
+    label: 'Layout för block'
+    body: 'Block är rutor med innehåll som återges till ett område, eller en region, på en webbsida som kan visas i regioner (som sidfot eller sidofält) på din sida.'
+  place-block:
+    label: 'Placera block'
+    body: 'Alla anpassade eller kontribuerade block kan läggas till i en viss region genom att klicka på knappen Placera block. Ett nytt block kan även skapas genom att klicka på Placera block'
+  block-region:
+    label: Blockregion
+    body: 'Tilldela eller ändra region för ett block genom att klicka här. En rullgardinslista med alla regioner visas. Du kan placera ett block i flera regioner.'
+  configure-block:
+    label: 'Konfigurera block'

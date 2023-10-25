@@ -1,0 +1,37 @@
+uuid: 86dfee44-8bfb-4b7e-8e39-5ccb7fd81ae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.services
+    - field.storage.commerce_product_variation.field_media_variation
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+id: commerce_product_variation.services.field_media_variation
+field_name: field_media_variation
+entity_type: commerce_product_variation
+bundle: services
+label: 'Media variation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+      document: document
+      image: image
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: audio
+field_type: entity_reference

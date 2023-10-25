@@ -1,0 +1,22 @@
+uuid: 84a875ca-ff00-4045-9b4c-473b3a033646
+langcode: sv
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+id: media.remote_video.status
+field_name: status
+entity_type: media
+bundle: remote_video
+label: Publicerad
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: På
+  off_label: Av
+field_type: boolean

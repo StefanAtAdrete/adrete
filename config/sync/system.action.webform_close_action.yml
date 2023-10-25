@@ -1,0 +1,13 @@
+uuid: 8a266ef1-fd45-4bf1-a3e7-76f57baa052d
+langcode: sv
+status: true
+dependencies:
+  module:
+    - webform
+_core:
+  default_config_hash: Dl-1T9PDkraB7MyMUjTJAioPEx6UNvIB9gqmnB1CRkk
+id: webform_close_action
+label: 'Stäng webbformulär'
+type: webform
+plugin: webform_close_action
+configuration: {  }

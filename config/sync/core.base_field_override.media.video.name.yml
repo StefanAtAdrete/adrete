@@ -1,0 +1,20 @@
+uuid: 265906f9-0b18-4a61-9547-550a68ab91cf
+langcode: sv
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video.name
+field_name: name
+entity_type: media
+bundle: video
+label: Namn
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,12 @@
+uuid: bbb97cde-978a-4ceb-b654-6634b65d68a6
+langcode: en
+status: true
+dependencies: {  }
+id: margin_bottom_4
+label: 'Margin bottom 4'
+classes: mb-4
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

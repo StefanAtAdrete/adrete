@@ -1,0 +1,16 @@
+uuid: 4bd940ca-ff5e-4852-a7a1-8f6181ef8e9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+    - taxonomy.vocabulary.services
+id: services
+label: Services
+vocabulary: services
+menu: main
+expanded: false
+depth: 1
+menu_parent: 'main:'
+description_field_name: ''
+use_term_weight_order: true

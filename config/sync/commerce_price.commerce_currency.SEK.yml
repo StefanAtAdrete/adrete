@@ -1,0 +1,9 @@
+uuid: 1d2e86ac-c9dd-4c61-9783-b4c1cdccb399
+langcode: en
+status: true
+dependencies: {  }
+currencyCode: SEK
+name: 'Swedish Krona'
+numericCode: '752'
+symbol: SEK
+fractionDigits: 0

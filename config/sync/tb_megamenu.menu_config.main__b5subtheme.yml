@@ -1,0 +1,133 @@
+uuid: 874d9320-7889-4bb0-abe3-60e362a04f79
+langcode: en
+status: true
+dependencies:
+  theme:
+    - b5subtheme
+  menu:
+    - main
+id: main__b5subtheme
+menu: main
+theme: b5subtheme
+block_config: |-
+  {
+      "animation": "slide",
+      "duration": 400,
+      "delay": 200,
+      "breakpoint": 768,
+      "hide-mobile-menu": "",
+      "auto-arrow": "1",
+      "always-show-submenu": "0",
+      "number-columns": null
+  }
+menu_config: |-
+  {
+      "taxonomy_menu.menu_link:taxonomy_menu.menu_link.services.25": {
+          "rows_content": [],
+          "submenu_config": {
+              "width": "",
+              "class": "",
+              "group": "0"
+          },
+          "item_config": {
+              "class": "bg-dark-subtle p-0",
+              "xicon": "",
+              "caption": "",
+              "alignsub": "left",
+              "group": "0",
+              "hidewcol": "0",
+              "hidesub": "0",
+              "label": ""
+          }
+      },
+      "taxonomy_menu.menu_link:taxonomy_menu.menu_link.services.386": {
+          "rows_content": [],
+          "submenu_config": {
+              "width": "",
+              "class": "",
+              "group": "0"
+          },
+          "item_config": {
+              "class": "bg-dark-subtle p-0",
+              "xicon": "fa-facebook-square",
+              "caption": "",
+              "alignsub": "",
+              "group": "0",
+              "hidewcol": "0",
+              "hidesub": "0",
+              "label": ""
+          }
+      },
+      "taxonomy_menu.menu_link:taxonomy_menu.menu_link.services.387": {
+          "rows_content": [],
+          "submenu_config": {
+              "width": "",
+              "class": "",
+              "group": "0"
+          },
+          "item_config": {
+              "class": "bg-dark-subtle p-0",
+              "xicon": "",
+              "caption": "",
+              "alignsub": "",
+              "group": "0",
+              "hidewcol": "0",
+              "hidesub": "0",
+              "label": ""
+          }
+      },
+      "menu_link_content:342d9894-df45-428c-a328-4143e0cb5242": {
+          "rows_content": [],
+          "submenu_config": {
+              "width": "",
+              "class": "",
+              "group": "0"
+          },
+          "item_config": {
+              "class": "bg-secondary-subtle p-0",
+              "xicon": "",
+              "caption": "",
+              "alignsub": "",
+              "group": "0",
+              "hidewcol": "0",
+              "hidesub": "0",
+              "label": ""
+          }
+      },
+      "menu_link_content:bfe9246b-5119-41ea-b468-0d7ce20f61b1": {
+          "rows_content": [],
+          "submenu_config": {
+              "width": "",
+              "class": "",
+              "group": "0"
+          },
+          "item_config": {
+              "class": "bg-secondary-subtle p-0",
+              "xicon": "",
+              "caption": "",
+              "alignsub": "",
+              "group": "0",
+              "hidewcol": "0",
+              "hidesub": "0",
+              "label": ""
+          }
+      },
+      "menu_link_content:ff8007e0-4ad3-4e01-9ff4-7885492db938": {
+          "rows_content": [],
+          "submenu_config": {
+              "width": "",
+              "class": "",
+              "group": "0"
+          },
+          "item_config": {
+              "class": "bg-secondary-subtle p-0",
+              "xicon": "",
+              "caption": "",
+              "alignsub": "",
+              "group": "0",
+              "hidewcol": "0",
+              "hidesub": "0",
+              "label": ""
+          }
+      }
+  }

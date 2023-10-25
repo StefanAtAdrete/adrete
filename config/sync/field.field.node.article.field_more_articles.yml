@@ -1,0 +1,28 @@
+uuid: 67ec8cf6-c569-4df5-9051-e9b2ff0a4568
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_more_articles
+    - node.type.article
+id: node.article.field_more_articles
+field_name: field_more_articles
+entity_type: node
+bundle: article
+label: 'More articles'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

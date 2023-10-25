@@ -1,0 +1,14 @@
+uuid: 5323b92e-1fd5-413d-a458-20251e942c7a
+langcode: en
+status: true
+dependencies: {  }
+id: services
+label: Services
+traits: {  }
+locked: false
+description: 'Services like consulting and such'
+variationType: services
+variationTypes:
+  - services
+multipleVariations: true
+injectVariationFields: true

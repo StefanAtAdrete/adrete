@@ -1,0 +1,8 @@
+uuid: a0b65de9-b7f4-4918-935a-c493a42936be
+langcode: en
+status: true
+dependencies: {  }
+id: g3XYqcXbSKPVBDODwnT6pq7oqhCFkPryj4vVqrl_Kfc
+label: 'http://adrete.lndo.site'
+context:
+  language: en

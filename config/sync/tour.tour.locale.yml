@@ -1,0 +1,69 @@
+uuid: 4737030c-cd87-4afa-ba48-ac44d9e6eea4
+langcode: sv
+status: true
+dependencies:
+  module:
+    - locale
+_core:
+  default_config_hash: Kcx1PIw-KgGbTo5_tOkbI6TWJiP_0Sr7t5T9SuMV2hA
+id: locale
+label: Översättning
+module: locale
+routes:
+  -
+    route_name: locale.translate_page
+tips:
+  locale-overview:
+    id: locale-overview
+    plugin: text
+    label: 'Översättning av användargränssnitt'
+    weight: 1
+    body: 'Denna sida låter dig översätta användargränssnittet eller ändra befintliga översättningar. Om du först har installerat din webbplats på engelska måste du först lägga ett annat språk på sidan <a href="[site:url]admin/config/regional/language">Språk</a> för att kunna använda denna sida.'
+  locale-language:
+    id: locale-language
+    plugin: text
+    label: Översättningsspråk
+    weight: 2
+    selector: '#edit-langcode'
+    body: 'Välj det språk du vill översätta.'
+  locale-search:
+    id: locale-search
+    plugin: text
+    label: Sök
+    weight: 3
+    selector: '#edit-string'
+    body: 'Ange specifikt ord eller en mening som du vill översätta. Du kan också skriva bara en del av ett ord.'
+  locale-filter:
+    id: locale-filter
+    plugin: text
+    label: 'Filtrera sökningen'
+    weight: 4
+    selector: '#edit-translation'
+    body: 'Du kan söka efter ej översatta strängar om du vill översätta något som inte är översatt ännu. Om du vill ändra en befintlig översättning kanske du enbart vill söka efter översatta strängar.'
+  locale-submit:
+    id: locale-submit
+    plugin: text
+    label: 'Tillämpa dina sökkriterier'
+    weight: 5
+    selector: '#edit-submit'
+    body: 'Klicka på knappen <em>Filter</em> för att tillämpa dina sökkriterier.'
+  locale-translate:
+    id: locale-translate
+    plugin: text
+    label: Översätt
+    weight: 6
+    selector: .js-form-type-textarea
+    body: 'Du kan skriva din egen översättning i textfälten i den högra kolumnen. Försök att räkna ut i vilket sammanhang texten kommer att användas för att översätta det på lämpligt sätt.'
+  locale-validate:
+    id: locale-validate
+    plugin: text
+    label: 'Bekräfta översättningen'
+    weight: 7
+    selector: '#edit-submit--2'
+    body: 'Klicka på knappen <em>Spara översättningar</em> när du är klar med dina översättningar. Du måste spara dina översättningar innan du byter sida eller gör en ny sökning.'
+  locale-continue:
+    id: locale-continue
+    plugin: text
+    label: 'Fortsätter på'
+    weight: 8
+    body: 'Översättningar du har gjort här kommer att användas på användargränssnittet för din webbplats. Om du vill använda dem på en annan webbplats eller ändra dem på en extern översättningsredigerare kan du <a href="[site:url]admin/config/regional/translate/export">exportera dem</a> till en fil av typ .po och <a href="[site:url]admin/config/regional/translate/import">importera dem</a> senare.'

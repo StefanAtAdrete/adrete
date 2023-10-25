@@ -1,0 +1,31 @@
+uuid: ccfb0641-0df4-4220-84de-0ade7e737f6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.1_1_crop
+    - image.style.max_650x650
+    - image.style.medium
+    - image.style.wide
+  theme:
+    - b5subtheme
+id: 1_1_autocrop
+label: '1:1 autocrop'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: wide
+    breakpoint_id: b5subtheme.screen.md-max
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: max_650x650
+    breakpoint_id: b5subtheme.screen.sm-max
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: 1_1_crop
+    breakpoint_id: b5subtheme.screen.xs-max
+    multiplier: 1x
+breakpoint_group: b5subtheme.screen
+fallback_image_style: medium

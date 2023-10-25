@@ -1,0 +1,19 @@
+uuid: be106158-8691-4feb-aec2-a9ead19d170a
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_guid
+field_name: field_guid
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

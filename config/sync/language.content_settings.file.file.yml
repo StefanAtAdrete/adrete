@@ -1,0 +1,11 @@
+uuid: 60ee6e5e-eed5-4b96-9ac7-c91c409b2833
+langcode: sv
+status: true
+dependencies:
+  module:
+    - file
+id: file.file
+target_entity_type_id: file
+target_bundle: file
+default_langcode: site_default
+language_alterable: false

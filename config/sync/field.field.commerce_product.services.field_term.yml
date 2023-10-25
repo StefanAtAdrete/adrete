@@ -1,0 +1,29 @@
+uuid: 3cdc5dde-780b-4e47-81b1-013630303933
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.services
+    - field.storage.commerce_product.field_term
+    - taxonomy.vocabulary.services
+id: commerce_product.services.field_term
+field_name: field_term
+entity_type: commerce_product
+bundle: services
+label: Term
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      services: services
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: services
+field_type: entity_reference

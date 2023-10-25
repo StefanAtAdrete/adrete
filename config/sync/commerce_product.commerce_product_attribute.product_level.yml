@@ -1,0 +1,7 @@
+uuid: 546506f1-0905-48c4-add0-42e50a6d28da
+langcode: en
+status: true
+dependencies: {  }
+id: product_level
+label: 'Product level'
+elementType: select

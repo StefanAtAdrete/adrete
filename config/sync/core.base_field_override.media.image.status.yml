@@ -1,0 +1,22 @@
+uuid: 10f029c2-a086-451f-81bb-aebb16c259fa
+langcode: sv
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.status
+field_name: status
+entity_type: media
+bundle: image
+label: Publicerad
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: På
+  off_label: Av
+field_type: boolean

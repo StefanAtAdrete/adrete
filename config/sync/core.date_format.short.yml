@@ -1,0 +1,10 @@
+uuid: d415e784-9cf4-4055-ad1b-71fd086d400c
+langcode: sv
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AlzeyytA8InBgxIG9H2UDJYs3CG98Zj6yRsDKmlbZwA
+id: short
+label: 'Förvalt kort datum'
+locked: false
+pattern: 'm/d/Y - H:i'

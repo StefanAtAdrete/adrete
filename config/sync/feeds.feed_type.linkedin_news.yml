@@ -1,0 +1,150 @@
+uuid: 6ab385ea-3be9-417a-84e8-9e9b412ca5f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news_feed.body
+    - field.field.node.news_feed.field_guid
+    - field.field.node.news_feed.field_image
+    - field.field.node.news_feed.field_links
+    - field.field.node.news_feed.field_tags
+    - node.type.news_feed
+  module:
+    - feeds_log
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+  feeds_tamper:
+    tampers:
+      273b6773-ae56-429a-a93f-a376a7140894:
+        find: '/<div>.*<\/div>/'
+        replace: ' '
+        limit: 1
+        uuid: 273b6773-ae56-429a-a93f-a376a7140894
+        plugin: find_replace_regex
+        source: content
+        weight: 0
+        label: 'Find replace REGEX'
+      ea5175eb-d8cd-45c8-8f3e-3aae999ac60a:
+        text: 'https://blog.linkedin.com/[mediarss_thumbnail]'
+        uuid: ea5175eb-d8cd-45c8-8f3e-3aae999ac60a
+        plugin: rewrite
+        source: mediarss_thumbnail
+        weight: 0
+        label: Rewrite
+      66bcd924-2fd9-4aad-9672-cbf9474830d5:
+        text: '[tags]'
+        uuid: 66bcd924-2fd9-4aad-9672-cbf9474830d5
+        plugin: rewrite
+        source: guid
+        weight: 0
+        label: Rewrite
+      f35a4d4e-7a61-411b-98ee-598fb0060563:
+        text: LinkedIn
+        uuid: f35a4d4e-7a61-411b-98ee-598fb0060563
+        plugin: rewrite
+        source: 'parent:fid'
+        weight: 0
+        label: Rewrite
+label: 'LinkedIn news'
+id: linkedin_news
+description: 'Meta about feed'
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: true
+  fallback_hub: ''
+  request_timeout: 90
+parser: syndication
+parser_configuration: {  }
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: news_feed
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: 31536000
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  meta:
+    value: Meta
+    label: Meta
+    machine_name: meta
+    type: blank
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique:
+      value: 1
+  -
+    target: body
+    map:
+      value: content
+      summary: feed_description
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_links
+    map:
+      uri: url
+      title: url
+    settings:
+      language: null
+  -
+    target: field_guid
+    map:
+      uri: guid
+      title: feed_title
+    settings:
+      language: null
+  -
+    target: field_image
+    map:
+      target_id: mediarss_thumbnail
+      alt: title
+      title: title
+    settings:
+      language: ''
+      reference_by: fid
+      autocreate: 0
+      existing: '2'
+      autocreate_bundle: false
+  -
+    target: field_tags
+    map:
+      target_id: 'parent:fid'
+    settings:
+      language: en
+      reference_by: name
+      autocreate: 0
+      autocreate_bundle: tags

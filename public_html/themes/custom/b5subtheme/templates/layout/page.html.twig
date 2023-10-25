@@ -57,11 +57,13 @@ set footer_classes = ' ' ~
   (b5_footer_bg_schema != 'none' ? " bg-#{b5_footer_bg_schema}" : ' ')
 %}
 
-<header>
+<header class="bg-secondary-subtle">
 	{{ page.header }}
 	{% if page.usernav %}
-		<div class="{{ nav_classes }}" id="userNav">
-			<div class="usernav container">{{ page.usernav }}</div>
+		<div class="{{ nav_classes }}bg-secondary bg-opacity-10" id="userNav">
+			<div class="usernav container">
+				{{ page.usernav }}
+			</div>
 		</div>
 	{% endif %}
 	{% if page.nav_branding or page.nav_main or page.nav_additional %}
@@ -69,10 +71,10 @@ set footer_classes = ' ' ~
 			<div class="{{ b5_top_container }}">
 				{{ page.nav_branding }}
 				{# <button
-																																													class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">{#<span class="navbar-toggler-icon"></span> 
-																																												</button> 
-																												
-																																<div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent"> #}
+																																																																													class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">{#<span class="navbar-toggler-icon"></span> 
+																																																																												</button> 
+																																																												
+																																																																<div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent"> #}
 				{{ page.nav_main }}
 				{{ page.nav_additional }}
 			</div>

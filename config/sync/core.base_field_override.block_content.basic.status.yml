@@ -1,0 +1,22 @@
+uuid: 79eae89c-4455-4132-b18f-458d9e964c3b
+langcode: sv
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+id: block_content.basic.status
+field_name: status
+entity_type: block_content
+bundle: basic
+label: Publicerad
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: På
+  off_label: Av
+field_type: boolean

@@ -1,0 +1,18 @@
+uuid: 200bf5d7-5cb3-4369-8b32-5e20c8c6b7e1
+langcode: sv
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video.changed
+field_name: changed
+entity_type: media
+bundle: video
+label: Ändrad
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

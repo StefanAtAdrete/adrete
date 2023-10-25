@@ -1,0 +1,12 @@
+uuid: 6941c5f8-9113-4ee6-9964-ef00de9749cb
+langcode: en
+status: true
+dependencies: {  }
+id: second_column_misc
+label: 'Second column misc'
+classes: 'mt-4 p-4 rounded-1 bg-secondary-subtle'
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

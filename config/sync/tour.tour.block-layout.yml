@@ -1,0 +1,42 @@
+uuid: ee31e59a-0d00-436f-b395-7dc0c8add61f
+langcode: sv
+status: true
+dependencies:
+  module:
+    - block
+_core:
+  default_config_hash: pG6QAggTrD7RQWb79PT3NH48GSvTiePly_l53f3OENs
+id: block-layout
+label: 'Block Layout Sida'
+module: block
+routes:
+  -
+    route_name: block.admin_display
+tips:
+  block-layout:
+    id: block-layout
+    plugin: text
+    label: 'Layout för block'
+    weight: 1
+    body: 'Block är rutor med innehåll som återges till ett område, eller en region, på en webbsida som kan visas i regioner (som sidfot eller sidofält) på din sida.'
+  place-block:
+    id: place-block
+    plugin: text
+    label: 'Placera block'
+    weight: 2
+    selector: .button--small
+    body: 'Alla anpassade eller kontribuerade block kan läggas till i en viss region genom att klicka på knappen Placera block. Ett nytt block kan även skapas genom att klicka på Placera block'
+  block-region:
+    id: block-region
+    plugin: text
+    label: Blockregion
+    weight: 3
+    selector: .block-region-select
+    body: 'Tilldela eller ändra region för ett block genom att klicka här. En rullgardinslista med alla regioner visas. Du kan placera ett block i flera regioner.'
+  configure-block:
+    id: configure-block
+    plugin: text
+    label: 'Konfigurera block'
+    weight: 4
+    selector: .dropbutton-widget
+    body: 'By Clicking on "Configure" you can go ahead and edit the contents of the block, deal with the visibility settings and even change the placement of where it is on your theme.'

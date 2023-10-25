@@ -1,0 +1,23 @@
+uuid: 2f135f53-79ca-47ce-9982-40b9baf8a631
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_xs_portrait
+label: 'Hero xs portrait'
+effects:
+  9e24beb8-dff9-4420-a927-d01b2f1c3dbf:
+    uuid: 9e24beb8-dff9-4420-a927-d01b2f1c3dbf
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 360
+      height: 480
+      crop_type: focal_point
+  5c5d3590-a111-42f6-889b-88fd81aa5e5d:
+    uuid: 5c5d3590-a111-42f6-889b-88fd81aa5e5d
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

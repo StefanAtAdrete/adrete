@@ -1,0 +1,25 @@
+uuid: 251f7fa2-00a6-4d78-8dcc-f869718d82c4
+langcode: sv
+status: true
+dependencies: {  }
+id: faktura_10_dagar
+label: 'Faktura 10 dagar'
+weight: null
+plugin: manual
+configuration:
+  display_label: Manual
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  instructions:
+    value: '<p>Betalningsvillkor: 10 dagar<br>Betalningssätt: Bankgiro<br>Referens: [commerce_order:order_id]</p><p>Vänligen se till att betalningen sker senast förfallodatumet. Vid försenad betalning tillkommer dröjsmålsränta enligt räntelagen samt eventuella påminnelseavgifter.</p>'
+    format: full_html
+conditions:
+  -
+    plugin: 'order_purchased_entity:commerce_product_variation'
+    configuration:
+      entities:
+        20: 42e2eaff-7432-48eb-82a0-f58cbef67089
+        21: e687b12d-b0ed-474c-bf94-41a44fab6a24
+conditionOperator: AND

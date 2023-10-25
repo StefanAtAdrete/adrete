@@ -1,0 +1,18 @@
+uuid: d3573fee-567c-4b54-b8f1-855fcb303816
+langcode: sv
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.changed
+field_name: changed
+entity_type: media
+bundle: image
+label: Ändrad
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

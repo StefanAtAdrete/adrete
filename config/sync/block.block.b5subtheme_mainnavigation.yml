@@ -1,0 +1,24 @@
+uuid: 730ef56a-5f7d-4465-ac69-47b5776550c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - tb_megamenu
+  theme:
+    - b5subtheme
+third_party_settings:
+  block_class:
+    classes: container
+id: b5subtheme_mainnavigation
+theme: b5subtheme
+region: nav_main
+weight: 0
+provider: null
+plugin: 'tb_megamenu_menu_block:main'
+settings:
+  id: 'tb_megamenu_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: tb_megamenu
+visibility: {  }

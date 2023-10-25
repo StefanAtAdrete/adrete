@@ -1,0 +1,8 @@
+uuid: 0e5f57c2-4c48-4081-9830-0703c271ccec
+langcode: sv
+status: true
+dependencies: {  }
+id: b5subtheme_footerkontakt
+theme: ''
+text: ''
+classes: text-align-center

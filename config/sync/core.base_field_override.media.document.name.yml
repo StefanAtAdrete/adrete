@@ -1,0 +1,20 @@
+uuid: ec25f88b-81de-42dc-87ec-f8bdee29e44e
+langcode: sv
+status: true
+dependencies:
+  config:
+    - media.type.document
+id: media.document.name
+field_name: name
+entity_type: media
+bundle: document
+label: Namn
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

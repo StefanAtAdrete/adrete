@@ -1,0 +1,24 @@
+uuid: 799d5111-64f6-4451-aa21-68e37dd38906
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highlighted_text
+    - filter.format.full_html
+    - node.type.page
+  module:
+    - text
+id: node.page.field_highlighted_text
+field_name: field_highlighted_text
+entity_type: node
+bundle: page
+label: 'Highlighted text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

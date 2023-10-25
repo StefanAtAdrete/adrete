@@ -1,0 +1,79 @@
+uuid: 6d0e7d9c-b43e-4a80-9dc5-eca6ce2916ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.services
+    - field.field.commerce_product_variation.services.attribute_product_level
+    - field.field.commerce_product_variation.services.field_media_variation
+    - field.field.commerce_product_variation.services.field_variation_text
+  module:
+    - commerce_price
+    - text
+id: commerce_product_variation.services.default
+targetEntityType: commerce_product_variation
+bundle: services
+mode: default
+content:
+  field_media_variation:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_variation_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  list_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  product_id:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  sku:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  add_to_cart_link: true
+  attribute_product_level: true
+  langcode: true

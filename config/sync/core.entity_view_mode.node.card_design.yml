@@ -1,0 +1,10 @@
+uuid: 94908aa3-f46a-4da4-895a-19583e1ecca5
+langcode: sv
+status: true
+dependencies:
+  module:
+    - node
+id: node.card_design
+label: 'Card design'
+targetEntityType: node
+cache: true

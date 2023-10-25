@@ -1,0 +1,14 @@
+uuid: 2f933714-62e1-4515-82b0-8a8131fab218
+langcode: sv
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: k3aUaZXGDuhkek2TZIee0PApOPTvYZLadziekdyHA5A
+id: user_search
+label: Användare
+path: user
+weight: 0
+plugin: user_search
+configuration: {  }

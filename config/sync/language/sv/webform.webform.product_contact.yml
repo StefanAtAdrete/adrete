@@ -1,0 +1,20 @@
+title: 'Produkt kontakt'
+elements: |
+  i_am_interested_of_this_product:
+    '#title': 'Jag är intresserad av denna produkt'
+  name:
+    '#title': Namn
+    '#first__title': Förnamn
+    '#middle__title': Mellannamn
+  your_e_mailaddress:
+    '#title': 'Din e-postadress'
+    '#required_error': 'Denna är obligatorisk så att vi kan kontakta dig'
+  my_business_social_media_page:
+    '#title': 'Mitt företags sida för kanalen (t.ex LinkedIn)'
+    '#description': '<p>Om du ger oss webbadressen till din Facebook/Meta sida eller LinkedIn kan vi få lite mera information om er verksamhet.</p>'
+    '#counter_maximum_message': 'Max 150 tecken '
+  gdpr_collection_of_submitted_data:
+    '#title': 'GDPR - insamling av data'
+    '#description': '<p>Jag har läst Adretes <a href="http://adrete.lndo.site/node/1291" target="_blank">data policy</a> och godkänner insamling av min personliga data för marknadsföring.</p>'
+settings:
+  confirmation_title: 'Tack för ditt mejl!'

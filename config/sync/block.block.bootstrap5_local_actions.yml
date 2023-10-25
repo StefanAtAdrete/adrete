@@ -1,0 +1,20 @@
+uuid: 6abff8bb-4c30-4ba8-bc49-78907bb6444f
+langcode: sv
+status: true
+dependencies:
+  theme:
+    - bootstrap5
+_core:
+  default_config_hash: MBqG1B5mr5-fPSCDyTR6z2zVTRxZ10XeS_pAw6C7za4
+id: bootstrap5_local_actions
+theme: bootstrap5
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primära administratörsåtgärder'
+  label_display: '0'
+  provider: core
+visibility: {  }

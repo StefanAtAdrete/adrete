@@ -1,0 +1,148 @@
+_core:
+  default_config_hash: CXhei_vpaZk-3f_Mj2cH0YmpK-ZpKHoSzVA3yZrDq0g
+langcode: sv
+definitions:
+  contact__site_page:
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__24':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__13':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__10':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__18':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__23':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__8':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__14':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__11':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__9':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__7':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__17':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__19':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__15':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__22':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__16':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__20':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__21':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__12':
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  standard__front_page:
+    menu_name: main
+    parent: ''
+    weight: -50
+    expanded: false
+    enabled: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__25':
+    menu_name: main
+    parent: ''
+    weight: -49
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__386':
+    menu_name: main
+    parent: ''
+    weight: -48
+    expanded: false
+    enabled: true
+  user__page:
+    menu_name: account
+    parent: ''
+    weight: -10
+    expanded: false
+    enabled: true
+  user__logout:
+    menu_name: account
+    parent: ''
+    weight: 10
+    expanded: false
+    enabled: true

@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Two column template for the checkout form.
+ *
+ * Available variables:
+ * - form: The form.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="layout-checkout-form clearfix container mb-5">
+	<div class="layout-region layout-region-checkout-main">
+		{{ form|without('sidebar', 'actions') }}
+	</div>
+	<div class="layout-region layout-region-checkout-secondary mt-4 p-4 rounded-1 bg-secondary-subtle">
+		<h3>{% trans %}
+			Order summary
+			{% endtrans %}</h3>
+		{{ form.sidebar }}
+	</div>
+	<div class="layout-region layout-region-checkout-footer">
+		{{ form.actions }}
+	</div>
+</div>

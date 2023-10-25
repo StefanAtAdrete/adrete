@@ -1,0 +1,70 @@
+uuid: b14f306c-b5a8-4ca6-8d26-a872220c2602
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news_feed.body
+    - field.field.node.news_feed.feeds_item
+    - field.field.node.news_feed.field_date
+    - field.field.node.news_feed.field_guid
+    - field.field.node.news_feed.field_image
+    - field.field.node.news_feed.field_links
+    - field.field.node.news_feed.field_media
+    - field.field.node.news_feed.field_tags
+    - image.style.medium
+    - node.type.news_feed
+  module:
+    - svg_image
+    - text
+    - user
+id: node.news_feed.teaser
+targetEntityType: node
+bundle: news_feed
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  feeds_item: true
+  field_date: true
+  field_guid: true
+  field_links: true
+  field_media: true
+  langcode: true
+  published_at: true

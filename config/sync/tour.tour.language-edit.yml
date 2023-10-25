@@ -1,0 +1,48 @@
+uuid: 0c79b5af-5fed-4964-85fc-813c49a5d81b
+langcode: sv
+status: true
+dependencies:
+  module:
+    - language
+_core:
+  default_config_hash: gjYvYwMqulNsq7VmScWKOqEUxar9AX0TvG8vfCCguUQ
+id: language-edit
+label: 'Redigerar språk'
+module: language
+routes:
+  -
+    route_name: entity.configurable_language.edit_form
+tips:
+  language-edit-overview:
+    id: language-edit-overview
+    plugin: text
+    label: 'Redigerar språk'
+    weight: 1
+    body: '<p>Denna sida tillhandahåller möjligheten att redigera språk på din webbplats, inklusive anpassade språk.</p>'
+  language-edit-langcode:
+    id: language-edit-langcode
+    plugin: text
+    label: Språkkod
+    weight: 2
+    selector: '#edit-langcode-view'
+    body: '<p>Du kan inte ändra koden för ett språk på webbplatsen eftersom det används av systemet för att hålla reda på språket.</p>'
+  language-edit-label:
+    id: language-edit-label
+    plugin: text
+    label: 'Namn på språk'
+    weight: 3
+    selector: '#edit-label'
+    body: '<p>Språknamnet används på hela webbplatsen för alla användare och är skrivet på engelska. Namn på inbyggda språk kan översättas med hjälp av modulen Interface Translation och namnen på både inbyggda och anpassade språk kan översättas med hjälp av modulen Configuration Translation.</p>'
+  language-edit-direction:
+    id: language-edit-direction
+    plugin: text
+    label: 'Riktning på språk'
+    weight: 4
+    selector: '#edit-direction--wrapper--description'
+    body: '<p>Välj om språket är ett språk som läses "Vänster till höger" eller "Höger till vänster".</p><p>Observera att inte alla teman stöder layouter för "Höger till vänster" så testa ditt tema om du använder "Höger till vänster".</p>'
+  language-edit-continue:
+    id: language-edit-continue
+    plugin: text
+    label: 'Fortsätter på'
+    weight: 5
+    body: '<p>Nu när du har en översikt över funktionen "Redigera språk" kan du fortsätta genom att:<ul><li>Redigera ett språk</li><li><a href="[site:url]admin/config/regional/language">Visa konfigurerade språk</a></li></ul></p>'

@@ -1,0 +1,24 @@
+uuid: 756e4aba-5269-41f1-9441-c31334900f33
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.services
+    - field.storage.commerce_product_variation.field_variation_text
+    - filter.format.full_html
+  module:
+    - text
+id: commerce_product_variation.services.field_variation_text
+field_name: field_variation_text
+entity_type: commerce_product_variation
+bundle: services
+label: 'Variation text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

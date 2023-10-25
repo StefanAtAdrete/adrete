@@ -1,0 +1,30 @@
+label: Aktivitet
+display:
+  default:
+    display_title: Huvud
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Applicera
+          reset_button_label: Återställ
+          exposed_sorts_label: 'Sortera efter'
+          sort_asc_label: Stigande
+          sort_desc_label: Fallande
+      fields:
+        created:
+          label: Datum
+          separator: ', '
+        rendered_entity:
+          label: Meddelande
+        uid:
+          label: Användare
+          separator: ', '
+      arguments:
+        source_entity_id:
+          exception:
+            title: Alla
+        source_entity_type:
+          exception:
+            title: Alla
+  block_1:
+    display_title: Block

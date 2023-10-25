@@ -1,0 +1,28 @@
+uuid: dfa9d4db-d502-486b-8961-73e182bcfbd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.services
+    - field.storage.commerce_product.field_other_products
+id: commerce_product.services.field_other_products
+field_name: field_other_products
+entity_type: commerce_product
+bundle: services
+label: 'Other products'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      services: services
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

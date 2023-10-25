@@ -1,0 +1,19 @@
+uuid: 7936c35e-1c68-4a44-aa5f-aa147091bccf
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - fontawesome
+id: commerce_product.field_font_awsome_icon
+field_name: field_font_awsome_icon
+entity_type: commerce_product
+type: fontawesome_icon
+settings: {  }
+module: fontawesome
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

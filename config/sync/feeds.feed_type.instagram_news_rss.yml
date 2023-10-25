@@ -1,0 +1,138 @@
+uuid: a3457240-cfd1-4578-a8e2-40d0ca79a2dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news_feed.body
+    - field.field.node.news_feed.field_guid
+    - field.field.node.news_feed.field_image
+    - field.field.node.news_feed.field_links
+    - field.field.node.news_feed.field_tags
+    - node.type.news_feed
+  module:
+    - feeds_log
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+  feeds_tamper:
+    tampers:
+      273b6773-ae56-429a-a93f-a376a7140894:
+        find: '/<div>.*<\/div>/'
+        replace: ' '
+        limit: 1
+        uuid: 273b6773-ae56-429a-a93f-a376a7140894
+        plugin: find_replace_regex
+        source: content
+        weight: 0
+        label: 'Find replace REGEX'
+      e69d6711-02da-4c96-97bc-f16884ee869e:
+        text: Instagram
+        uuid: e69d6711-02da-4c96-97bc-f16884ee869e
+        plugin: rewrite
+        source: 'parent:title'
+        weight: 0
+        label: Rewrite
+      c4662b99-5805-48d9-b50e-5310e724d23f:
+        text: 'http://adrete.lndo.site/themes/custom/b5subtheme/instagram.png'
+        uuid: c4662b99-5805-48d9-b50e-5310e724d23f
+        plugin: rewrite
+        source: mediarss_thumbnail
+        weight: 0
+        label: 'Rewrite standard Instagram image'
+label: 'Instagram news RSS'
+id: instagram_news_rss
+description: 'Meta about feed'
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: true
+  fallback_hub: ''
+  request_timeout: 90
+parser: syndication
+parser_configuration: {  }
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: news_feed
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: 31536000
+  owner_feed_author: false
+  owner_id: 0
+custom_sources: {  }
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique:
+      value: 1
+  -
+    target: body
+    map:
+      value: content
+      summary: feed_description
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_links
+    map:
+      uri: url
+      title: url
+    settings:
+      language: null
+  -
+    target: field_guid
+    map:
+      uri: guid
+      title: feed_title
+    settings:
+      language: null
+  -
+    target: field_image
+    map:
+      target_id: mediarss_thumbnail
+      alt: title
+      title: title
+    settings:
+      language: ''
+      reference_by: fid
+      autocreate: 0
+      existing: '2'
+      autocreate_bundle: false
+  -
+    target: field_tags
+    map:
+      target_id: 'parent:title'
+    settings:
+      language: en
+      reference_by: name
+      autocreate: 1
+      autocreate_bundle: tags

@@ -1,0 +1,18 @@
+uuid: f980ec6b-b99c-4fa4-bef3-12b5211e1dfa
+langcode: sv
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+id: commerce_product.default.changed
+field_name: changed
+entity_type: commerce_product
+bundle: default
+label: Ändrad
+description: 'The time when the product was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

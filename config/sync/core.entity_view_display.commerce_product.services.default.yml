@@ -1,0 +1,524 @@
+uuid: 2e644684-1612-4787-be37-7ce3d858143b
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.services
+    - field.field.commerce_product.services.body
+    - field.field.commerce_product.services.field_font_awsome_icon
+    - field.field.commerce_product.services.field_hero_image
+    - field.field.commerce_product.services.field_other_products
+    - field.field.commerce_product.services.field_part_of_hero_carousell
+    - field.field.commerce_product.services.field_product_media
+    - field.field.commerce_product.services.field_term
+    - field.field.commerce_product_variation.services.field_variation_text
+    - webform.webform.product_contact
+  module:
+    - bootstrap_layout_builder
+    - commerce_product
+    - layout_builder
+    - text
+    - webform
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'bootstrap_layout_builder:blb_col_1'
+        layout_settings:
+          label: ''
+          container_wrapper_classes: ''
+          container_wrapper_attributes: null
+          container_wrapper:
+            bootstrap_styles:
+              background:
+                background_type: null
+              background_color:
+                class: null
+              background_media:
+                image:
+                  media_id: null
+                video:
+                  media_id: null
+                background_options:
+                  background_position: center
+                  background_repeat: no-repeat
+                  background_attachment: not_fixed
+                  background_size: cover
+              text_color:
+                class: null
+              padding:
+                class: _none
+              padding_left:
+                class: _none
+              padding_top:
+                class: _none
+              padding_right:
+                class: _none
+              padding_bottom:
+                class: _none
+              margin:
+                class: _none
+              margin_left:
+                class: _none
+              margin_top:
+                class: _none
+              margin_right:
+                class: _none
+              margin_bottom:
+                class: _none
+              border:
+                border_style:
+                  class: null
+                border_width:
+                  class: _none
+                border_color:
+                  class: null
+                rounded_corners:
+                  class: _none
+                border_left_style:
+                  class: null
+                border_left_width:
+                  class: _none
+                border_left_color:
+                  class: null
+                border_top_style:
+                  class: null
+                border_top_width:
+                  class: _none
+                border_top_color:
+                  class: null
+                border_right_style:
+                  class: null
+                border_right_width:
+                  class: _none
+                border_right_color:
+                  class: null
+                border_bottom_style:
+                  class: null
+                border_bottom_width:
+                  class: _none
+                border_bottom_color:
+                  class: null
+                rounded_corner_top_left:
+                  class: _none
+                rounded_corner_top_right:
+                  class: _none
+                rounded_corner_bottom_left:
+                  class: _none
+                rounded_corner_bottom_right:
+                  class: _none
+              scroll_effects:
+                class: null
+              text_alignment:
+                class: null
+              box_shadow:
+                class: null
+          container_wrapper_bg_color_class: ''
+          container_wrapper_bg_media: null
+          container: container
+          section_classes: ''
+          section_attributes: null
+          regions_classes:
+            blb_region_col_1: ''
+          regions_attributes:
+            blb_region_col_1: null
+          breakpoints: {  }
+          layout_regions_classes: {  }
+          remove_gutters: '0'
+          context_mapping: {  }
+        components:
+          81e27926-54fc-4c0c-a46c-988983c5fade:
+            uuid: 81e27926-54fc-4c0c-a46c-988983c5fade
+            region: blb_region_col_1
+            configuration:
+              id: 'field_block:commerce_product:services:title'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: h1
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+        third_party_settings: {  }
+      -
+        layout_id: 'bootstrap_layout_builder:blb_col_2'
+        layout_settings:
+          label: ''
+          container_wrapper_classes: ''
+          container_wrapper_attributes: null
+          container_wrapper:
+            bootstrap_styles:
+              background:
+                background_type: null
+              background_color:
+                class: null
+              background_media:
+                image:
+                  media_id: null
+                video:
+                  media_id: null
+                background_options:
+                  background_position: center
+                  background_repeat: no-repeat
+                  background_attachment: not_fixed
+                  background_size: cover
+              text_color:
+                class: null
+              padding:
+                class: _none
+              padding_left:
+                class: _none
+              padding_top:
+                class: _none
+              padding_right:
+                class: _none
+              padding_bottom:
+                class: _none
+              margin:
+                class: _none
+              margin_left:
+                class: _none
+              margin_top:
+                class: _none
+              margin_right:
+                class: _none
+              margin_bottom:
+                class: _none
+              border:
+                border_style:
+                  class: null
+                border_width:
+                  class: _none
+                border_color:
+                  class: null
+                rounded_corners:
+                  class: _none
+                border_left_style:
+                  class: null
+                border_left_width:
+                  class: _none
+                border_left_color:
+                  class: null
+                border_top_style:
+                  class: null
+                border_top_width:
+                  class: _none
+                border_top_color:
+                  class: null
+                border_right_style:
+                  class: null
+                border_right_width:
+                  class: _none
+                border_right_color:
+                  class: null
+                border_bottom_style:
+                  class: null
+                border_bottom_width:
+                  class: _none
+                border_bottom_color:
+                  class: null
+                rounded_corner_top_left:
+                  class: _none
+                rounded_corner_top_right:
+                  class: _none
+                rounded_corner_bottom_left:
+                  class: _none
+                rounded_corner_bottom_right:
+                  class: _none
+              scroll_effects:
+                class: null
+              text_alignment:
+                class: null
+              box_shadow:
+                class: null
+          container_wrapper_bg_color_class: ''
+          container_wrapper_bg_media: null
+          container: container
+          section_classes: ''
+          section_attributes: null
+          regions_classes:
+            blb_region_col_1: ''
+            blb_region_col_2: ''
+          regions_attributes:
+            blb_region_col_1: null
+            blb_region_col_2: null
+          breakpoints:
+            desktop: blb_col_6_6
+            tablet: blb_col_6_6
+            mobile: blb_col_12
+          layout_regions_classes:
+            blb_region_col_1:
+              - col-lg-6
+              - col-md-6
+              - col-12
+            blb_region_col_2:
+              - col-lg-6
+              - col-md-6
+              - col-12
+          remove_gutters: '0'
+          context_mapping: {  }
+        components:
+          628fc874-c15e-4975-acf7-caf206807c53:
+            uuid: 628fc874-c15e-4975-acf7-caf206807c53
+            region: blb_region_col_1
+            configuration:
+              id: 'field_block:commerce_product:services:field_product_media'
+              label: 'Product media'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: responsive_adrete
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                margin_bottom_4: margin_bottom_4
+                second_column_misc: 0
+          865cdfa6-ca0c-4a46-b1a7-9c9142746111:
+            uuid: 865cdfa6-ca0c-4a46-b1a7-9c9142746111
+            region: blb_region_col_2
+            configuration:
+              id: 'field_block:commerce_product:services:variations'
+              label: Variations
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: commerce_add_to_cart
+                label: hidden
+                settings:
+                  combine: false
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                margin_bottom_4: margin_bottom_4
+                second_column_misc: 0
+          20e776c4-3ad8-4ae9-b5c2-bffc24284902:
+            uuid: 20e776c4-3ad8-4ae9-b5c2-bffc24284902
+            region: blb_region_col_2
+            configuration:
+              id: 'field_block:commerce_product:services:field_other_products'
+              label: 'Other products'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 9
+            additional:
+              layout_builder_styles_style:
+                second_column_misc: second_column_misc
+          a3d14af6-1003-43f3-9ebe-766ca3d38396:
+            uuid: a3d14af6-1003-43f3-9ebe-766ca3d38396
+            region: blb_region_col_2
+            configuration:
+              id: 'field_block:commerce_product_variation:services:field_variation_text'
+              label: 'Variation text'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@commerce_product.product_variation_route_context:commerce_product_variation'
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          7ac16693-5077-4e21-890c-e6cdc1b09cb9:
+            uuid: 7ac16693-5077-4e21-890c-e6cdc1b09cb9
+            region: blb_region_col_2
+            configuration:
+              id: 'field_block:commerce_product:services:field_font_awsome_icon'
+              label: 'Font Awsome Icon'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: fontawesome_icon_formatter
+                label: hidden
+                settings:
+                  layers: false
+                third_party_settings: {  }
+            weight: 10
+            additional:
+              layout_builder_styles_style:
+                second_column_misc: second_column_misc
+                margin_bottom_4: 0
+          2c9a2eb5-ee4f-4c03-9ebf-7de2fe15a4b4:
+            uuid: 2c9a2eb5-ee4f-4c03-9ebf-7de2fe15a4b4
+            region: blb_region_col_1
+            configuration:
+              id: 'field_block:commerce_product:services:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          508f8a0b-cafd-42c4-8932-ea71ffcb2c6f:
+            uuid: 508f8a0b-cafd-42c4-8932-ea71ffcb2c6f
+            region: blb_region_col_2
+            configuration:
+              id: 'field_block:commerce_product:services:variations'
+              label: Variations
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: commerce_product_attributes_overview
+                label: above
+                settings:
+                  attributes: {  }
+                  view_mode: add_to_cart
+                third_party_settings: {  }
+            weight: 11
+            additional:
+              layout_builder_styles_style:
+                margin_bottom_4: 0
+                second_column_misc: 0
+          685200be-d437-4925-b897-007d51e7f102:
+            uuid: 685200be-d437-4925-b897-007d51e7f102
+            region: blb_region_col_2
+            configuration:
+              id: webform_block
+              label: Webform
+              label_display: '0'
+              provider: webform
+              context_mapping: {  }
+              webform_id: product_contact
+              default_data: ''
+              redirect: false
+              lazy: false
+            weight: 12
+            additional:
+              layout_builder_styles_style:
+                margin_bottom_4: margin_bottom_4
+                second_column_misc: second_column_misc
+                hero_title: 0
+          5ece966f-3277-46b7-91bf-ecba4d718820:
+            uuid: 5ece966f-3277-46b7-91bf-ecba4d718820
+            region: blb_region_col_2
+            configuration:
+              id: 'field_block:commerce_product_variation:services:price'
+              label: Pris
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@commerce_product.product_variation_route_context:commerce_product_variation'
+                view_mode: view_mode
+              formatter:
+                type: commerce_price_default
+                label: inline
+                settings:
+                  strip_trailing_zeroes: false
+                  currency_display: symbol
+                third_party_settings: {  }
+            weight: 6
+            additional:
+              layout_builder_styles_style:
+                margin_bottom_4: margin_bottom_4
+                hero_title: 0
+                second_column_misc: 0
+        third_party_settings: {  }
+id: commerce_product.services.default
+targetEntityType: commerce_product
+bundle: services
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_other_products:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_product_media:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  add_to_cart_link: true
+  created: true
+  field_font_awsome_icon: true
+  field_hero_image: true
+  field_part_of_hero_carousell: true
+  field_term: true
+  langcode: true
+  stores: true
+  uid: true

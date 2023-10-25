@@ -1,0 +1,23 @@
+uuid: f2f5fe4c-9d77-4adc-82ac-ef15e73fb389
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_cropped_1200_
+label: 'Hero cropped 1200+'
+effects:
+  3fe632cc-ff87-44b3-ac66-40570202f1c1:
+    uuid: 3fe632cc-ff87-44b3-ac66-40570202f1c1
+    id: focal_point_scale_and_crop
+    weight: -8
+    data:
+      width: 1200
+      height: 300
+      crop_type: focal_point
+  aa0ab42a-c387-4311-bdd6-278f32b07842:
+    uuid: aa0ab42a-c387-4311-bdd6-278f32b07842
+    id: image_convert
+    weight: -7
+    data:
+      extension: webp

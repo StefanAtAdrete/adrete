@@ -1,0 +1,16 @@
+uuid: 52fc482f-7563-4da5-90a6-997a4d8dd2d6
+langcode: sv
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: WRpxpwYpfcO_i0so7BV4QXxXlbPiSVppYmAV6DAz4c0
+id: sex
+label: Kön
+category: Demographic
+likert: false
+options: |
+  Male: Male
+  Female: Female

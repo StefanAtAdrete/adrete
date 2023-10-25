@@ -1,0 +1,22 @@
+uuid: 15c4eff4-cc02-4954-bbd9-eeb9a98fff5a
+langcode: sv
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - b5subtheme
+_core:
+  default_config_hash: 9_NqR6dIAo-kjTURrM5eAWQG7YEY0sYKOp1sfzBWXvs
+id: b5subtheme_content
+theme: b5subtheme
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Huvudsakligt sidinnehåll'
+  label_display: '0'
+  provider: system
+visibility: {  }

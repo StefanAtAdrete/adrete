@@ -1,0 +1,29 @@
+uuid: f88bff87-5bf3-4653-8631-8fe7c6c21075
+langcode: sv
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - language
+  theme:
+    - b5subtheme
+id: b5subtheme_varukorg
+theme: b5subtheme
+region: usernav
+weight: -4
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Varukorg
+  label_display: '0'
+  provider: commerce_cart
+  dropdown: true
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      sv: sv
