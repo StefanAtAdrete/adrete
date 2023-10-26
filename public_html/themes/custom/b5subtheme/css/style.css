@@ -57,7 +57,7 @@ li.breadcrumb-item {
 /* Hero fixes */
 .block-field-blockcommerce-productservicestitle a {
   text-decoration: none;
-  color: #636363;
+  color: #ffffff;
 }
 
 .flex-control-nav {
@@ -261,10 +261,11 @@ article.contextual-region.node.node--type-article.node--view-mode-teaser h2.card
   float: left;
 }
 
-/* Add to cart form 
+/*  Add to cart form */
 input.button--add-to-cart {
-    display: none;
-}*/
+  display: none;
+}
+
 /*.cart.cart-form {
     margin-left: auto;
     margin-right: auto;
