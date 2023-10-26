@@ -2,3 +2,7 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+  js:
+    js/facebook-pixel.js: {}
+    js/google-pixel.js: {}
+    js/youai.js: {}
