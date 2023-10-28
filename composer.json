@@ -55,6 +55,7 @@
         "drupal/hal": "^2.0",
         "drupal/honeypot": "^2.1",
         "drupal/image_effects": "^3.4",
+        "drupal/image_url_formatter": "^1.1",
         "drupal/jsonapi_extras": "^3.23",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/language_switcher_langcode": "^2.1",

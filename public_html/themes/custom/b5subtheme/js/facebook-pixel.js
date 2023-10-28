@@ -1,6 +1,6 @@
 (function() {
   // Här byter du ut 'DITT_FACEBOOK_PIXEL_ID' mot ditt Facebook-pixel-ID
-  var pixelId = '779812272921115';
+  var pixelId = '427673074694017';
   
   // Här lägger du till Facebook-pixelkoden
   !function(f,b,e,v,n,t,s)
