@@ -47,11 +47,8 @@ li.breadcrumb-item {
   color: #a6a6a6;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
-  float: left;
-  padding-right: var(--bs-breadcrumb-item-padding-x);
-  color: rgba(202, 202, 202, 0.75);
-  content: var(--bs-breadcrumb-divider, ">");
+.breadcrumb li:before {
+  content: " »";
 }
 
 /* Hero fixes */
