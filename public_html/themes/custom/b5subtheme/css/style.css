@@ -5098,7 +5098,7 @@ textarea.form-control-lg {
   float: left;
   padding-right: var(--bs-breadcrumb-item-padding-x);
   color: var(--bs-breadcrumb-divider-color);
-  content: var(--bs-breadcrumb-divider, ">") /* rtl: var(--bs-breadcrumb-divider, ">") */;
+  content: var(--bs-breadcrumb-divider, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E")) /* rtl: var(--bs-breadcrumb-divider, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E")) */;
 }
 .breadcrumb-item.active, .media-library-view--widget .view-header a.breadcrumb-item.is-active {
   color: var(--bs-breadcrumb-item-active-color);
