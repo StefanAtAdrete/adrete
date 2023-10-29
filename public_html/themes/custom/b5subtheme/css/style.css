@@ -47,17 +47,6 @@ li.breadcrumb-item {
   color: #a6a6a6;
 }
 
-.breadcrumb li:before {
-  content: "»";
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-  float: left;
-  padding-right: var(--bs-breadcrumb-item-padding-x);
-  color: var(--bs-breadcrumb-divider-color);
-  content: var(--bs-breadcrumb-divider, "»");
-}
-
 /* Hero fixes */
 .block-field-blockcommerce-productservicestitle a {
   text-decoration: none;
@@ -5109,7 +5098,7 @@ textarea.form-control-lg {
   float: left;
   padding-right: var(--bs-breadcrumb-item-padding-x);
   color: var(--bs-breadcrumb-divider-color);
-  content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+  content: var(--bs-breadcrumb-divider, ">") /* rtl: var(--bs-breadcrumb-divider, ">") */;
 }
 .breadcrumb-item.active, .media-library-view--widget .view-header a.breadcrumb-item.is-active {
   color: var(--bs-breadcrumb-item-active-color);
