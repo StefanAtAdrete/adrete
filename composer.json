@@ -52,6 +52,7 @@
         "drupal/focal_point": "^2.0",
         "drupal/fontawesome": "^2.26",
         "drupal/fontawesome_menu_icons": "^2.0",
+        "drupal/google_analytics": "^4.0",
         "drupal/google_tag": "^2.0",
         "drupal/hal": "^2.0",
         "drupal/honeypot": "^2.1",
