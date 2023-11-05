@@ -171,7 +171,7 @@ button.find-more-button.eu-cookie-compliance-more-button.find-more-button-proces
 button.eu-cookie-withdraw-tab {
     border-radius: 0 0 5px 5px;
     border: 0;
-    background: #ccc;
+    background: #222222;
 }
 
 div#popup-text h2 {
@@ -296,6 +296,10 @@ input.button--add-to-cart {
 
 /* Article */
 
+.h5.p-2.block.block-layout-builder.block-field-blocknodearticletitle a {
+    text-decoration: none;
+    color: #333;
+}
 
 
 figure.caption {
@@ -350,7 +354,7 @@ video {
 
 .card-title a {
     text-decoration: none;
-    color: #6C757D;
+    color: #3d3d3d;
 }
 
 
