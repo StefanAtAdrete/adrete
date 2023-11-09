@@ -5,7 +5,7 @@ package: OpenAI
 core_version_requirement: ^10
 configure: openai.api_settings
 
-# Information added by Drupal.org packaging script on 2023-06-16
-version: '1.0.0-alpha14'
+# Information added by Drupal.org packaging script on 2023-11-04
+version: '1.0.0-alpha15'
 project: 'openai'
-datestamp: 1686928730
+datestamp: 1699127500
