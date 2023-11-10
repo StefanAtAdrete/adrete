@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61077c91e2a11dfb55c00ecf9cd68c1d",
+    "content-hash": "60a02239894ab5c821ce07de19f70584",
     "packages": [
         {
             "name": "arthurkushman/query-path",
@@ -2684,6 +2684,50 @@
             ],
             "support": {
                 "source": "https://git.drupalcode.org/project/bootstrap_styles"
+            }
+        },
+        {
+            "name": "drupal/calendar_view",
+            "version": "2.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/calendar_view.git",
+                "reference": "2.1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/calendar_view-2.1.6.zip",
+                "reference": "2.1.6",
+                "shasum": "e963bff89219093fb2700abea120409e3fe86605"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.6",
+                    "datestamp": "1695962399",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "matthieuscarset",
+                    "homepage": "https://www.drupal.org/user/3471281"
+                }
+            ],
+            "description": "Display entities in a filterable calendar View",
+            "homepage": "https://www.drupal.org/project/calendar_view",
+            "support": {
+                "source": "https://git.drupalcode.org/project/calendar_view"
             }
         },
         {

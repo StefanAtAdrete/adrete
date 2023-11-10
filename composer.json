@@ -29,6 +29,7 @@
         "drupal/bootstrap_barrio": "^5.5",
         "drupal/bootstrap_layout_builder": "^2.1",
         "drupal/bootstrap_styles": "^1.1",
+        "drupal/calendar_view": "^2.1",
         "drupal/ckeditor": "^1.0",
         "drupal/colorbox": "^2.0",
         "drupal/commerce": "^2.33",
