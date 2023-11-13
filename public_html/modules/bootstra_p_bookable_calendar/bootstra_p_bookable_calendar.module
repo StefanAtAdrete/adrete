@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for bootstra�p bookable calendar module.
+ */
+
+/**
+ * Implements hook_form_FORM_ID_alter() for Bookable Calendar form.
+ */
+function bootstra_p_bookable_calendar_form_booking_contact_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    // Check if it's the correct form
+    if ($form_id == 'booking_contact_add_form') {
+      // Add a new class to the form
+      $form['#attributes']['class'][] = 'container';
+    }
+  }
+  
+  

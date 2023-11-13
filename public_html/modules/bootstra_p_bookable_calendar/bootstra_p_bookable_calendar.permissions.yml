@@ -1,0 +1,4 @@
+administer bootstra_p_bookable_calendar configuration:
+  title: 'Administer bootstra_p_bookable_calendar configuration'
+  description: 'Optional description.'
+  restrict access: true

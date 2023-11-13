@@ -1,0 +1,5 @@
+name: bootstrap bookable calendar
+type: module
+description: Add Bootstrap classes
+package: Bookable calendar
+core_version_requirement: ^9 || ^10

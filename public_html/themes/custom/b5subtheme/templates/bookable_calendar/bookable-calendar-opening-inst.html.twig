@@ -14,11 +14,8 @@
  */
 #}
 {{ attach_library('bookable_calendar/default') }}
-<div{{ attributes.addClass('bookable-calendar-opening-instance') }}
-  data-opening-instance="{{ bookable_calendar_opening_inst_id }}"
-  data-max-party-size="{{ bookable_calendar_max_party_size }}"
-  data-slots-as-parties="{{ bookable_calendar_slots_as_parties }}">
-  {% if content %}
-    {{- content -}}
-  {% endif %}
+<div{{attributes.addClass('bookable-calendar-opening-instance')}} data-opening-instance="{{ bookable_calendar_opening_inst_id }}" data-max-party-size="{{ bookable_calendar_max_party_size }}" data-slots-as-parties="{{ bookable_calendar_slots_as_parties }}">
+	{% if content %}
+		{{- content -}}
+	{% endif %}
 </div>
