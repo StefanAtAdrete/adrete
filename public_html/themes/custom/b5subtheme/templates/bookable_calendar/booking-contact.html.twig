@@ -14,8 +14,8 @@
  * @see template_preprocess_booking_contact()
  */
 #}
-<article{{ attributes }}>
-  {% if content %}
-    {{- content -}}
-  {% endif %}
+<article{{attributes}}>
+	{% if content %}
+		<div class="container mt-1 mb-5">{{- content -}}</div>
+	{% endif %}
 </article>
