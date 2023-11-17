@@ -33,6 +33,7 @@
 *.ppt
 *.pptx
 *.swp
+*.DS_Store
 
 
 # Ignore paths that may contain user-generated content
