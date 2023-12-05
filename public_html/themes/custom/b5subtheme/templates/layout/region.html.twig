@@ -23,3 +23,8 @@
 		{{ content }}
 	</div>
 {% endif %}
+{% if footer %}
+	<div{{attributes.addClass(classes)}}>
+		<div class="row">{{ footer }}</div>
+	</div>
+{% endif %}

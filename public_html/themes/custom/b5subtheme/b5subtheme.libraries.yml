@@ -5,4 +5,4 @@ global-styling:
   js:
     js/facebook-pixel.js: {}
     js/google-pixel.js: {}
-    js/youai.js: {}
+    js/popperbot.js: {}

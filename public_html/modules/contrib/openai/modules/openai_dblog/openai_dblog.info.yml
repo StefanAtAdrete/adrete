@@ -1,4 +1,4 @@
-name: OpenAI Log Analyzer
+name: OpenAI Error Log Analyzer
 type: module
 description: Attempts to provide a possible explanation for logs captured in Drupal.
 package: OpenAI
@@ -8,7 +8,7 @@ dependencies:
   - dblog
   - openai:openai
 
-# Information added by Drupal.org packaging script on 2023-11-04
-version: '1.0.0-alpha15'
+# Information added by Drupal.org packaging script on 2023-11-20
+version: '1.0.0-beta2'
 project: 'openai'
-datestamp: 1699127500
+datestamp: 1700488332

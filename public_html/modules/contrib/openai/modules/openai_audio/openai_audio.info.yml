@@ -1,4 +1,4 @@
-name: OpenAI Audio
+name: OpenAI Speech to Text
 type: module
 description: Adds capability to interact with the OpenAI audio (speech to text) endpoints.
 package: OpenAI
@@ -7,7 +7,7 @@ configure: openai_audio.audio_form
 dependencies:
   - openai:openai
 
-# Information added by Drupal.org packaging script on 2023-11-04
-version: '1.0.0-alpha15'
+# Information added by Drupal.org packaging script on 2023-11-20
+version: '1.0.0-beta2'
 project: 'openai'
-datestamp: 1699127500
+datestamp: 1700488332

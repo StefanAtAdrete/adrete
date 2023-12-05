@@ -1,13 +1,13 @@
-name: OpenAI Embeddings
+name: OpenAI Text Embeddings
 type: module
-description: Examines content and generates vectors to calculate relationships between strings.
+description: Examines content and generates vectors to calculate relationships between strings and integrates with different vector backends (Pinecone, Milvus, Weaviate etc).
 package: OpenAI
 core_version_requirement: ^10
 configure: openai_embeddings.settings
 dependencies:
   - openai:openai
 
-# Information added by Drupal.org packaging script on 2023-11-04
-version: '1.0.0-alpha15'
+# Information added by Drupal.org packaging script on 2023-11-20
+version: '1.0.0-beta2'
 project: 'openai'
-datestamp: 1699127500
+datestamp: 1700488332

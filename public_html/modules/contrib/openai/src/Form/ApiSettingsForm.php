@@ -33,14 +33,14 @@ class ApiSettingsForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('API Key'),
       '#default_value' => $this->config('openai.settings')->get('api_key'),
-      '#description' => $this->t('The API key is required to interface with OpenAI services. Get your API key by signing up on the <a href="@link" target="_blank">OpenAI website</a>.', ['@link' => 'https://openai.com/api']),
+      '#description' => $this->t('The API key is required to interface with OpenAI services. Get your API key by signing up on the <a href="@link" target="_blank">OpenAI website</a>.', [':link' => 'https://openai.com/api']),
     ];
 
     $form['api_org'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Organization name/ID'),
+      '#title' => $this->t('Organization ID'),
       '#default_value' => $this->config('openai.settings')->get('api_org'),
-      '#description' => $this->t('The organization name or ID on your OpenAI account. This is required for some OpenAI services to work correctly.'),
+      '#description' => $this->t('The organization ID on your OpenAI account. This is required for some OpenAI services to work correctly.'),
     ];
 
     return parent::buildForm($form, $form_state);

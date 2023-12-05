@@ -69,14 +69,17 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
       '#type' => 'select',
       '#title' => $this->t('Model'),
       '#options' => [
+        'gpt-4-1106-preview' => 'gpt-4-1106-preview',
+        'gpt-4-vision-preview' => 'gpt-4-vision-preview',
         'gpt-4' => 'gpt-4',
         'gpt-4-32k' => 'gpt-4-32k',
+        'gpt-3.5-turbo-1106' => 'gpt-3.5-turbo-1106',
         'gpt-3.5-turbo' => 'gpt-3.5-turbo',
         'gpt-3.5-turbo-16k' => 'gpt-3.5-turbo-16k',
         'gpt-3.5-turbo-0301' => 'gpt-3.5-turbo-0301',
       ],
       '#default_value' => 'gpt-3.5-turbo',
-      '#description' => $this->t('Select which model to use to generate text. See the <a href="@link">model overview</a> for details about each model.', ['@link' => 'https://platform.openai.com/docs/models']),
+      '#description' => $this->t('Select which model to use to generate text. See the <a href=":link">model overview</a> for details about each model.', [':link' => 'https://platform.openai.com/docs/models']),
     ];
 
     $form['gpt']['system'] = [
@@ -101,10 +104,9 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
       '#type' => 'number',
       '#title' => $this->t('Max tokens'),
       '#min' => 128,
-      '#max' => 32768,
       '#step' => 1,
       '#default_value' => '512',
-      '#description' => $this->t('The maximum number of tokens to generate in the response. The token count of your prompt plus max_tokens cannot exceed the model\'s context length. Most models have a context length of 4096 tokens (except for the newest GPT-4 models, which can support up to 32768). Note that requesting to generate too many nodes or having a high token count can take much longer.'),
+      '#description' => $this->t('The maximum number of tokens to generate in the response. The token count of your prompt plus max_tokens cannot exceed the model\'s context length.'),
     ];
 
     $form['gpt']['html'] = [
