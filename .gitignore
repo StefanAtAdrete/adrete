@@ -9,7 +9,7 @@
 /public_html/sites/*/services.yml
 /public_html/sites/*/settings.local.php
 /public_html/sites/*/settings.testing.php
-DS_Store
+
 
 # Drupal 9 files to ignore
 *.log
