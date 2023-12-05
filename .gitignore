@@ -3,7 +3,7 @@
 /public_html/modules/contrib/
 /public_html/themes/contrib/
 /public_html/profiles/contrib/
-/public_html/libraries/
+# /public_html/libraries/
 /public_html/sites/*/files/
 /public_html/sites/*/settings.php
 /public_html/sites/*/services.yml
