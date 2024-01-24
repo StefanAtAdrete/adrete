@@ -4,13 +4,10 @@ declare(strict_types=1);
 
 namespace Drupal\openai_embeddings\Form;
 
-use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Entity\ContentEntityType;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Form\SubformState;
-use Drupal\Core\Plugin\PluginFormInterface;
-use Drupal\openai_embeddings\VectorClientPluginBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -51,7 +48,7 @@ class SettingsForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'openai_embeddings.settings'
+      'openai_embeddings.settings',
     ];
   }
 
@@ -82,7 +79,10 @@ class SettingsForm extends ConfigFormBase {
       '#type' => 'fieldset',
       '#tree' => TRUE,
       '#title' => $this->t('Enable analysis of these entities and their bundles'),
-      '#description' => $this->t('Select which bundles of these entity types to generate embeddings from. Note that more content that you analyze will use more of your API usage. Check your <a href=":link">OpenAI account</a> for usage and billing details.', [':link' => 'https://platform.openai.com/account/usage']),
+      '#description' => $this->t('Select which bundles of these entity types to generate embeddings from, or alternatively use the <a href=":search_api_ai_link">Search API AI</a> module. Note that more content that you analyze will use more of your API usage. Check your <a href=":openai_link">OpenAI account</a> for usage and billing details.', [
+        ':search_api_ai_link' => 'https://www.drupal.org/project/search_api_ai',
+        ':openai_link' => 'https://platform.openai.com/account/usage',
+      ]),
     ];
 
     foreach ($entity_types as $entity_type => $entity_label) {
@@ -120,7 +120,7 @@ class SettingsForm extends ConfigFormBase {
       '#type' => 'select',
       '#title' => $this->t('Model to use'),
       '#options' => [
-        'text-embedding-ada-002' => 'text-embedding-ada-002',
+        'text-embedding-ada-002' => $this->t('text-embedding-ada-002'),
       ],
       '#default_value' => $this->config('openai_embeddings.settings')->get('model'),
       '#description' => $this->t('Select which model to use to analyze text. See the <a href=":link">model overview</a> for details about each model.', [':link' => 'https://platform.openai.com/docs/guides/embeddings/embedding-models']),
@@ -150,6 +150,10 @@ class SettingsForm extends ConfigFormBase {
     foreach ($this->pluginManager->getDefinitions() as $pid => $plugin) {
       /** @var \Drupal\openai_embeddings\VectorClientPluginBase $plugin */
       $plugin_instance = $this->pluginManager->createInstance($pid);
+      if (!method_exists($plugin_instance, 'buildConfigurationForm')) {
+        continue;
+      }
+
       $form['connections'][$pid] = [
         '#type' => 'details',
         '#title' => $plugin_instance->getPluginDefinition()['label'],
@@ -168,6 +172,24 @@ class SettingsForm extends ConfigFormBase {
     }
 
     return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    parent::validateForm($form, $form_state);
+
+    foreach ($this->pluginManager->getDefinitions() as $pid => $plugin) {
+      /** @var \Drupal\openai_embeddings\VectorClientPluginBase $plugin */
+      $plugin_instance = $this->pluginManager->createInstance($pid);
+      if (!method_exists($plugin_instance, 'validateConfigurationForm')) {
+        continue;
+      }
+      $subform = &$form['connections'][$pid];
+      $subform_state = SubformState::createForSubform($form['connections'][$pid], $form, $form_state);
+      $plugin_instance->validateConfigurationForm($subform, $subform_state);
+    }
   }
 
   /**
@@ -215,9 +237,6 @@ class SettingsForm extends ConfigFormBase {
   protected function getSupportedEntityTypes(): array {
     $entity_types = [];
 
-    /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager */
-    $entity_type_manager = \Drupal::service('entity_type.manager');
-
     $supported_types = [
       'node',
       'media',
@@ -227,8 +246,7 @@ class SettingsForm extends ConfigFormBase {
     ];
 
     // @todo Add an alter hook so custom entities can 'opt-in'
-
-    foreach ($entity_type_manager->getDefinitions() as $entity_name => $definition) {
+    foreach ($this->entityTypeManager->getDefinitions() as $entity_name => $definition) {
       if (!in_array($entity_name, $supported_types)) {
         continue;
       }

@@ -2,21 +2,20 @@
 
 namespace Drupal\openai_embeddings\Plugin\QueueWorker;
 
-use Drupal\Component\Utility\Unicode;
-use Drupal\Core\Annotation\QueueWorker;
+use Drupal\Component\Serialization\Json;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Database\Connection;
+use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityStorageException;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Queue\QueueWorkerBase;
 use Drupal\openai\Utility\StringHelper;
 use Drupal\openai_embeddings\VectorClientPluginManager;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use OpenAI\Client;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\Entity\EntityFieldManagerInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Queue worker for OpenAI Embeddings module.
@@ -155,67 +154,64 @@ final class EmbeddingQueueWorker extends QueueWorkerBase implements ContainerFac
 
               $namespace = '';
               if (!$this->config->get('vector_clients.' . $plugin_id . '.disable_namespace')) {
-                $namespace = $entity->getEntityTypeId() . ':' . $field->getName();
+                $namespace = $entity->getEntityTypeId();
               }
 
               $vectors = [
                 'id' => $this->generateUniqueId($entity, $field->getName(), $delta),
-                'values' => $embeddings["data"][0]["embedding"],
+                'values' => $embeddings['data'][0]['embedding'],
                 'metadata' => [
                   'entity_id' => $entity->id(),
                   'entity_type' => $entity->getEntityTypeId(),
                   'bundle' => $entity->bundle(),
                   'field_name' => $field->getName(),
                   'field_delta' => $delta,
-                ]
+                ],
               ];
 
-              $vector_client_plugin->upsert($vectors, $namespace);
+              $parameters = [
+                'vectors' => $vectors,
+                'collection' => $namespace,
+              ];
+              $vector_client_plugin->upsert($parameters);
 
               $this->database->merge('openai_embeddings')
-                ->keys(
-                  [
-                    'entity_id' => $entity->id(),
-                    'entity_type' => $entity->getEntityTypeId(),
-                    'bundle' => $entity->bundle(),
-                    'field_name' => $field->getName(),
-                    'field_delta' => $delta,
-                  ]
-                )
-                ->fields(
-                  [
-                    'embedding' => json_encode(['data' => $embeddings["data"][0]["embedding"]]) ?? [],
-                    'data' => json_encode(['usage' => $embeddings["usage"]]),
-                  ]
-                )
+                ->keys([
+                  'entity_id' => $entity->id(),
+                  'entity_type' => $entity->getEntityTypeId(),
+                  'bundle' => $entity->bundle(),
+                  'field_name' => $field->getName(),
+                  'field_delta' => $delta,
+                ])
+                ->fields([
+                  'embedding' => Json::encode(['data' => $embeddings['data'][0]['embedding']]) ?? [],
+                  'data' => Json::encode(['usage' => $embeddings['usage']]),
+                ])
                 ->execute();
 
-              // sleep for 1.2 second(s)
+              // Sleep for 1.2 second(s)
               sleep(1);
               usleep(200000);
-            } catch (\Exception $e) {
-              $this->logger->error(
-                'An exception occurred while trying to generate embeddings for a :entity_type with the ID of :entity_id on the :field_name field, with a delta of :field_delta. The bundle of this entity is :bundle. The error was :error',
-                [
-                  ':entity_type' => $entity->getEntityTypeId(),
-                  ':entity_id' => $entity->id(),
-                  ':field_name' => $field->getName(),
-                  ':field_delta' => $delta,
-                  ':bundle' => $entity->bundle(),
-                  ':error' => $e->getMessage(),
-                ]
-              );
+            }
+            catch (\Exception $e) {
+              $this->logger->error('An exception occurred while trying to generate embeddings for a :entity_type with the ID of :entity_id on the :field_name field, with a delta of :field_delta. The bundle of this entity is :bundle. The error was :error', [
+                ':entity_type' => $entity->getEntityTypeId(),
+                ':entity_id' => $entity->id(),
+                ':field_name' => $field->getName(),
+                ':field_delta' => $delta,
+                ':bundle' => $entity->bundle(),
+                ':error' => $e->getMessage(),
+              ]);
             }
           }
         }
       }
-    } catch (EntityStorageException|\Exception $e) {
-      $this->logger->error('Error processing queue item. Queued entity type was :type and has an ID of :id.',
-        [
-          ':type' => $data['entity_type'],
-          ':id' => $data['entity_id']
-        ]
-      );
+    }
+    catch (EntityStorageException | \Exception $e) {
+      $this->logger->error('Error processing queue item. Queued entity type was :type and has an ID of :id.', [
+        ':type' => $data['entity_type'],
+        ':id' => $data['entity_id'],
+      ]);
     }
   }
 
@@ -240,6 +236,7 @@ final class EmbeddingQueueWorker extends QueueWorkerBase implements ContainerFac
    * A list of string/text field types.
    *
    * @return string[]
+   *   An array of field types that are supported.
    */
   protected function getFieldTypes(): array {
     return [
@@ -247,7 +244,7 @@ final class EmbeddingQueueWorker extends QueueWorkerBase implements ContainerFac
       'string_long',
       'text',
       'text_long',
-      'text_with_summary'
+      'text_with_summary',
     ];
   }
 
@@ -265,4 +262,5 @@ final class EmbeddingQueueWorker extends QueueWorkerBase implements ContainerFac
   protected function removeStopWord(string $word, string $text): string {
     return preg_replace("/\b$word\b/i", '', trim($text));
   }
+
 }

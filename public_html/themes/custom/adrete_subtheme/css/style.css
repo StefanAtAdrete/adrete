@@ -1,0 +1,195 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+
+ /* Card */
+ .card-title a {
+  color: #222222;
+  text-decoration: none;
+ }
+
+ .container-fluid {
+    padding: 0;
+ }
+
+ div.node__content.clearfix {
+    padding-top: 0;
+
+ }
+
+
+#navbar-main {
+    background-color: #88a8bc;
+}
+
+path#logo {
+    fill: #00d4f4;
+}
+
+/* NAV stuff */
+
+#CollapsingNavbar li.nav-item {
+    padding: 0 1em;
+}
+
+.offcanvas-body span.link-text {
+    color: #333;
+}
+
+/* Cookie concent banner */
+.eu-cookie-compliance-content {
+    margin: 0 auto;
+    max-width: 80%;
+    display: inline-block;
+    text-align: left;
+    padding: 1rem;
+  }
+  
+  div#sliding-popup {
+    background: #222222;
+    border-radius: 0 0 5px 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  button.decline-button.eu-cookie-compliance-default-button {
+    border: 0;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 5px;
+  }
+  
+  button.agree-button.eu-cookie-compliance-secondary-button {
+    border: 0;
+    margin: 1em;
+    padding: 1em;
+    background: #76cb76;
+    border-radius: 5px;
+  }
+  
+  button.find-more-button.eu-cookie-compliance-more-button.find-more-button-processed {
+    border: 0;
+    padding: 1% 5%;
+    /* margin: 1em; */
+    /* width: 90%; */
+    font-size: 0.8rem;
+    background: #dcdcdc;
+    border-radius: 5px;
+  }
+  
+  button.eu-cookie-withdraw-tab {
+    border-radius: 0 0 5px 5px;
+    border: 0;
+    background: #222222;
+  }
+  
+  div#popup-text h2 {
+    font-size: 1.5rem;
+    margin-top: 1em;
+  }
+  
+  /* Cookie concent banner */
+.eu-cookie-compliance-content {
+    margin: 0 auto;
+    max-width: 80%;
+    display: inline-block;
+    text-align: left;
+    padding: 1rem;
+  }
+  
+  div#sliding-popup {
+    background: #222222;
+    border-radius: 0 0 5px 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  button.decline-button.eu-cookie-compliance-default-button {
+    border: 0;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 5px;
+  }
+  
+  button.agree-button.eu-cookie-compliance-secondary-button {
+    border: 0;
+    margin: 1em;
+    padding: 1em;
+    background: #76cb76;
+    border-radius: 5px;
+  }
+  
+  button.find-more-button.eu-cookie-compliance-more-button.find-more-button-processed {
+    border: 0;
+    padding: 1% 5%;
+    /* margin: 1em; */
+    /* width: 90%; */
+    font-size: 0.8rem;
+    background: #dcdcdc;
+    border-radius: 5px;
+  }
+  
+  button.eu-cookie-withdraw-tab {
+    border-radius: 0 0 5px 5px;
+    border: 0;
+    background: #222222;
+  }
+  
+  div#popup-text h2 {
+    font-size: 1.5rem;
+    margin-top: 1em;
+  }
+
+  /* Hero fixes */
+
+  
+  .flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    z-index: 999;
+  }
+  
+  .flex-control-paging li a.flex-active {
+    background: #ffffff;
+    background: rgb(255 255 255 / 90%);
+    cursor: default;
+  }
+  
+  .flex-control-paging li a {
+    width: 32px;
+    height: 6px;
+    display: block;
+    background: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 20px;
+    border-radius: 0px;
+  }
+  
+  .flexslider {
+    margin: 0 0 0px;
+    background: transparent;
+    border: 0px solid #fff;
+    position: relative;
+    zoom: 1;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: "" 0 0p 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: "" 0 0px 0px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: "" 0 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: "" 0 0px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .flex-direction-nav a {
+    height: 50px;
+}

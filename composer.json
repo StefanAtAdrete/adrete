@@ -20,7 +20,7 @@
         "drupal/addtoany": "^2.0",
         "drupal/admin_toolbar": "^3.3",
         "drupal/amazon_product_widget": "^1.5",
-        "drupal/anchor_link": "^3.0@alpha",
+        "drupal/anchor_link": "^2.6",
         "drupal/back_to_top": "^3.0",
         "drupal/backup_migrate": "^5.0",
         "drupal/better_exposed_filters": "^6.0",
@@ -37,6 +37,7 @@
         "drupal/commerce": "^2.33",
         "drupal/commerce_add_to_cart_link": "^2.0",
         "drupal/commerce_feeds": "^1.0@alpha",
+        "drupal/commerce_pricelist": "^2.8",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
@@ -56,7 +57,7 @@
         "drupal/flexslider": "^3.0@alpha",
         "drupal/focal_point": "^2.0",
         "drupal/fontawesome": "^2.26",
-        "drupal/fontawesome_menu_icons": "^2.0",
+        "drupal/fontawesome_menu_icons": "^3.0",
         "drupal/google_analytics": "^4.0",
         "drupal/google_tag": "^2.0",
         "drupal/hal": "^2.0",
@@ -78,6 +79,8 @@
         "drupal/openai": "^1.0@alpha",
         "drupal/pathauto": "^1.11",
         "drupal/publication_date": "^2.0@beta",
+        "drupal/recaptcha": "^3.2",
+        "drupal/recaptcha_v3": "^2.0",
         "drupal/redirect": "^1.8",
         "drupal/remote_stream_wrapper": "^2.0",
         "drupal/responsive_tables_filter": "^1.17",
@@ -100,7 +103,7 @@
         "drupal/webform_views": "^5.2",
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^1.4",
-        "drush/drush": "^11.5"
+        "drush/drush": "^12"
     },
     "conflict": {
         "drupal/drupal": "*"

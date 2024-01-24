@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's theme implementation for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% set attributes = attributes.addClass('site-branding') %}
+{% if site_logo or site_name %}
+	<a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="navbar-brand">
+		{% if site_logo %}
+			{#<img src="{{ site_logo }}" alt="{{ 'Home'|t }}" class="img-fluid d-inline-block align-top"/> #}
+			<svg xmlns="http://www.w3.org/2000/svg" width="121" height="23" fill="none" class="img-fluid d-inline-block align-top">
+				<path id="logo" fill="#ffffff" d="M107.613 22.146V.5h12.647v1.051h-11.534v8.999h9.679V11.6h-9.679v9.494h11.534v1.051h-12.647ZM85.955 1.551V.5h15.462v1.051h-7.144v20.595H93.16V1.551h-7.205ZM68.398 22.146V.5h12.648v1.051H69.512v8.999h9.678V11.6h-9.678v9.494h11.534v1.051H68.398ZM47.61 13.178v8.968h-1.114V.5h7.762c2.185 0 3.803.495 4.855 1.484 1.051.99 1.577 2.557 1.577 4.7 0 3.65-1.495 5.763-4.484 6.34l4.886 9.122h-1.268L55 13.178h-7.39Zm11.905-6.493c0-1.794-.423-3.093-1.268-3.897-.845-.824-2.175-1.237-3.99-1.237H47.61v10.576h6.649c3.505 0 5.257-1.814 5.257-5.442ZM31.517 22.146h-8.04V.5h8.04c1.32 0 2.453.289 3.401.866a5.929 5.929 0 0 1 2.258 2.412 11.71 11.71 0 0 1 1.206 3.34c.247 1.195.37 2.515.37 3.958s-.133 2.793-.401 4.05a14.18 14.18 0 0 1-1.175 3.526 6.49 6.49 0 0 1-2.258 2.566c-.969.619-2.102.928-3.401.928Zm4.762-4.33c.453-1.01.783-2.071.99-3.184.206-1.134.309-2.433.309-3.896 0-1.464-.176-2.866-.526-4.206-.33-1.36-.969-2.525-1.917-3.494-.949-.99-2.155-1.485-3.618-1.485H24.59v19.544h6.927c1.113 0 2.072-.3 2.876-.897.824-.598 1.453-1.392 1.886-2.381ZM.26 22.146 6.908.5h3.278l6.649 21.646H15.72l-2.01-6.648H3.383l-2.01 6.648H.26ZM7.682 1.551 3.723 14.446h9.648L9.413 1.551H7.682Z"/>
+			</svg>
+		{% endif %}
+		{{ site_name }}
+	</a>
+{% endif %}
+{% if site_slogan %}
+	<div class="d-inline-block align-top site-name-slogan">
+		{{ site_slogan }}
+	</div>
+{% endif %}
