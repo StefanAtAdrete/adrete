@@ -10,7 +10,7 @@ elements: |
     '#title': 'Din e-postadress'
     '#required_error': 'Denna är obligatorisk så att vi kan kontakta dig'
   my_business_social_media_page:
-    '#title': 'Mitt företags sida för kanalen (t.ex LinkedIn)'
+    '#title': 'Mitt företags sida på sociala media (t.ex Meta eller LinkedIn)'
     '#description': '<p>Om du ger oss webbadressen till din Facebook/Meta sida eller LinkedIn kan vi få lite mera information om er verksamhet.</p>'
     '#counter_maximum_message': 'Max 150 tecken '
   gdpr_collection_of_submitted_data:

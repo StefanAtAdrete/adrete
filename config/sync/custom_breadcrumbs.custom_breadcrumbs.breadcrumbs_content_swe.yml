@@ -1,0 +1,15 @@
+uuid: 758c7b43-2540-4beb-a753-556d29f46846
+langcode: sv
+status: true
+dependencies: {  }
+id: breadcrumbs_content_swe
+label: 'Breadcrumbs content Svenska'
+description: ''
+entityType: node
+entityBundle: article
+language: sv
+breadcrumbPaths: '/taxonomy/term/[node:field_tags:0:target_id]'
+breadcrumbTitles: '[node:field_tags:0:entity]'
+type: '1'
+pathPattern: ''
+extraCacheContexts: ''

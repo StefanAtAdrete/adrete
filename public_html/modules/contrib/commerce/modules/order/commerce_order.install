@@ -336,9 +336,11 @@ function commerce_order_update_8217() {
     if (!$field_config) {
       continue;
     }
-    $field_config->setSetting('field_overrides', [
-      AddressField::ADDRESS_LINE3 => ['override' => FieldOverride::HIDDEN],
-    ]);
+    $field_overrides = (array) $field_config->get('field_overrides');
+    $field_overrides[AddressField::ADDRESS_LINE3] = [
+      'override' => FieldOverride::HIDDEN,
+    ];
+    $field_config->setSetting('field_overrides', $field_overrides);
     $field_config->save();
   }
 }

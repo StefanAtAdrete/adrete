@@ -90,3 +90,17 @@ cloneable_entities:
   - entity_view_display
   - entity_view_mode
   - base_field_override
+  - custom_breadcrumbs
+  - google_tag_container
+  - smart_date_format
+  - smart_date_override
+  - smart_date_rule
+  - booking_contact
+  - bookable_calendar
+  - booking
+  - bookable_calendar_opening
+  - bookable_calendar_opening_inst
+  - captcha_point
+  - recaptcha_v3_action
+  - commerce_pricelist
+  - commerce_pricelist_item

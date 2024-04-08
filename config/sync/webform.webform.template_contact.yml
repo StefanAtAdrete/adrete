@@ -143,9 +143,9 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: url_message
-  confirmation_url: '<front>'
+  confirmation_url: /tack-for-kontakt
   confirmation_title: ''
-  confirmation_message: 'Ditt meddelande har skickats.'
+  confirmation_message: '<p>Ditt meddelande har skickats och kommer att behandlas snarast möjligast.</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -278,7 +278,7 @@ handlers:
       cc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
+      from_name: _default
       reply_to: ''
       return_path: ''
       sender_mail: ''

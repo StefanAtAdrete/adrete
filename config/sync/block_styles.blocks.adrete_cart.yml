@@ -1,0 +1,8 @@
+uuid: 5e1e2e22-78a3-4ddc-b828-7d82545a51d3
+langcode: sv
+status: true
+dependencies: {  }
+id: adrete_cart
+theme: ''
+text: ''
+classes: 'badge rounded-pill text-bg-dark'

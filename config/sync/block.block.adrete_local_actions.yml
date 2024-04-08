@@ -1,0 +1,20 @@
+uuid: 5b8831d6-df84-49ea-9cc1-b537d2fd810b
+langcode: sv
+status: true
+dependencies:
+  theme:
+    - adrete
+_core:
+  default_config_hash: CdXfDmRgAvms7EQovxxWPdYi0GitxeRbVtScYK16ZH0
+id: adrete_local_actions
+theme: adrete
+region: breadcrumb
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

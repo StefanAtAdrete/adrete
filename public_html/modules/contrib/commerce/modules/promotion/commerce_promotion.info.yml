@@ -9,7 +9,7 @@ dependencies:
   - commerce:commerce_order
   - drupal:options
 
-# Information added by Drupal.org packaging script on 2023-12-31
-version: '8.x-2.37'
+# Information added by Drupal.org packaging script on 2024-02-05
+version: '8.x-2.38'
 project: 'commerce'
-datestamp: 1704007226
+datestamp: 1707150197

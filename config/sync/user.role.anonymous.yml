@@ -5,11 +5,11 @@ dependencies:
   config:
     - filter.format.restricted_html
   module:
+    - bookable_calendar
     - comment
     - commerce_checkout
     - commerce_product
     - contact
-    - eu_cookie_compliance
     - filter
     - media
     - search
@@ -25,8 +25,15 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
-  - 'display eu cookie compliance popup'
+  - 'create bookable calendar'
+  - 'create bookable calendar opening'
+  - 'create bookable calendar opening instance'
+  - 'create booking'
+  - 'create booking contact'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view bookable calendar'
+  - 'view bookable calendar opening instance'
+  - 'view booking'
   - 'view commerce_product'
   - 'view media'

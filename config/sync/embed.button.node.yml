@@ -2,6 +2,11 @@ uuid: 928ed000-1038-498c-929e-8eeab6f1b44b
 langcode: sv
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - node.type.article
+    - node.type.landingpage
+    - node.type.page
   module:
     - entity_embed
     - node
@@ -12,7 +17,15 @@ id: node
 type_id: entity
 type_settings:
   entity_type: node
-  bundles: {  }
-  display_plugins: {  }
-icon: {  }
+  bundles:
+    - article
+    - page
+    - landingpage
+  display_plugins:
+    - 'view_mode:node.full'
+  entity_browser: ''
+  entity_browser_settings: {  }
+icon:
+  uri: 'public://embed_buttons/entity.svg'
+  data: PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMiAxNlYwSDEyLjk2ODJWMi43ODkwNkg1LjQ0MTQ3VjYuNjAxNTZIMTIuNDAzOVY5LjM5MDYySDUuNDQxNDdWMTMuMjEwOUgxM1YxNkgyWiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==
 icon_uuid: null

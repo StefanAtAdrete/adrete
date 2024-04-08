@@ -5,11 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.media.responsive_adrete
     - field.field.media.image.field_media_image
-    - image.style.1_1_crop
     - media.type.image
+    - responsive_image.styles.1_1_autocrop
   module:
     - layout_builder
-    - svg_image
+    - svg_image_responsive
 third_party_settings:
   layout_builder:
     enabled: false
@@ -22,22 +22,23 @@ bundle: image
 mode: responsive_adrete
 content:
   field_media_image:
-    type: image
-    label: visually_hidden
+    type: responsive_image
+    label: hidden
     settings:
+      responsive_image_style: 1_1_autocrop
       image_link: ''
-      image_style: 1_1_crop
       image_loading:
-        attribute: lazy
+        attribute: eager
       svg_attributes:
         width: null
         height: null
       svg_render_as_image: true
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
   addtoany: true
+  breadcrumbs: true
   created: true
   langcode: true
   name: true

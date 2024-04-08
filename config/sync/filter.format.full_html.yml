@@ -9,14 +9,28 @@ dependencies:
     - core.entity_view_mode.media.token
   module:
     - editor
+    - entity_embed
     - media
     - responsive_tables_filter
+    - url_embed
 _core:
   default_config_hash: HvAE4vD_4-nvhwLobIN3k5rTE9zq9AQG8UScfnwuKQo
 name: 'Fullständig HTML'
 format: full_html
 weight: 2
 filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 11
+    settings: {  }
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: true
+    weight: 100
+    settings: {  }
   filter_align:
     id: filter_align
     provider: filter
@@ -29,6 +43,15 @@ filters:
     status: true
     weight: 9
     settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<i> <p class="mt-3 mb-5 btn btn-primary text-white text-decoration-none">'
+      filter_html_help: true
+      filter_html_nofollow: false
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
@@ -41,29 +64,21 @@ filters:
     status: true
     weight: 15
     settings: {  }
-  editor_file_reference:
-    id: editor_file_reference
-    provider: editor
-    status: true
-    weight: 11
-    settings: {  }
-  filter_html:
-    id: filter_html
-    provider: filter
-    status: false
-    weight: -10
-    settings:
-      allowed_html: '<i>'
-      filter_html_help: true
-      filter_html_nofollow: false
   filter_responsive_tables_filter:
     id: filter_responsive_tables_filter
     provider: responsive_tables_filter
-    status: false
+    status: true
     weight: 0
     settings:
       tablesaw_type: stack
       tablesaw_persist: '1'
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
   media_embed:
     id: media_embed
     provider: media
@@ -78,3 +93,16 @@ filters:
         responsive_adrete: responsive_adrete
         token: token
       allowed_media_types: {  }
+  url_embed:
+    id: url_embed
+    provider: url_embed
+    status: true
+    weight: 0
+    settings: {  }
+  url_embed_convert_links:
+    id: url_embed_convert_links
+    provider: url_embed
+    status: true
+    weight: 0
+    settings:
+      url_prefix: ''

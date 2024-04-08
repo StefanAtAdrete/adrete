@@ -1,0 +1,29 @@
+uuid: 961e79cc-21f0-46d2-a551-9d181ee651e0
+langcode: sv
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.services
+    - field.storage.node.field_products
+    - node.type.landingpage
+id: node.landingpage.field_products
+field_name: field_products
+entity_type: node
+bundle: landingpage
+label: Produkter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      services: services
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

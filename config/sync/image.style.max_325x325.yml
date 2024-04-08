@@ -8,13 +8,19 @@ dependencies:
 _core:
   default_config_hash: HAJh3VFnKZmYvJF2Rsnc2HETYtffmXFcQr2FhVPmnSU
 name: max_325x325
-label: 'Maximalt 325x325'
+label: 'Maximalt 360x360'
 effects:
   cb842cc8-682f-42a6-bd05-5a1ac726f0d8:
     uuid: cb842cc8-682f-42a6-bd05-5a1ac726f0d8
     id: image_scale
     weight: 1
     data:
-      width: 325
-      height: 325
-      upscale: false
+      width: 360
+      height: 360
+      upscale: true
+  f767d820-fa3e-4fa0-bf8f-8a5022f044be:
+    uuid: f767d820-fa3e-4fa0-bf8f-8a5022f044be
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

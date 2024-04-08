@@ -8,6 +8,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
+  anchor_link: 0
   automated_cron: 0
   back_to_top: 0
   backup_migrate: 0
@@ -20,9 +21,13 @@ module:
   block_content: 0
   block_styles: 0
   block_styles_bootstrap: 0
+  bookable_calendar: 0
+  bootstra_p_bookable_calendar: 0
   bootstrap_layout_builder: 0
   bootstrap_styles: 0
   breakpoint: 0
+  calendar_view: 0
+  captcha: 0
   ckeditor5: 0
   colorbox: 0
   comment: 0
@@ -36,6 +41,7 @@ module:
   commerce_order: 0
   commerce_payment: 0
   commerce_price: 0
+  commerce_pricelist: 0
   commerce_product: 0
   commerce_store: 0
   commerce_tax: 0
@@ -44,11 +50,9 @@ module:
   contact: 0
   contextual: 0
   crop: 0
+  custom_breadcrumbs: 0
   datetime: 0
   dblog: 0
-  devel: 0
-  devel_entity_updates: 0
-  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   embed: 0
@@ -77,6 +81,7 @@ module:
   fontawesome_iconpicker_widget: 0
   fontawesome_media: 0
   fontawesome_menu_icons: 0
+  google_analytics: 0
   help: 0
   history: 0
   honeypot: 0
@@ -118,6 +123,8 @@ module:
   path: 0
   path_alias: 0
   profile: 0
+  recaptcha: 0
+  recaptcha_v3: 0
   redirect: 0
   redirect_404: 0
   responsive_image: 0
@@ -133,6 +140,8 @@ module:
   serialization: 0
   settings_tray: 0
   shortcut: 0
+  smart_date: 0
+  smart_date_recur: 0
   state_machine: 0
   statistics: 0
   styles_api: 0
@@ -159,6 +168,7 @@ module:
   views_slideshow_cycle: 0
   views_ui: 0
   webform: 0
+  webform_mautic: 0
   webform_submission_log: 0
   webform_templates: 0
   webform_ui: 0
@@ -174,10 +184,9 @@ module:
   tvi: 15
   publication_date: 99
   standard: 1000
-  eu_cookie_compliance: 1001
 theme:
   claro: 0
   stable9: 0
-  bootstrap5: 0
-  b5subtheme: 0
+  bootstrap_barrio: 0
+  adrete: 0
 profile: standard

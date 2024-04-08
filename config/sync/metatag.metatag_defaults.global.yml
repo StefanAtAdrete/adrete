@@ -8,4 +8,18 @@ id: global
 label: Globalt
 tags:
   canonical_url: '[current-page:url]'
+  facebook_domain_verification: 3rmj9kmznm7sj5gmdl08vvwu1unj2g
+  keywords: 'Artiklar, grafik, bilder, annonsering, GDPR'
+  news_keywords: 'Meta, Google, GDPR, AI, Automation'
+  og_site_name: '[site:name]'
+  og_title: '[current-page:title]'
+  og_type: Page
+  og_url: '[current-page:url]'
+  rights: 'Adrete 2023'
+  schema_web_site_id: '[site:base-url]'
+  schema_web_site_in_language: '[language:name]'
+  schema_web_site_name: '[site:name]'
+  schema_web_site_publisher: 'a:4:{s:5:"@type";s:13:"LocalBusiness";s:3:"@id";s:15:"[site:base-url]";s:4:"name";s:26:"[node:author:display-name]";s:3:"url";s:17:"[node:author:url]";}'
+  schema_web_site_type: WebSite
+  schema_web_site_url: '[site:base-url]'
   title: '[current-page:title] | [site:name]'

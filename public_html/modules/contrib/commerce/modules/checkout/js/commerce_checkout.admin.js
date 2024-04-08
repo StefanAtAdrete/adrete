@@ -18,8 +18,8 @@
     attach: (context) => {
       $(
         once('checkout-pane-overview', 'table#checkout-pane-overview', context),
-      ).each(() => {
-        Drupal.checkoutPaneOverview.attach(this);
+      ).each((index, element) => {
+        Drupal.checkoutPaneOverview.attach(element);
       });
     },
   };
@@ -35,7 +35,7 @@
      * @param {HTMLTableElement} table
      *   The table element for the overview.
      */
-    attach: (table) => {
+    attach(table) {
       const tableDrag = Drupal.tableDrag[table.id];
 
       // Add custom tabledrag callbacks.
@@ -45,7 +45,7 @@
     /**
      * Updates the dropped row (Step dropdown, settings display).
      */
-    onDrop: () => {
+    onDrop() {
       const dragObject = this;
       const $rowElement = $(dragObject.rowObject.element);
       const regionRow = $rowElement.prevAll('tr.region-message').get(0);
@@ -69,11 +69,11 @@
     /**
      * Refreshes placeholder rows in empty regions while a row is being dragged.
      */
-    onSwap: () => {
+    onSwap() {
       const rowObject = this;
       $(rowObject.table)
         .find('tr.region-message')
-        .each(() => {
+        .each(function () {
           const $that = $(this);
           // If the dragged row is in this region, but above the message row, swap
           // it down one space.

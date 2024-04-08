@@ -1,31 +1,30 @@
-uuid: ccfb0641-0df4-4220-84de-0ade7e737f6f
-langcode: en
+uuid: e02ace89-093e-4cd4-bcd5-2a2f3fe7ae49
+langcode: sv
 status: true
 dependencies:
   config:
     - image.style.1_1_crop
-    - image.style.max_650x650
-    - image.style.medium
-    - image.style.wide
+    - image.style.large
+    - image.style.max_325x325
   theme:
-    - b5subtheme
+    - bootstrap_barrio
 id: 1_1_autocrop
 label: '1:1 autocrop'
 image_style_mappings:
   -
     image_mapping_type: image_style
-    image_mapping: wide
-    breakpoint_id: b5subtheme.screen.md-max
-    multiplier: 1x
-  -
-    image_mapping_type: image_style
-    image_mapping: max_650x650
-    breakpoint_id: b5subtheme.screen.sm-max
-    multiplier: 2x
-  -
-    image_mapping_type: image_style
     image_mapping: 1_1_crop
-    breakpoint_id: b5subtheme.screen.xs-max
+    breakpoint_id: bootstrap_barrio.extraextra
     multiplier: 1x
-breakpoint_group: b5subtheme.screen
-fallback_image_style: medium
+  -
+    image_mapping_type: image_style
+    image_mapping: large
+    breakpoint_id: bootstrap_barrio.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: max_325x325
+    breakpoint_id: bootstrap_barrio.small
+    multiplier: 1x
+breakpoint_group: bootstrap_barrio
+fallback_image_style: '_original image_'

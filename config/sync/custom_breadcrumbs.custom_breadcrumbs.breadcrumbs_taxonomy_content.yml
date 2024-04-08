@@ -1,0 +1,15 @@
+uuid: e0dcf675-9680-4710-835b-14bb90c94349
+langcode: sv
+status: true
+dependencies: {  }
+id: breadcrumbs_taxonomy_content
+label: 'Breadcrumbs taxonomy content'
+description: ''
+entityType: taxonomy_term
+entityBundle: tags
+language: sv
+breadcrumbPaths: '/taxonomy/term/[term:url:args]'
+breadcrumbTitles: '[term:name]'
+type: '1'
+pathPattern: ''
+extraCacheContexts: ''

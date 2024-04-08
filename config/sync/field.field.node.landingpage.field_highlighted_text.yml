@@ -1,0 +1,24 @@
+uuid: f033ccbe-6668-4d2b-ac5a-d18215257516
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highlighted_text
+    - filter.format.full_html
+    - node.type.landingpage
+  module:
+    - text
+id: node.landingpage.field_highlighted_text
+field_name: field_highlighted_text
+entity_type: node
+bundle: landingpage
+label: 'Highlighted text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

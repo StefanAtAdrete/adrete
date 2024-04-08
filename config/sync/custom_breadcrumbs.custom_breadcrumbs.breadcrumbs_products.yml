@@ -1,0 +1,15 @@
+uuid: f8489330-6744-4e04-8b0a-9b9da1ec16ff
+langcode: sv
+status: true
+dependencies: {  }
+id: breadcrumbs_products
+label: 'Breadcrumbs products'
+description: ''
+entityType: commerce_product
+entityBundle: services
+language: sv
+breadcrumbPaths: '/taxonomy/term/[commerce_product:field_term:0:target_id]'
+breadcrumbTitles: '[commerce_product:field_term:0:entity]'
+type: '1'
+pathPattern: ''
+extraCacheContexts: ''

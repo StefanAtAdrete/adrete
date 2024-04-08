@@ -298,6 +298,8 @@ class Product extends CommerceContentEntityBase implements ProductInterface {
    * {@inheritdoc}
    */
   public static function postDelete(EntityStorageInterface $storage, array $entities) {
+    parent::postDelete($storage, $entities);
+
     // Delete the product variations of a deleted product.
     $variations = [];
     foreach ($entities as $entity) {

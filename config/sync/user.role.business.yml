@@ -1,0 +1,9 @@
+uuid: e82093ca-780c-467d-a902-4be28764d11d
+langcode: sv
+status: true
+dependencies: {  }
+id: business
+label: Företag
+weight: 4
+is_admin: null
+permissions: {  }

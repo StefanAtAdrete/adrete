@@ -8,4 +8,16 @@ id: front
 label: Startsida
 tags:
   canonical_url: '[site:url]'
+  description: 'Adrete hjälper företag  att driva en effektiv digital plattform genom sökmotor optimerat innehåll, annonsering och mätning som följer GDPR.'
+  keywords: 'GDPR, Content, Meta ads, Google Ads, AI, Automation'
+  og_description: 'Adrete - allt för ditt företags marknadsföring. Innehåll, bilder, grafik och annonser på olika plattformar. Vi skräddarsyr en lösning till er.'
+  og_image: 'https://adrete.se/sites/default/files/styles/max_650x650/public/2023-10/DALL%C2%B7E%202023-10-21%2007.17.04%20-%20A%201720x250%20pixel%20digital%20expanse%20with%20a%20soft%2C%20dreamy%20ambiance%2C%20blending%20nature%27s%20tranquility%20with%20digital%20motifs.%20Trees%20with%20delicate%20color%20tones%20disp.png'
+  og_site_name: '[site:name]'
+  og_title: '[current-page:title]'
+  og_url: '[current-page:url]'
+  schema_web_site_id: '[site:base-url]'
+  schema_web_site_name: '[site:name]'
+  schema_web_site_type: WebSite
+  schema_web_site_url: '[site:url]'
   shortlink: '[site:url]'
+  title: '[site:name]'

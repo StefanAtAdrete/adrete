@@ -4,7 +4,7 @@ description: 'Theme with Bootstrap 5 css library'
 core_version_requirement: ^9.4 || ^10
 'base theme': stable9
 starterkit: true
-generator: 'starterkit_theme:10.1.2'
+generator: 'starterkit_theme:10.2.4'
 
 libraries:
   - bootstrap5/base
@@ -41,7 +41,7 @@ regions:
   sidebar_second: 'Sidebar second'
   footer: Footer
 
-# Information added by Drupal.org packaging script on 2023-09-17
-version: '4.0.0-alpha1'
+# Information added by Drupal.org packaging script on 2024-03-22
+version: '4.0.0-beta1'
 project: 'bootstrap5'
-datestamp: 1694954919
+datestamp: 1711069945

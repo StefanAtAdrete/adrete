@@ -1,0 +1,43 @@
+label: 'Bookable Calendar Opening Instances'
+display:
+  default:
+    display_title: Master
+    display_options:
+      title: 'Bookable Calendar Opening Instances'
+      fields:
+        view_bookable_calendar_opening_inst:
+          label: 'Link to Bookable Calendar Opening Instance'
+          text: view
+        id:
+          label: ID
+          alter:
+            path: '{{ view_bookable_calendar_opening_inst }}'
+          separator: ', '
+        booking_opening:
+          label: 'Booking Opening'
+          separator: ', '
+        date__value:
+          label: Date
+          separator: ', '
+        operations:
+          label: Operations
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+  page_1:
+    display_title: Page

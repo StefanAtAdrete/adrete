@@ -10,5 +10,5 @@ recipients:
   - info@adrete.se
 reply: ''
 weight: 0
-message: 'Ditt meddelande har skickats.'
+message: '<p>Ditt meddelande har skickats och kommer att behandlas snarast möjligast.</p>'
 redirect: ''

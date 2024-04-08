@@ -1,0 +1,100 @@
+label: Bookings
+display:
+  default:
+    display_title: Master
+    display_options:
+      title: Bookings
+      fields:
+        view_booking:
+          label: 'Link to Booking'
+          text: view
+        id:
+          label: ID
+          alter:
+            path: '{{ view_booking }}'
+          separator: ', '
+        email:
+          label: Email
+          separator: ', '
+        booking_calendar:
+          label: 'Booking Calendar'
+          separator: ', '
+        booking_instance:
+          label: 'Booking Instance'
+          separator: ', '
+        created:
+          label: Created
+          separator: ', '
+        booking_date__value:
+          label: 'Booking Date'
+          separator: ', '
+        operations:
+          label: Operations
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      filters:
+        email:
+          expose:
+            label: Email
+        booking_instance:
+          expose:
+            label: 'Booking Instance'
+  admin_route:
+    display_title: 'Admin Report'
+    display_options:
+      fields:
+        view_booking:
+          label: 'Link to Booking'
+          text: view
+        email:
+          label: Email
+          separator: ', '
+        booking_calendar:
+          label: 'Booking Calendar'
+          separator: ', '
+        booking_instance:
+          label: 'Booking Instance'
+          separator: ', '
+        created:
+          label: Created
+          separator: ', '
+        booking_date__value:
+          label: 'Booking Date'
+          separator: ', '
+        party_size:
+          label: 'Party Size'
+          separator: ', '
+        operations:
+          label: Operations
+      arguments:
+        booking_calendar:
+          exception:
+            title: All
+      filters:
+        email:
+          expose:
+            label: Email
+        booking_instance:
+          expose:
+            label: 'Booking Instance'
+        booking_date__value:
+          expose:
+            label: 'Booking Date'
+  page_1:
+    display_title: Page

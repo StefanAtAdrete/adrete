@@ -3,6 +3,7 @@ langcode: sv
 status: true
 dependencies:
   config:
+    - block_content.type.basic
     - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
@@ -13,6 +14,7 @@ dependencies:
     - field.field.node.article.field_tags
     - image.style.wide
     - node.type.article
+    - webform.webform.product_contact
   module:
     - bootstrap_layout_builder
     - comment
@@ -21,13 +23,14 @@ dependencies:
     - svg_image
     - text
     - user
+    - webform
 third_party_settings:
   layout_builder:
     enabled: true
     allow_custom: false
     sections:
       -
-        layout_id: 'bootstrap_layout_builder:blb_col_2'
+        layout_id: 'bootstrap_layout_builder:blb_col_1'
         layout_settings:
           label: ''
           container_wrapper_classes: ''
@@ -35,7 +38,7 @@ third_party_settings:
           container_wrapper:
             bootstrap_styles:
               background:
-                background_type: color
+                background_type: null
               background_color:
                 class: null
               background_media:
@@ -43,6 +46,151 @@ third_party_settings:
                   media_id: null
                 video:
                   media_id: null
+                background_options:
+                  background_position: center
+                  background_repeat: no-repeat
+                  background_attachment: not_fixed
+                  background_size: cover
+              text_color:
+                class: null
+              padding:
+                class: _none
+              padding_left:
+                class: _none
+              padding_top:
+                class: _none
+              padding_right:
+                class: _none
+              padding_bottom:
+                class: _none
+              margin:
+                class: _none
+              margin_left:
+                class: _none
+              margin_top:
+                class: _none
+              margin_right:
+                class: _none
+              margin_bottom:
+                class: _none
+              border:
+                border_style:
+                  class: null
+                border_width:
+                  class: _none
+                border_color:
+                  class: null
+                rounded_corners:
+                  class: _none
+                border_left_style:
+                  class: null
+                border_left_width:
+                  class: _none
+                border_left_color:
+                  class: null
+                border_top_style:
+                  class: null
+                border_top_width:
+                  class: _none
+                border_top_color:
+                  class: null
+                border_right_style:
+                  class: null
+                border_right_width:
+                  class: _none
+                border_right_color:
+                  class: null
+                border_bottom_style:
+                  class: null
+                border_bottom_width:
+                  class: _none
+                border_bottom_color:
+                  class: null
+                rounded_corner_top_left:
+                  class: _none
+                rounded_corner_top_right:
+                  class: _none
+                rounded_corner_bottom_left:
+                  class: _none
+                rounded_corner_bottom_right:
+                  class: _none
+              scroll_effects:
+                class: null
+              text_alignment:
+                class: null
+              box_shadow:
+                class: null
+          container_wrapper_bg_color_class: ''
+          container_wrapper_bg_media: null
+          container: container
+          section_classes: ''
+          section_attributes: null
+          regions_classes:
+            blb_region_col_1: ''
+          regions_attributes:
+            blb_region_col_1: null
+          breakpoints: {  }
+          layout_regions_classes: {  }
+          remove_gutters: '0'
+          context_mapping: {  }
+        components:
+          a83d881a-f9d9-4af8-9e82-948ff916bfa0:
+            uuid: a83d881a-f9d9-4af8-9e82-948ff916bfa0
+            region: blb_region_col_1
+            configuration:
+              id: 'field_block:node:article:title'
+              label: Titel
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                hero_title: 0
+                margin_bottom_4: 0
+                second_column_misc: 0
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: h1
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+        third_party_settings: {  }
+      -
+        layout_id: 'bootstrap_layout_builder:blb_col_2'
+        layout_settings:
+          label: ''
+          container_wrapper_classes: mt-5
+          container_wrapper_attributes: null
+          container_wrapper:
+            bootstrap_styles:
+              background:
+                background_type: video
+              background_color:
+                class: null
+              background_media:
+                image:
+                  media_id: ''
+                video:
+                  media_id: ''
                 background_options:
                   background_position: center
                   background_repeat: no-repeat
@@ -158,7 +306,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 1
+            weight: 3
             additional: {  }
           9ce9985f-5bff-4b8c-a0af-e17685c6cbcd:
             uuid: 9ce9985f-5bff-4b8c-a0af-e17685c6cbcd
@@ -168,7 +316,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-            weight: 3
+            weight: 5
             additional: {  }
           1d114ba0-a9de-469f-ad5d-678f7f7fe067:
             uuid: 1d114ba0-a9de-469f-ad5d-678f7f7fe067
@@ -178,7 +326,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-            weight: 2
+            weight: 4
             additional: {  }
           3a2b694c-8c8b-4bd5-8548-b5f26596ec52:
             uuid: 3a2b694c-8c8b-4bd5-8548-b5f26596ec52
@@ -194,7 +342,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 0
+            weight: 2
             additional: {  }
           3e1e8481-33ee-4959-8872-2f6257df4d54:
             uuid: 3e1e8481-33ee-4959-8872-2f6257df4d54
@@ -216,18 +364,61 @@ third_party_settings:
             region: blb_region_col_1
             configuration:
               id: 'field_block:node:article:field_media'
+              label: Media
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: entity_reference_entity_view
-                label: above
+                label: hidden
                 settings:
-                  view_mode: default
-                  link: false
+                  view_mode: responsive_adrete
                 third_party_settings: {  }
             weight: 0
-            additional: {  }
+            additional:
+              layout_builder_styles_style:
+                hero_title: 0
+                margin_bottom_4: 0
+                second_column_misc: 0
+          529056c8-a4d7-44b7-b165-b46b94904e7a:
+            uuid: 529056c8-a4d7-44b7-b165-b46b94904e7a
+            region: blb_region_col_2
+            configuration:
+              id: webform_block
+              label: 'Vill du ha innehåll och nyheter till din sajt?'
+              label_display: '0'
+              provider: webform
+              context_mapping: {  }
+              webform_id: product_contact
+              default_data: ''
+              redirect: false
+              lazy: false
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                second_column_misc: second_column_misc
+                hero_title: 0
+                margin_bottom_4: 0
+          441f21c8-8abf-4272-9cd4-62e83dc99e8e:
+            uuid: 441f21c8-8abf-4272-9cd4-62e83dc99e8e
+            region: blb_region_col_2
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Vill du ha innehåll och nyheter till din sajt?'
+              label_display: visible
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 4
+              block_serialized: null
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                hero_title: 0
+                margin_bottom_4: 0
+                second_column_misc: 0
         third_party_settings: {  }
 _core:
   default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
@@ -306,5 +497,6 @@ content:
     weight: 100
     region: content
 hidden:
+  breadcrumbs: true
   langcode: true
   published_at: true

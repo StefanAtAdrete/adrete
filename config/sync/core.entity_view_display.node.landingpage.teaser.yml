@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landingpage.body
+    - field.field.node.landingpage.field_highlighted_text
+    - field.field.node.landingpage.field_media
+    - field.field.node.landingpage.field_more_articles
+    - field.field.node.landingpage.field_products
     - field.field.node.landingpage.layout_builder__layout
     - node.type.landingpage
   module:
@@ -30,6 +34,11 @@ content:
     region: content
 hidden:
   addtoany: true
+  breadcrumbs: true
+  field_highlighted_text: true
+  field_media: true
+  field_more_articles: true
+  field_products: true
   langcode: true
   layout_builder__layout: true
   published_at: true

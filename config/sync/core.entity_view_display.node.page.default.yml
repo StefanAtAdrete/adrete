@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_highlighted_text
     - field.field.node.page.field_media
+    - field.field.node.page.layout_builder__layout
     - node.type.page
     - webform.webform.contact
   module:
@@ -17,7 +18,7 @@ dependencies:
 third_party_settings:
   layout_builder:
     enabled: true
-    allow_custom: false
+    allow_custom: true
     sections:
       -
         layout_id: 'bootstrap_layout_builder:blb_col_1'
@@ -368,9 +369,9 @@ third_party_settings:
             weight: 4
             additional:
               layout_builder_styles_style:
+                second_column_misc: second_column_misc
                 hero_title: 0
                 margin_bottom_4: 0
-                second_column_misc: 0
           97d5a263-3f8c-4cc2-8508-ef5ee3772b90:
             uuid: 97d5a263-3f8c-4cc2-8508-ef5ee3772b90
             region: blb_region_col_1
@@ -446,6 +447,8 @@ content:
     weight: 101
     region: content
 hidden:
+  breadcrumbs: true
   field_media: true
   langcode: true
+  layout_builder__layout: true
   published_at: true

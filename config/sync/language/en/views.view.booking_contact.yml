@@ -1,0 +1,146 @@
+label: 'Booking Contact'
+display:
+  default:
+    display_title: Master
+    display_options:
+      title: 'Booking Contact'
+      fields:
+        view_booking_contact:
+          label: 'Link to Booking Contact'
+          text: view
+        id:
+          label: ID
+          alter:
+            path: '{{ view_booking_contact }}'
+          separator: ', '
+        email:
+          label: Email
+          separator: ', '
+        party_size:
+          label: 'Party Size'
+          separator: ', '
+        booking_instance:
+          label: 'Booking Instance'
+          separator: ', '
+        operations:
+          label: Operations
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      filters:
+        email:
+          expose:
+            label: Email
+        party_size:
+          expose:
+            label: 'Party Size'
+  attachment_1:
+    display_title: 'Past Bookings'
+    display_options:
+      title: 'Your Past Bookings'
+      fields:
+        view_booking_contact:
+          label: 'Link to Booking Contact'
+          text: view
+        id:
+          label: ID
+          alter:
+            path: '{{ view_booking_contact }}'
+          separator: ', '
+        party_size:
+          label: 'Party Size'
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          label: 'Link to Bookable Calendar Opening Instance'
+          text: view
+        date:
+          label: Date
+          alter:
+            path: '{{ view_bookable_calendar_opening_inst }}'
+          separator: ', '
+        operations:
+          label: Operations
+      arguments:
+        uid:
+          exception:
+            title: All
+      header:
+        area:
+          content:
+            value: '<h2>Your Past Bookings</h2>'
+  page_1:
+    display_title: Page
+    display_options:
+      fields:
+        view_booking_contact:
+          label: 'Link to Booking Contact'
+          text: view
+        id:
+          label: ID
+          alter:
+            path: '{{ view_booking_contact }}'
+          separator: ', '
+        email:
+          label: Email
+          separator: ', '
+        party_size:
+          label: 'Party Size'
+          separator: ', '
+        booking_instance:
+          label: 'Booking Instance'
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: view
+        date:
+          label: 'Booking Date'
+          alter:
+            path: '{{ view_bookable_calendar_opening_inst }}'
+          separator: ', '
+        operations:
+          label: Operations
+  user_bookings:
+    display_title: 'User Bookings'
+    display_options:
+      title: 'Your Bookings'
+      fields:
+        view_booking_contact:
+          label: 'Link to Booking Contact'
+          text: view
+        id:
+          label: ID
+          alter:
+            path: '{{ view_booking_contact }}'
+          separator: ', '
+        party_size:
+          label: 'Party Size'
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: view
+        date:
+          label: Date
+          alter:
+            path: '{{ view_bookable_calendar_opening_inst }}'
+          separator: ', '
+        operations:
+          label: Operations
+      arguments:
+        uid:
+          exception:
+            title: All
+      menu:
+        title: 'Your Bookings'

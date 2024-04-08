@@ -1,0 +1,30 @@
+uuid: 4c710ae7-7a16-4072-9a24-17617e7a382b
+langcode: sv
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - adrete
+  enforced:
+    config:
+      - search.page.help_search
+id: adrete_help_search
+theme: adrete
+region: footer_fifth
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search help'
+  label_display: visible
+  provider: search
+  page_id: help_search
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /admin/help

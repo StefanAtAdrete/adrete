@@ -1,0 +1,22 @@
+uuid: baf5238d-2da7-455a-ba53-6996ad1191db
+langcode: sv
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - adrete
+_core:
+  default_config_hash: jccFSSVqV0WCDb6NtML1VWAWTtDbZ-zn5YgTRMgMrIM
+id: adrete_help
+theme: adrete
+region: breadcrumb
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

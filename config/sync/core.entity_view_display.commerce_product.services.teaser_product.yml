@@ -12,6 +12,7 @@ dependencies:
     - field.field.commerce_product.services.field_part_of_hero_carousell
     - field.field.commerce_product.services.field_product_media
     - field.field.commerce_product.services.field_term
+    - field.field.commerce_product.services.field_webform
   module:
     - bootstrap_layout_builder
     - commerce_product
@@ -26,7 +27,7 @@ third_party_settings:
         layout_id: 'bootstrap_layout_builder:blb_col_1'
         layout_settings:
           label: 'Card teaser'
-          container_wrapper_classes: 'card border-0'
+          container_wrapper_classes: 'card border-0 p-0'
           container_wrapper_attributes: null
           container_wrapper:
             bootstrap_styles:
@@ -119,7 +120,7 @@ third_party_settings:
           section_classes: ''
           section_attributes: null
           regions_classes:
-            blb_region_col_1: ''
+            blb_region_col_1: h-100
           regions_attributes:
             blb_region_col_1: null
           breakpoints: {  }
@@ -232,6 +233,10 @@ third_party_settings:
                   class: ''
                   style: ''
                   data: ''
+              layout_builder_styles_style:
+                hero_title: 0
+                margin_bottom_4: 0
+                second_column_misc: 0
         third_party_settings: {  }
 id: commerce_product.services.teaser_product
 targetEntityType: commerce_product
@@ -271,12 +276,14 @@ content:
     region: content
 hidden:
   add_to_cart_link: true
+  breadcrumbs: true
   created: true
   field_font_awsome_icon: true
   field_hero_image: true
   field_other_products: true
   field_part_of_hero_carousell: true
   field_product_media: true
+  field_webform: true
   langcode: true
   stores: true
   uid: true

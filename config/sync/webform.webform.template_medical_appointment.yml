@@ -315,7 +315,7 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: page
-  confirmation_url: '<front>'
+  confirmation_url: /tack-for-kontakt
   confirmation_title: 'Thank You'
   confirmation_message: 'Your request has been sent. A care specialist will call you back within XX hours to schedule an appointment.'
   confirmation_attributes: {  }
@@ -413,7 +413,7 @@ handlers:
       cc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
+      from_name: _default
       reply_to: ''
       return_path: ''
       sender_mail: ''

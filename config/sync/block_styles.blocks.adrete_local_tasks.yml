@@ -1,0 +1,8 @@
+uuid: c194438f-36ca-460d-8962-7ed8e3587d7d
+langcode: sv
+status: true
+dependencies: {  }
+id: adrete_local_tasks
+theme: ''
+text: ''
+classes: container

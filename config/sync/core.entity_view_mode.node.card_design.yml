@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.card_design
 label: 'Card design'
+description: ''
 targetEntityType: node
 cache: true

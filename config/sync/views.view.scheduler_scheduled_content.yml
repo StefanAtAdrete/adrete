@@ -7,6 +7,7 @@ dependencies:
   module:
     - node
     - scheduler
+    - smart_date
     - user
 _core:
   default_config_hash: uZN6cIt2dD4FwsmAOJePjdGDOLwx9TjvixvVXEetc9k
@@ -1086,7 +1087,6 @@ display:
           default_argument_type: fixed
           default_argument_options:
             argument: ''
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true

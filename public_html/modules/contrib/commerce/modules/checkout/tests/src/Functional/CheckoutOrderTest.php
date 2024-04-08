@@ -282,10 +282,10 @@ class CheckoutOrderTest extends CommerceBrowserTestBase {
 
     $this->drupalLogout();
     $this->drupalGet('/fr/product/' . $this->product->id());
-    $this->submitForm([], 'Add to cart');
+    $this->submitForm([], (string) $this->t('Add to cart'));
     $cart_link = $this->getSession()->getPage()->findLink('your cart');
     $cart_link->click();
-    $this->submitForm([], 'Checkout');
+    $this->submitForm([], (string) $this->t('Checkout'));
     $this->assertSession()->pageTextContains('New Customer');
     $this->submitForm([
       'login[register][name]' => 'User name',

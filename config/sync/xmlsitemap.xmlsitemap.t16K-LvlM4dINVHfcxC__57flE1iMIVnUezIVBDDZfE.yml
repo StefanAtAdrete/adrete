@@ -1,0 +1,8 @@
+uuid: 6d9027b9-f498-45d8-b840-1f042bac5b0c
+langcode: sv
+status: true
+dependencies: {  }
+id: t16K-LvlM4dINVHfcxC__57flE1iMIVnUezIVBDDZfE
+label: 'Adrete Svenska'
+context:
+  language: sv

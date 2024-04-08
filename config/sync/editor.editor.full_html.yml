@@ -13,10 +13,10 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - style
       - bold
       - italic
       - underline
-      - specialCharacters
       - alignment
       - strikethrough
       - superscript
@@ -41,6 +41,7 @@ settings:
       - '|'
       - sourceEditing
       - code
+      - specialCharacters
   plugins:
     ckeditor5_alignment:
       enabled_alignments:
@@ -102,11 +103,18 @@ settings:
     ckeditor5_imageResize:
       allow_resize: true
     ckeditor5_list:
-      reversed: true
-      startIndex: true
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags:
         - '<i>'
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Link Button primary'
+          element: '<p class="mt-3 mb-5 btn btn-primary text-white text-decoration-none">'
     media_media:
       allow_view_mode_override: true
 image_upload:

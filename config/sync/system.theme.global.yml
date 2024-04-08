@@ -12,6 +12,6 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: themes/custom/b5subtheme/adrete_logo2023.svg
-  url: ''
+  path: themes/custom/adrete/ADRETE.svg
+  url: null
   use_default: false

@@ -1,5 +1,5 @@
-uuid: f0519b8e-08b4-4fd1-a2a0-c7980e6bed5d
-langcode: en
+uuid: e9fb131f-9b53-490d-94aa-0744c39941a6
+langcode: sv
 status: true
 dependencies:
   config:
@@ -7,19 +7,19 @@ dependencies:
     - image.style.hero_xs_portrait
     - image.style.medium
   theme:
-    - b5subtheme
+    - bootstrap_barrio
 id: hero_responsive
 label: 'Hero responsive'
 image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: hero_cropped_1200_
-    breakpoint_id: b5subtheme.screen.xl-min
+    breakpoint_id: bootstrap_barrio.extra
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: hero_xs_portrait
-    breakpoint_id: b5subtheme.screen.xs-max
+    breakpoint_id: bootstrap_barrio.small
     multiplier: 1x
-breakpoint_group: b5subtheme.screen
+breakpoint_group: bootstrap_barrio
 fallback_image_style: medium

@@ -3,12 +3,13 @@ _core:
 langcode: sv
 uuid: b78a12a3-f828-4545-acff-ef517fcbb36d
 name: Adrete
-mail: info@adrete.se
+mail: stefan@adrete.se
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/1290
+  front: /node/1324
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: sv
+mail_notification: ''

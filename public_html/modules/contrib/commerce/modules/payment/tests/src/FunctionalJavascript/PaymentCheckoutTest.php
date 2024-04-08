@@ -774,7 +774,6 @@ class PaymentCheckoutTest extends CommerceWebDriverTestBase {
     $this->createScreenshot('../checkout_3.png');
     $radio_button = $this->getSession()->getPage()->findField('Visa ending in 1111');
     $radio_button->click();
-    $this->assertSession()->assertWaitOnAjaxRequest();
     $this->submitForm([], 'Continue to review');
     $this->submitForm([], 'Pay and complete purchase');
     $this->assertSession()->pageTextContains('Your order number is 2. You can view your order on your account page when logged in.');

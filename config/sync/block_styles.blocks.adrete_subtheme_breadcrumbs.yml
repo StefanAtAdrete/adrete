@@ -1,0 +1,8 @@
+uuid: 136e02c1-4e8c-4394-bc4d-adf38f9d937a
+langcode: sv
+status: true
+dependencies: {  }
+id: adrete_subtheme_breadcrumbs
+theme: ''
+text: ''
+classes: container

@@ -1,0 +1,22 @@
+uuid: 6ad20e27-e9e1-499f-ab08-f9e95c4a9f6f
+langcode: sv
+status: true
+dependencies:
+  theme:
+    - adrete
+_core:
+  default_config_hash: ACjBZI5shAMiiUpsz-inLYVXDqNNXRnSzAWV3kV_8Hw
+id: adrete_primary_local_tasks
+theme: adrete
+region: breadcrumb
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

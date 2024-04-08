@@ -1,0 +1,37 @@
+uuid: 2fbc35ee-b146-4321-8c4e-0de75cbd0833
+langcode: sv
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: content_url_alias
+label: 'Content URL alias'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  cc0c6e49-abbe-4d43-a8f4-e2d9abc37745:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: cc0c6e49-abbe-4d43-a8f4-e2d9abc37745
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+      landingpage: landingpage
+      news_feed: news_feed
+      page: page
+  102d6ef5-0e5d-4aed-b038-e3beacde558c:
+    id: language
+    negate: false
+    uuid: 102d6ef5-0e5d-4aed-b038-e3beacde558c
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      sv: sv
+      en: en
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Språk

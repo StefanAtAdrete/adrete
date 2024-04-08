@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_more_articles
     - node.type.article
+    - node.type.landingpage
 id: node.article.field_more_articles
 field_name: field_more_articles
 entity_type: node
@@ -20,9 +21,10 @@ settings:
   handler_settings:
     target_bundles:
       article: article
+      landingpage: landingpage
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: article
 field_type: entity_reference

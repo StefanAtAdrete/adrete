@@ -1,0 +1,8 @@
+uuid: 903d9bdc-424a-4650-96a3-dc94e6bb5f2f
+langcode: sv
+status: true
+dependencies: {  }
+id: adrete_subtheme_huvudmeny
+theme: ''
+text: ''
+classes: fw-light

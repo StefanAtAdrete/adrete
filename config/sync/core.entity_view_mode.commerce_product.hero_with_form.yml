@@ -1,0 +1,11 @@
+uuid: eca7fecb-2438-4802-83ae-0dfbdad319d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.hero_with_form
+label: 'Hero with form'
+description: ''
+targetEntityType: commerce_product
+cache: true

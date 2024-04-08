@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
     - node.type.landingpage
   module:
     - text
@@ -12,7 +15,7 @@ field_name: body
 entity_type: node
 bundle: landingpage
 label: Body
-description: ''
+description: "VSL - Video Sales Letter\r\nNiche Specific Headline/Hook\r\nSocial Proof/ Case-Study\r\nIdentification (Who is this for?)\r\nBackground Story/Credibility (Who are you?)\r\nCore Concept (What is this?)\r\nOption 1 or Option 2\r\nBenefits\r\nFeatures (How it works?)\r\nCall To Action\r\nUrgency/Scarcity\r\nBonus\r\nGuarantee\r\nSummary\r\nCall To Action"
 required: false
 translatable: true
 default_value: {  }
@@ -20,5 +23,8 @@ default_value_callback: ''
 settings:
   display_summary: true
   required_summary: false
-  allowed_formats: {  }
+  allowed_formats:
+    - basic_html
+    - restricted_html
+    - full_html
 field_type: text_with_summary

@@ -6,7 +6,7 @@ menu_link_icons:
     icon: fa-pencil-square-o
     prefix: fa
     tag: i
-    appearance: before
+    appearance: after
   user_page:
     icon: fa-user-circle
     prefix: fa
@@ -17,3 +17,13 @@ menu_link_icons:
     prefix: fa
     tag: i
     appearance: before
+  'taxonomy_menu_menu_link:taxonomy_menu_menu_link_services_386':
+    icon: fa-bullhorn
+    prefix: fa
+    tag: i
+    appearance: after
+  'taxonomy_menu_menu_link:taxonomy_menu_menu_link_services_387':
+    icon: fa-cogs
+    prefix: fa
+    tag: i
+    appearance: after

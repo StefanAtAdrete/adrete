@@ -1,0 +1,8 @@
+uuid: 37f651c9-9be8-4ddb-9653-dea8c084782c
+langcode: sv
+status: true
+dependencies: {  }
+id: adrete_varukorg
+theme: ''
+text: ''
+classes: 'badge rounded-pill text-bg-dark'

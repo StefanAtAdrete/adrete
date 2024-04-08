@@ -123,26 +123,32 @@ definitions:
     expanded: false
     enabled: false
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__25':
-    menu_name: main
-    parent: ''
-    weight: -49
-    expanded: false
-    enabled: true
-  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__386':
-    menu_name: main
     parent: ''
     weight: -48
     expanded: false
     enabled: true
+    menu_name: main
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__386':
+    parent: ''
+    weight: -49
+    expanded: false
+    enabled: true
+    menu_name: main
   user__page:
     menu_name: account
     parent: ''
-    weight: -10
-    expanded: false
+    weight: -50
+    expanded: true
     enabled: true
   user__logout:
-    menu_name: account
+    weight: -49
     parent: ''
-    weight: 10
+    menu_name: account
+    enabled: true
+    expanded: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__services__387':
+    parent: ''
+    weight: -47
     expanded: false
     enabled: true
+    menu_name: main

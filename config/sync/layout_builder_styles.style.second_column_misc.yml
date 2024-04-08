@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: second_column_misc
 label: 'Second column misc'
-classes: 'mt-4 p-4 rounded-1 bg-secondary-subtle'
+classes: 'mt-4 p-4 rounded-1 bg-secondary bg-opacity-25'
 type: component
 group: default
 block_restrictions: {  }

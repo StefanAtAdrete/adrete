@@ -3,12 +3,12 @@ _core:
 langcode: sv
 check:
   disabled_extensions: false
-  interval_days: 1
+  interval_days: 7
 fetch:
-  url: ''
+  url: null
   max_attempts: 2
   timeout: 30
 notification:
   emails:
     - info@adrete.se
-  threshold: all
+  threshold: security

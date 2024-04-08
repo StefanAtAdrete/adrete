@@ -1,0 +1,55 @@
+uuid: 62f1ae8f-8c95-4530-b199-c6187a19ff9a
+langcode: sv
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - core.entity_view_mode.commerce_product.hero_with_form
+    - field.field.commerce_product.default.body
+  module:
+    - commerce_product
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: 10qgl6V_HwkrJufzsNCV75OpqOeMzzKDJb3BhaogmzQ
+id: commerce_product.default.hero_with_form
+targetEntityType: commerce_product
+bundle: default
+mode: hero_with_form
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: hidden
+    settings:
+      show_quantity: false
+      default_quantity: '1'
+      combine: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  add_to_cart_link: true
+  breadcrumbs: true
+  created: true
+  langcode: true
+  stores: true
+  uid: true

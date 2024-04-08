@@ -1,0 +1,20 @@
+uuid: 8807baf6-bd3b-494a-8c66-03832dc91e43
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - webform
+id: commerce_product.field_webform
+field_name: field_webform
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: webform
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

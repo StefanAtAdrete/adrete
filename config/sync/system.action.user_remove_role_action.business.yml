@@ -1,0 +1,14 @@
+uuid: 0b0c512b-ebca-4266-9a6d-7779620389c6
+langcode: sv
+status: true
+dependencies:
+  config:
+    - user.role.business
+  module:
+    - user
+id: user_remove_role_action.business
+label: 'Ta bort rollen Företag från vald(a) användare'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: business

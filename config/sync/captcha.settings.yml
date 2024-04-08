@@ -1,0 +1,16 @@
+_core:
+  default_config_hash: QDFjOXYIYVwCPQYHY4wAx4DUqOEkNaZokIx6DGApR9I
+langcode: sv
+enable_globally: 0
+enable_globally_on_admin_routes: false
+default_challenge: captcha/Math
+description: 'Den här frågan testar om du är en mänsklig besökare och förhindrar automatiska spaminsändningar.'
+title: CAPTCHA
+administration_mode: false
+administration_mode_on_admin_routes: false
+whitelist_ips: ''
+wrong_captcha_response_message: 'Svaret du angav för CAPTCHA var inte rätt.'
+default_validation: 1
+persistence: 1
+enable_stats: false
+log_wrong_responses: false

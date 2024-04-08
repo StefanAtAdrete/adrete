@@ -1,0 +1,22 @@
+uuid: 7ed3a08c-0f43-4d57-9cf8-8e2f95bfd598
+langcode: sv
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - adrete
+_core:
+  default_config_hash: a0Yyx1GeyKarZ4T_yXQBR_ZFKnXiFLtxAb6gWLd8nr0
+id: adrete_content
+theme: adrete
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

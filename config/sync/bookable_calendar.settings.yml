@@ -1,0 +1,18 @@
+_core:
+  default_config_hash: _9VZz5ylTS54cF_SUqFaDju0yBHBK3CIywpAZo_pnYU
+langcode: sv
+email_settings:
+  admin_email:
+    subject: 'En ny bokning skapades för [booking_contact:calendar_title]'
+    body: "En ny bokning skapades för:\r\n[booking_contact:values]"
+    subject_cancel: 'En bokning ställdes in för [booking_contact:calendar_title]'
+    body_cancel: "Bokningen ställdes in:\r\n [booking_contact:values]"
+  user_email:
+    subject: 'Din bokning är nu bekräftad'
+    body: "Du kan se din bokning här [booking_contact:hashed_login_url]\r\n\r\n[booking_contact:values]"
+    subject_cancel: 'Din bokning togs bort'
+    body_cancel: "Din bokning togs bort: \r\n [booking_contact:values]"
+sitewide_settings:
+  max_open_bookings: 0
+  one_click_booking: false
+bookable_calendar: null

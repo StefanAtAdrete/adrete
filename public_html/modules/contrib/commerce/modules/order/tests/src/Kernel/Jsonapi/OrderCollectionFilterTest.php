@@ -57,6 +57,7 @@ class OrderCollectionFilterTest extends OrderKernelTestBase {
   protected static $modules = [
     'serialization',
     'jsonapi',
+    'file',
   ];
 
   /**
