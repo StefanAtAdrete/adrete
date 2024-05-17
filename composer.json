@@ -34,7 +34,10 @@
         "drupal/bootstrap_layout_builder": "^2.1",
         "drupal/bootstrap_styles": "^1.1",
         "drupal/calendar_view": "^2.1",
+        "drupal/charts": "^5.0",
+        "drupal/charts_twig": "^1.0",
         "drupal/ckeditor": "^1.0",
+        "drupal/clientside_validation": "^4.0",
         "drupal/colorbox": "^2.0",
         "drupal/commerce": "^2.33",
         "drupal/commerce_add_to_cart_link": "^2.0",
@@ -92,6 +95,7 @@
         "drupal/restui": "^1.21",
         "drupal/scheduler": "^1.5",
         "drupal/schema_metatag": "^2.5",
+        "drupal/simple_oauth": "^5.2",
         "drupal/simple_sitemap": "^4.1",
         "drupal/social_media": "^2.0",
         "drupal/svg_image": "^3.0",
@@ -99,13 +103,15 @@
         "drupal/tb_megamenu": "^3.0@alpha",
         "drupal/token": "^1.11",
         "drupal/tvi": "^2.0@alpha",
+        "drupal/twig_tweak": "^3.3",
         "drupal/url_embed": "^2.0@alpha",
         "drupal/views_bootstrap": "^4.4",
         "drupal/views_bulk_edit": "^2.8",
         "drupal/views_bulk_operations": "^4.2",
         "drupal/views_slideshow": "^5.0",
-        "drupal/webform": "^6.2@beta",
+        "drupal/webform": "^6.2",
         "drupal/webform_mautic": "^2.0",
+        "drupal/webform_score": "^2.3",
         "drupal/webform_views": "^5.2",
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^1.4",
@@ -198,6 +204,9 @@
       },
       "drupal/jsonapi_extras": {
         "https://www.drupal.org/project/jsonapi_extras/issues/3331874": "https://www.drupal.org/files/issues/2023-04-17/jsonapi_extras_3331874_2.patch"
+      },
+      "drupal/bootstrap_barrio": {
+        "https://www.drupal.org/project/bootstrap_barrio/issues/3399061": "https://www.drupal.org/files/issues/2023-11-06/3399061-2.patch"
       }
 }
 }
