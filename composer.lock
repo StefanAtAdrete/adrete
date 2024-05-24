@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4ffa4d9b1ef3ac29fd285262e6bdd25",
+    "content-hash": "48a4b4b82490be2190fde7b72b74cb71",
     "packages": [
         {
             "name": "arthurkushman/query-path",
@@ -232,16 +232,16 @@
         },
         {
             "name": "chi-teck/drupal-code-generator",
-            "version": "3.5.0",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chi-teck/drupal-code-generator.git",
-                "reference": "74c2dc687e124bfc4001e73e9346b33067e2ec2b"
+                "reference": "7794c268309a6fd7aeecfd1246a01238c14384c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/74c2dc687e124bfc4001e73e9346b33067e2ec2b",
-                "reference": "74c2dc687e124bfc4001e73e9346b33067e2ec2b",
+                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/7794c268309a6fd7aeecfd1246a01238c14384c4",
+                "reference": "7794c268309a6fd7aeecfd1246a01238c14384c4",
                 "shasum": ""
             },
             "require": {
@@ -286,9 +286,9 @@
             "description": "Drupal code generator",
             "support": {
                 "issues": "https://github.com/Chi-teck/drupal-code-generator/issues",
-                "source": "https://github.com/Chi-teck/drupal-code-generator/tree/3.5.0"
+                "source": "https://github.com/Chi-teck/drupal-code-generator/tree/3.6.0"
             },
-            "time": "2024-04-11T11:23:44+00:00"
+            "time": "2024-05-20T12:50:42+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -1715,16 +1715,16 @@
         },
         {
             "name": "doctrine/event-manager",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/event-manager.git",
-                "reference": "750671534e0241a7c50ea5b43f67e23eb5c96f32"
+                "reference": "b680156fa328f1dfd874fd48c7026c41570b9c6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/750671534e0241a7c50ea5b43f67e23eb5c96f32",
-                "reference": "750671534e0241a7c50ea5b43f67e23eb5c96f32",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/b680156fa328f1dfd874fd48c7026c41570b9c6e",
+                "reference": "b680156fa328f1dfd874fd48c7026c41570b9c6e",
                 "shasum": ""
             },
             "require": {
@@ -1734,10 +1734,10 @@
                 "doctrine/common": "<2.9"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^10",
+                "doctrine/coding-standard": "^12",
                 "phpstan/phpstan": "^1.8.8",
-                "phpunit/phpunit": "^9.5",
-                "vimeo/psalm": "^4.28"
+                "phpunit/phpunit": "^10.5",
+                "vimeo/psalm": "^5.24"
             },
             "type": "library",
             "autoload": {
@@ -1786,7 +1786,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/event-manager/issues",
-                "source": "https://github.com/doctrine/event-manager/tree/2.0.0"
+                "source": "https://github.com/doctrine/event-manager/tree/2.0.1"
             },
             "funding": [
                 {
@@ -1802,7 +1802,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-12T20:59:15+00:00"
+            "time": "2024-05-22T20:47:39+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -2643,30 +2643,30 @@
         },
         {
             "name": "drupal/better_exposed_filters",
-            "version": "6.0.5",
+            "version": "6.0.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/better_exposed_filters.git",
-                "reference": "6.0.5"
+                "reference": "6.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-6.0.5.zip",
-                "reference": "6.0.5",
-                "shasum": "a325449adf32c13dd8e348bf10979aea301da84e"
+                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-6.0.6.zip",
+                "reference": "6.0.6",
+                "shasum": "558ca591d450fc64512cae7f98cb4b0241e15ba3"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
-                "drupal/jquery_ui": "^1.6",
-                "drupal/jquery_ui_datepicker": "^2.0",
-                "drupal/jquery_ui_slider": "^2.0.0",
-                "drupal/jquery_ui_touch_punch": "^1.0"
+                "drupal/jquery_ui": "*",
+                "drupal/jquery_ui_datepicker": "*",
+                "drupal/jquery_ui_slider": "*",
+                "drupal/jquery_ui_touch_punch": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.5",
-                    "datestamp": "1713570803",
+                    "version": "6.0.6",
+                    "datestamp": "1716397541",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2913,17 +2913,17 @@
         },
         {
             "name": "drupal/bootstrap5",
-            "version": "4.0.0-beta1",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap5.git",
-                "reference": "4.0.0-beta1"
+                "reference": "4.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap5-4.0.0-beta1.zip",
-                "reference": "4.0.0-beta1",
-                "shasum": "824ee88d9f59979d9a08af8f5330ea58a5b18b96"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap5-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "4424a72b11cc7a571275b8f5590ffa3be807e4af"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10"
@@ -2931,11 +2931,11 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "4.0.0-beta1",
-                    "datestamp": "1711069936",
+                    "version": "4.0.0",
+                    "datestamp": "1716472361",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -6243,17 +6243,17 @@
         },
         {
             "name": "drupal/google_tag",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/google_tag.git",
-                "reference": "2.0.4"
+                "reference": "2.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_tag-2.0.4.zip",
-                "reference": "2.0.4",
-                "shasum": "a56bcdb566bf1af54dc0c8871eb720ba54f1392e"
+                "url": "https://ftp.drupal.org/files/projects/google_tag-2.0.5.zip",
+                "reference": "2.0.5",
+                "shasum": "75f5cbdf8ea8c78178a5dfab50cf7ee7777c6491"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10",
@@ -6271,8 +6271,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.4",
-                    "datestamp": "1709073204",
+                    "version": "2.0.5",
+                    "datestamp": "1716308134",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7895,20 +7895,20 @@
         },
         {
             "name": "drupal/openai",
-            "version": "1.0.0-beta4",
+            "version": "1.0.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/openai.git",
-                "reference": "1.0.0-beta4"
+                "reference": "1.0.0-beta5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-beta4.zip",
-                "reference": "1.0.0-beta4",
-                "shasum": "0dac42aa9dff5dea042349c7352815b462ffd13d"
+                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-beta5.zip",
+                "reference": "1.0.0-beta5",
+                "shasum": "6c7240e76a0fa7b930105abde335dac45b6bc465"
             },
             "require": {
-                "drupal/core": "^10",
+                "drupal/core": "^10 || ^11",
                 "openai-php/client": ">=v0.7.8"
             },
             "require-dev": {
@@ -7918,8 +7918,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-beta4",
-                    "datestamp": "1704311315",
+                    "version": "1.0.0-beta5",
+                    "datestamp": "1716149827",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -8810,22 +8810,25 @@
         },
         {
             "name": "drupal/smart_date",
-            "version": "4.1.2",
+            "version": "4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_date.git",
-                "reference": "4.1.2"
+                "reference": "4.1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_date-4.1.2.zip",
-                "reference": "4.1.2",
-                "shasum": "2cc9f1290dea22e2f45feca5f6eacee654dfa902"
+                "url": "https://ftp.drupal.org/files/projects/smart_date-4.1.3.zip",
+                "reference": "4.1.3",
+                "shasum": "13b86c7a386eaf240ef4fd7bdd94df7528880c09"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
                 "php": ">=8.1",
                 "simshaun/recurr": "^5"
+            },
+            "require-dev": {
+                "drush/drush": "*"
             },
             "suggest": {
                 "drupal/multiple_fields_remove_button": "Provides a button for editors to remove unwanted rows."
@@ -8833,8 +8836,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.1.2",
-                    "datestamp": "1714740572",
+                    "version": "4.1.3",
+                    "datestamp": "1716307674",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8873,7 +8876,7 @@
         },
         {
             "name": "drupal/smart_date_recur",
-            "version": "4.1.2",
+            "version": "4.1.3",
             "require": {
                 "drupal/core": "^9 || ^10  || ^11",
                 "drupal/smart_date": "*"
@@ -8881,8 +8884,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "4.1.2",
-                    "datestamp": "1714740572",
+                    "version": "4.1.3",
+                    "datestamp": "1716307674",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -11290,12 +11293,12 @@
             "version": "v5.2.13",
             "source": {
                 "type": "git",
-                "url": "https://github.com/justinrainbow/json-schema.git",
+                "url": "https://github.com/jsonrainbow/json-schema.git",
                 "reference": "fbbe7e5d79f618997bc3332a6f49246036c45793"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/fbbe7e5d79f618997bc3332a6f49246036c45793",
+                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/fbbe7e5d79f618997bc3332a6f49246036c45793",
                 "reference": "fbbe7e5d79f618997bc3332a6f49246036c45793",
                 "shasum": ""
             },
@@ -11350,8 +11353,8 @@
                 "schema"
             ],
             "support": {
-                "issues": "https://github.com/justinrainbow/json-schema/issues",
-                "source": "https://github.com/justinrainbow/json-schema/tree/v5.2.13"
+                "issues": "https://github.com/jsonrainbow/json-schema/issues",
+                "source": "https://github.com/jsonrainbow/json-schema/tree/v5.2.13"
             },
             "time": "2023-09-26T02:20:38+00:00"
         },
@@ -12565,16 +12568,16 @@
         },
         {
             "name": "openai-php/client",
-            "version": "v0.8.5",
+            "version": "v0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openai-php/client.git",
-                "reference": "0f755fafa4d3f8d5c8ed964d3166d078fac0605a"
+                "reference": "7b5652b5e107b04b67aa5bc6560acf162ef2be97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openai-php/client/zipball/0f755fafa4d3f8d5c8ed964d3166d078fac0605a",
-                "reference": "0f755fafa4d3f8d5c8ed964d3166d078fac0605a",
+                "url": "https://api.github.com/repos/openai-php/client/zipball/7b5652b5e107b04b67aa5bc6560acf162ef2be97",
+                "reference": "7b5652b5e107b04b67aa5bc6560acf162ef2be97",
                 "shasum": ""
             },
             "require": {
@@ -12589,15 +12592,15 @@
             "require-dev": {
                 "guzzlehttp/guzzle": "^7.8.1",
                 "guzzlehttp/psr7": "^2.6.2",
-                "laravel/pint": "^1.15.0",
+                "laravel/pint": "^1.15.3",
                 "mockery/mockery": "^1.6.11",
                 "nunomaduro/collision": "^7.10.0",
-                "pestphp/pest": "^2.34.6",
+                "pestphp/pest": "^2.34.7",
                 "pestphp/pest-plugin-arch": "^2.7",
                 "pestphp/pest-plugin-type-coverage": "^2.8.1",
-                "phpstan/phpstan": "^1.10.66",
+                "phpstan/phpstan": "^1.10.67",
                 "rector/rector": "^1.0.4",
-                "symfony/var-dumper": "^6.4.4"
+                "symfony/var-dumper": "^6.4.7"
             },
             "type": "library",
             "autoload": {
@@ -12637,7 +12640,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openai-php/client/issues",
-                "source": "https://github.com/openai-php/client/tree/v0.8.5"
+                "source": "https://github.com/openai-php/client/tree/v0.9.0"
             },
             "funding": [
                 {
@@ -12653,7 +12656,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-15T19:11:23+00:00"
+            "time": "2024-05-21T18:50:46+00:00"
         },
         {
             "name": "oscarotero/html-parser",

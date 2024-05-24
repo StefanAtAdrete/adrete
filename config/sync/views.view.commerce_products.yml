@@ -450,7 +450,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No products available.'
+          content: 'Inga varor tillgängliga.'
           tokenize: false
       sorts: {  }
       arguments: {  }

@@ -104,3 +104,9 @@ cloneable_entities:
   - recaptcha_v3_action
   - commerce_pricelist
   - commerce_pricelist_item
+  - oauth2_server_client
+  - oauth2_server_authorization_code
+  - oauth2_server_jti
+  - oauth2_server_token
+  - oauth2_server
+  - oauth2_server_scope

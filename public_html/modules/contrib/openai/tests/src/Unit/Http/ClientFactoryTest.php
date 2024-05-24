@@ -3,9 +3,9 @@
 namespace Drupal\Tests\openai\Unit\Http;
 
 use Drupal\Core\Config\Config;
+use Drupal\openai\Http\ClientFactory;
 use Drupal\Tests\UnitTestCase;
 use OpenAI\Client as OpenAIAPIClient;
-use Drupal\openai\Http\ClientFactory;
 
 /**
  * @coversDefaultClass \Drupal\openai\Http\ClientFactory
@@ -24,6 +24,7 @@ class ClientFactoryTest extends UnitTestCase {
    * {@inheritdoc}
    */
   protected function setUp(): void {
+    parent::setUp();
     $storage = $this->createMock('Drupal\Core\Config\StorageInterface');
     $event_dispatcher = $this->createMock('Symfony\Contracts\EventDispatcher\EventDispatcherInterface');
     $typed_config = $this->createMock('Drupal\Core\Config\TypedConfigManagerInterface');
@@ -35,9 +36,7 @@ class ClientFactoryTest extends UnitTestCase {
       ]
     );
 
-    $config = $this->getMockBuilder('\Drupal\Core\Config\ConfigFactory')
-      ->disableOriginalConstructor()
-      ->getMock();
+    $config = $this->createMock('\Drupal\Core\Config\ConfigFactory');
 
     $config->expects($this->any())
       ->method('get')

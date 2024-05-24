@@ -1,0 +1,26 @@
+uuid: d2fec0d5-e3f5-41ae-95fc-b99e79eb8951
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.full_html
+    - node.type.underlag
+  module:
+    - text
+id: node.underlag.body
+field_name: body
+entity_type: node
+bundle: underlag
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

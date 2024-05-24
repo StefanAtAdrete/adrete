@@ -1,0 +1,10 @@
+popup_info:
+  value: '<h2>We use cookies on this website to improve your user experience.</h2><p>By clicking the Accept button, you agree to this.</p>'
+  format: basic_html
+popup_agree_button_message: 'I Accept'
+disagree_button_label: 'No, thank you'
+withdraw_message:
+  value: '<h2>We use cookies on this website to improve your user experience</h2><p>You have given your consent for us to use cookies.</p>'
+  format: basic_html
+withdraw_tab_button_label: 'Privacy settings'
+withdraw_action_button_label: 'Revoke permission'

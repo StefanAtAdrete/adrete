@@ -195,9 +195,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_trimmed
+          type: text_summary_or_trimmed
           settings:
-            trim_length: 100
+            trim_length: 150
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -283,7 +283,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"card mb-2\">\r\n  <div class=\"card-img-top\">{{ field_product_media }}</div>\r\n  <div class=\"card-body\">\r\n    <h5 class=\"card-title fs-5 badge text-bg-dark\">{{ title }}</h5>\r\n    <p class=\"card-text\">{{ body }}</p>\r\n  </div>\r\n</div>"
+            text: "<div class=\"card\">\r\n  <div class=\"card-img-top\">{{ field_product_media }}</div>\r\n  <div class=\"card-body\">\r\n    <h5 class=\"card-title fs-5 badge text-bg-dark\">{{ title }}</h5>\r\n    <p class=\"card-text\">{{ body }}</p>\r\n  </div>\r\n</div>"
             make_link: true
             path: '{{ view_commerce_product }}'
             absolute: false
@@ -460,7 +460,7 @@ display:
           entity_field: title
           plugin_id: string
           operator: contains
-          value: Leads
+          value: Sälj
           group: 2
           exposed: false
           expose:

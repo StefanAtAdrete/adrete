@@ -14,7 +14,7 @@ dependencies:
 _core:
   default_config_hash: tiKR1foQc_gOKNxs2Q5gMOUpn4T2rDMyqrCVLXQIrbc
 id: commerce_carts
-label: Carts
+label: Varukorgar
 module: views
 description: ''
 tag: Commerce
@@ -27,7 +27,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Carts
+      title: Varukorgar
       fields:
         commerce_order_bulk_form:
           id: commerce_order_bulk_form
@@ -573,7 +573,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No orders available.'
+          content: 'Inga beställningar tillgängliga.'
           tokenize: false
       sorts: {  }
       arguments: {  }
@@ -767,7 +767,7 @@ display:
       path: admin/commerce/orders/carts
       menu:
         type: tab
-        title: Carts
+        title: Varukorgar
         description: ''
         weight: 0
         expanded: false

@@ -1,0 +1,9 @@
+uuid: 836bd936-1ad2-472d-9513-82ce87162acb
+langcode: sv
+status: true
+dependencies: {  }
+id: nessecary_cookies
+label: 'Nödvändiga kakor'
+description: ''
+checkbox_default_state: checked
+weight: -9

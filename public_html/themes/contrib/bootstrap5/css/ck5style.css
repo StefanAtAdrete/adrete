@@ -11831,6 +11831,40 @@ a > .ck-content code {
   width: 100% !important;
   max-width: 100% !important;
 }
+.ck-content details.card:not([open]) summary.card-header, .ck-content .view-media-library .media-library-views-form .media-library-item--grid details.views-field-rendered-entity:not([open]) summary.card-header, .ck-content .media-library-selection details.media-library-item.media-library-item--grid:not([open]) summary.card-header, .ck-content details.card:not([open]) .view-media-library .media-library-views-form .media-library-item--grid summary.views-field-media-library-select-form, .ck-content .view-media-library .media-library-views-form .media-library-item--grid details.card:not([open]) summary.views-field-media-library-select-form, .ck-content .view-media-library .media-library-views-form .media-library-item--grid details.views-field-rendered-entity:not([open]) summary.views-field-media-library-select-form, .ck-content .media-library-selection .view-media-library .media-library-views-form details.media-library-item.media-library-item--grid:not([open]) summary.views-field-media-library-select-form, .ck-content .view-media-library .media-library-views-form .media-library-selection details.media-library-item.media-library-item--grid:not([open]) summary.views-field-media-library-select-form,
+.ck-content details.card:not([open]) .view-media-library .media-library-views-form .media-library-item--grid summary.views-field-media-bulk-form,
+.ck-content .view-media-library .media-library-views-form .media-library-item--grid details.card:not([open]) summary.views-field-media-bulk-form,
+.ck-content .view-media-library .media-library-views-form .media-library-item--grid details.views-field-rendered-entity:not([open]) summary.views-field-media-bulk-form,
+.ck-content .media-library-selection .view-media-library .media-library-views-form details.media-library-item.media-library-item--grid:not([open]) summary.views-field-media-bulk-form,
+.ck-content .view-media-library .media-library-views-form .media-library-selection details.media-library-item.media-library-item--grid:not([open]) summary.views-field-media-bulk-form {
+  border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius);
+  border-bottom: 0;
+}
+.ck-content .accordion details {
+  overflow: unset;
+}
+.ck-content .accordion details[open] .accordion-button {
+  color: var(--bs-accordion-active-color);
+  background-color: var(--bs-accordion-active-bg);
+}
+.ck-content .accordion details[open] .accordion-button::after {
+  background-image: var(--bs-accordion-btn-active-icon);
+  transform: var(--bs-accordion-btn-icon-transform);
+}
+.ck-content .accordion details:not([open]) {
+  border-bottom: 0;
+}
+.ck-content .accordion details:not([open]) .accordion-button {
+  color: var(--bs-accordion-btn-color);
+  background-color: var(--bs-accordion-btn-bg);
+  border: unset;
+  border-bottom-right-radius: var(--bs-accordion-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-border-radius);
+}
+.ck-content .accordion details:not([open]) .accordion-button::after {
+  background-image: var(--bs-accordion-btn-active-icon);
+  transform: unset;
+}
 .ck-content .alert-dismissible .close {
   color: #000;
 }

@@ -37,6 +37,13 @@ class SettingsForm extends ConfigFormBase {
   protected $pluginManager;
 
   /**
+   * The Open AI API client.
+   *
+   * @var \Drupal\openai\OpenAIApi
+   */
+  protected $api;
+
+  /**
    * {@inheritdoc}
    */
   public function getFormId() {
@@ -60,6 +67,7 @@ class SettingsForm extends ConfigFormBase {
     $instance->entityTypeManager = $container->get('entity_type.manager');
     $instance->entityTypeBundleInfo = $container->get('entity_type.bundle.info');
     $instance->pluginManager = $container->get('plugin.manager.vector_client');
+    $instance->api = $container->get('openai.api');
     return $instance;
   }
 
@@ -116,13 +124,14 @@ class SettingsForm extends ConfigFormBase {
       '#description' => $this->t('Enter a comma delimited list of words to exclude from generating embedding values for.'),
     ];
 
+    $models = $this->api->filterModels(['text-embedding-']);
+    $selected_model = $this->config('openai_embeddings.settings')->get('model');
     $form['model'] = [
       '#type' => 'select',
       '#title' => $this->t('Model to use'),
-      '#options' => [
-        'text-embedding-ada-002' => $this->t('text-embedding-ada-002'),
-      ],
-      '#default_value' => $this->config('openai_embeddings.settings')->get('model'),
+      '#options' => $models,
+      '#required' => TRUE,
+      '#default_value' => $models[$selected_model] ?: '',
       '#description' => $this->t('Select which model to use to analyze text. See the <a href=":link">model overview</a> for details about each model.', [':link' => 'https://platform.openai.com/docs/guides/embeddings/embedding-models']),
     ];
 
@@ -180,12 +189,9 @@ class SettingsForm extends ConfigFormBase {
   public function validateForm(array &$form, FormStateInterface $form_state) {
     parent::validateForm($form, $form_state);
 
-    foreach ($this->pluginManager->getDefinitions() as $pid => $plugin) {
-      /** @var \Drupal\openai_embeddings\VectorClientPluginBase $plugin */
-      $plugin_instance = $this->pluginManager->createInstance($pid);
-      if (!method_exists($plugin_instance, 'validateConfigurationForm')) {
-        continue;
-      }
+    $pid = $form_state->getValue(['connections', 'vector_client_plugin']);
+    $plugin_instance = $this->pluginManager->createInstance($pid);
+    if (method_exists($plugin_instance, 'validateConfigurationForm')) {
       $subform = &$form['connections'][$pid];
       $subform_state = SubformState::createForSubform($form['connections'][$pid], $form, $form_state);
       $plugin_instance->validateConfigurationForm($subform, $subform_state);

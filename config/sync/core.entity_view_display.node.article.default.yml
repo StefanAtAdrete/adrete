@@ -3,7 +3,6 @@ langcode: sv
 status: true
 dependencies:
   config:
-    - block_content.type.basic
     - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
@@ -401,24 +400,6 @@ third_party_settings:
                 second_column_misc: second_column_misc
                 hero_title: 0
                 margin_bottom_4: 0
-          441f21c8-8abf-4272-9cd4-62e83dc99e8e:
-            uuid: 441f21c8-8abf-4272-9cd4-62e83dc99e8e
-            region: blb_region_col_2
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Vill du ha innehåll och nyheter till din sajt?'
-              label_display: visible
-              provider: layout_builder
-              view_mode: full
-              context_mapping: {  }
-              block_revision_id: 4
-              block_serialized: null
-            weight: 0
-            additional:
-              layout_builder_styles_style:
-                hero_title: 0
-                margin_bottom_4: 0
-                second_column_misc: 0
         third_party_settings: {  }
 _core:
   default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk

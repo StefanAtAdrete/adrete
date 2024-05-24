@@ -5,8 +5,10 @@ dependencies:
   config:
     - block_content.type.html_block
     - field.field.block_content.html_block.body
+    - field.field.block_content.html_block.field_webform
   module:
     - text
+    - webform
 id: block_content.html_block.default
 targetEntityType: block_content
 bundle: html_block
@@ -21,6 +23,14 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  field_webform:
+    type: webform_entity_reference_select
+    weight: 27
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
     third_party_settings: {  }
   info:
     type: string_textfield

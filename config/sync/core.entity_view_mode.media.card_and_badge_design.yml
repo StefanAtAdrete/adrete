@@ -1,0 +1,11 @@
+uuid: 6acdd1b0-e3a3-4847-b766-3d5090e18b0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.card_and_badge_design
+label: 'Card and badge design'
+description: 'Smaller badges and cards'
+targetEntityType: media
+cache: true

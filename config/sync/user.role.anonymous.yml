@@ -5,11 +5,11 @@ dependencies:
   config:
     - filter.format.restricted_html
   module:
-    - bookable_calendar
     - comment
     - commerce_checkout
     - commerce_product
     - contact
+    - eu_cookie_compliance
     - filter
     - media
     - search
@@ -17,7 +17,7 @@ dependencies:
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
-label: 'Anonym användare'
+label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
@@ -25,15 +25,8 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
-  - 'create bookable calendar'
-  - 'create bookable calendar opening'
-  - 'create bookable calendar opening instance'
-  - 'create booking'
-  - 'create booking contact'
+  - 'display eu cookie compliance popup'
   - 'search content'
   - 'use text format restricted_html'
-  - 'view bookable calendar'
-  - 'view bookable calendar opening instance'
-  - 'view booking'
   - 'view commerce_product'
   - 'view media'

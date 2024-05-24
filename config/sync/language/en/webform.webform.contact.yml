@@ -1,3 +1,8 @@
+settings:
+  submission_label: Send
+  confirmation_title: Thanks!
+  confirmation_message: 'Your message has been sent.'
+  confirmation_url: '<front>'
 title: Contact
 description: 'Basic email contact webform.'
 elements: |
@@ -25,9 +30,6 @@ elements: |
     '#type': webform_actions
     '#title': 'Submit button(s)'
     '#submit__label': 'Send message'
-settings:
-  confirmation_message: 'Your message has been sent.'
-  confirmation_url: '<front>'
 handlers:
   email_confirmation:
     label: 'Email confirmation'

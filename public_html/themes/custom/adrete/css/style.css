@@ -3,6 +3,11 @@
  * Subtheme specific CSS.
  */
 
+ /* Startpage */
+ .view-id-frontpage.view-display-id-page_1 {
+  margin: 1rem 0;
+}
+
  /* Navbar */
  .navbar-nav li.nav-item {
   padding: 0 0.5em;
@@ -13,15 +18,16 @@
  /* border-radius: 9px 9px 0 0; */
 }
 
-.node .field--type-image img {
- border-radius: 6px 6px 0 0;
+.card .node .field--type-image img {
+ border-radius: 10px 10px 0 0;
 }
 
 .card {
-    background-color: #f2f2f2;
-    border: 0;
-    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  background: #000000 !important;
+  overflow: hidden;
+  border: 0;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
 }
 
 .card:hover{
@@ -32,6 +38,38 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 
 main#content {
     margin-top: -10px;
+}
+
+.card .field--type-entity-reference {
+  margin: 0
+}
+
+.card .field--name-field-tags ul.links li {
+  float: left;
+  padding: 0.3rem;
+  white-space: nowrap;
+}
+
+.card .field--name-field-tags ul.links li a {
+  color: #006ac2;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/* Frosting */
+.card span.field--name-title {
+  background: rgb(0,0,0);
+  background: linear-gradient(141deg, rgba(0,0,0,0.65) 54%, rgba(82,82,82,0.65) 85%);
+  width: 100%;
+  float: left;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+.card .field--name-title a {
+  color: #f7f7f7;
+  text-decoration: none;
+  font-weight: 100;
 }
 
 

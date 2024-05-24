@@ -1,0 +1,8 @@
+uuid: 2aa30d8d-c4eb-4270-9d0b-5e81a3b72079
+langcode: sv
+status: true
+dependencies: {  }
+id: adrete_nyhetsbrev
+theme: ''
+text: ''
+classes: 'container p-2'

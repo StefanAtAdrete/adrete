@@ -1,0 +1,18 @@
+uuid: 004b4fb3-3b6e-48fd-bc3d-ed557d15c259
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.thumbnail
+  theme:
+    - bootstrap_barrio
+id: badges_1_1_autocrop
+label: 'Badges 1:1 autocrop'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: thumbnail
+    breakpoint_id: bootstrap_barrio.small
+    multiplier: 1x
+breakpoint_group: bootstrap_barrio
+fallback_image_style: thumbnail

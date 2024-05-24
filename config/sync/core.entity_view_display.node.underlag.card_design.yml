@@ -1,0 +1,45 @@
+uuid: 590e6362-314b-4f58-834d-672e58a4f927
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_design
+    - field.field.node.underlag.body
+    - field.field.node.underlag.field_media
+    - field.field.node.underlag.field_tags
+    - node.type.underlag
+  module:
+    - user
+id: node.underlag.card_design
+targetEntityType: node
+bundle: underlag
+mode: card_design
+content:
+  field_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: responsive_adrete
+      link: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  breadcrumbs: true
+  langcode: true
+  published_at: true

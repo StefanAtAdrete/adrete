@@ -1,0 +1,11 @@
+uuid: 118f07d3-010e-485b-8ad5-b337f4de9764
+langcode: sv
+status: true
+dependencies:
+  config:
+    - node.type.underlag
+id: node.underlag
+target_entity_type_id: node
+target_bundle: underlag
+default_langcode: site_default
+language_alterable: false

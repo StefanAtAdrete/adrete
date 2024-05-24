@@ -412,7 +412,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: 'You have not placed any orders with us yet.'
+            value: 'Du har inte gjort några beställningar hos oss ännu.'
             format: basic_html
           tokenize: false
       sorts: {  }

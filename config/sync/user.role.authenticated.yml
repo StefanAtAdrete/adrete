@@ -12,6 +12,7 @@ dependencies:
     - commerce_payment
     - commerce_product
     - contact
+    - eu_cookie_compliance
     - file
     - filter
     - fontawesome
@@ -23,7 +24,7 @@ dependencies:
 _core:
   default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
 id: authenticated
-label: 'Inloggad användare'
+label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
@@ -34,6 +35,7 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'delete own files'
+  - 'display eu cookie compliance popup'
   - 'manage own commerce_payment_method'
   - 'opt-in or out of google analytics tracking'
   - 'post comments'

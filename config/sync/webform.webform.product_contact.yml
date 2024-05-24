@@ -18,6 +18,10 @@ title: 'Product contact'
 description: ''
 categories: {  }
 elements: |-
+  processed_text:
+    '#type': processed_text
+    '#text': '<p><strong>Do you want content, news or other for your site?</strong></p>'
+    '#format': basic_html
   i_am_interested_of_this_product:
     '#type': hidden
     '#title': 'I am interested of this product'

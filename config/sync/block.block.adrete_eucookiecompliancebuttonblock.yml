@@ -1,0 +1,20 @@
+uuid: ff3d49d6-00b3-474b-bef7-56a430d93f27
+langcode: sv
+status: true
+dependencies:
+  module:
+    - eu_cookie_compliance
+  theme:
+    - adrete
+id: adrete_eucookiecompliancebuttonblock
+theme: adrete
+region: footer_fifth
+weight: -4
+provider: null
+plugin: eu_cookie_compliance_button_block
+settings:
+  id: eu_cookie_compliance_button_block
+  label: 'EU Cookie Compliance Button Block'
+  label_display: '0'
+  provider: eu_cookie_compliance
+visibility: {  }

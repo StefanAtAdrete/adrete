@@ -1,6 +1,6 @@
 name: Adrete Bootstrap Barrio Subtheme
 type: theme
-description: "Adrete Bootstrap Barrio SubTheme."
+description: "Adrete Bootstrap Barrio SubTheme. 2.0"
 core: 8.x
 core_version_requirement: ^8 || ^9 || ^10
 base theme: bootstrap_barrio

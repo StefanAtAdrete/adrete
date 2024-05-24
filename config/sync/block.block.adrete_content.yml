@@ -3,9 +3,13 @@ langcode: sv
 status: true
 dependencies:
   module:
+    - block_class
     - system
   theme:
     - adrete
+third_party_settings:
+  block_class:
+    classes: container
 _core:
   default_config_hash: a0Yyx1GeyKarZ4T_yXQBR_ZFKnXiFLtxAb6gWLd8nr0
 id: adrete_content

@@ -1,0 +1,22 @@
+uuid: b08633b4-6dd8-4985-90c3-3d679e2af5f1
+langcode: sv
+status: true
+dependencies:
+  config:
+    - node.type.underlag
+id: node.underlag.status
+field_name: status
+entity_type: node
+bundle: underlag
+label: Publicerad
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: På
+  off_label: Av
+field_type: boolean

@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 id: node.card_design
-label: 'Card design'
-description: ''
+label: 'Card and badge design'
+description: 'Card on larger and badge on mobile.'
 targetEntityType: node
 cache: true

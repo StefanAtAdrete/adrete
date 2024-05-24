@@ -20,7 +20,7 @@ dependencies:
 _core:
   default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
 id: content_editor
-label: Innehållsredaktör
+label: 'Content editor'
 weight: 2
 is_admin: false
 permissions:

@@ -8,10 +8,9 @@ use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageInterface;
-use Drush\Utils\StringUtils;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\devel_generate\Plugin\DevelGenerate\ContentDevelGenerate;
-use OpenAI\Client;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\openai\OpenAIApi;
 
 /**
  * Provides a ContentGPTDevelGenerate plugin.
@@ -36,25 +35,25 @@ use OpenAI\Client;
 class ContentGPTDevelGenerate extends ContentDevelGenerate {
 
   /**
-   * The OpenAI client.
+   * The OpenAI API service.
    *
-   * @var \OpenAI\Client
+   * @var \Drupal\openai\OpenAIApi
    */
-  protected $client;
+  protected $api;
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): static {
     $instance = parent::create($container, $configuration, $plugin_id, $plugin_definition);
-    $instance->client = $container->get('openai.client');
+    $instance->api = $container->get('openai.api');
     return $instance;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function settingsForm(array $form, FormStateInterface $form_state) {
+  public function settingsForm(array $form, FormStateInterface $form_state): array {
     $form = parent::settingsForm($form, $form_state);
 
     $form['gpt'] = [
@@ -65,19 +64,12 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
       '#weight' => -50,
     ];
 
+    $models = $this->api->filterModels(['gpt']);
+
     $form['gpt']['model'] = [
       '#type' => 'select',
       '#title' => $this->t('Model'),
-      '#options' => [
-        'gpt-4-1106-preview' => 'gpt-4-1106-preview',
-        'gpt-4-vision-preview' => 'gpt-4-vision-preview',
-        'gpt-4' => 'gpt-4',
-        'gpt-4-32k' => 'gpt-4-32k',
-        'gpt-3.5-turbo-1106' => 'gpt-3.5-turbo-1106',
-        'gpt-3.5-turbo' => 'gpt-3.5-turbo',
-        'gpt-3.5-turbo-16k' => 'gpt-3.5-turbo-16k',
-        'gpt-3.5-turbo-0301' => 'gpt-3.5-turbo-0301',
-      ],
+      '#options' => $models,
       '#default_value' => 'gpt-3.5-turbo',
       '#description' => $this->t('Select which model to use to generate text. See the <a href=":link">model overview</a> for details about each model.', [':link' => 'https://platform.openai.com/docs/models']),
     ];
@@ -106,7 +98,7 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
       '#min' => 128,
       '#step' => 1,
       '#default_value' => '512',
-      '#description' => $this->t('The maximum number of tokens to generate in the response. The token count of your prompt plus max_tokens cannot exceed the model\'s context length.'),
+      '#description' => $this->t("The maximum number of tokens to generate in the response. The token count of your prompt plus max_tokens cannot exceed the model's context length."),
     ];
 
     $form['gpt']['html'] = [
@@ -119,7 +111,7 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
     $form['base_fields']['#required'] = TRUE;
     $form['base_fields']['#description'] = $this->t('Enter the field names as a comma-separated list. These will be populated. Please note generating text with GPT will only work on string/text type fields!');
 
-    // with GPT, this isn't really needed
+    // With GPT, this isn't really needed.
     unset($form['title_length']);
 
     return $form;
@@ -128,7 +120,7 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
   /**
    * {@inheritdoc}
    */
-  public function settingsFormValidate(array $form, FormStateInterface $form_state) {
+  public function settingsFormValidate(array $form, FormStateInterface $form_state): void {
     parent::settingsFormValidate($form, $form_state);
     $model = $form_state->getValue('model');
     $max_tokens = (int) $form_state->getValue('max_tokens');
@@ -140,17 +132,20 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
           $form_state->setError($form['gpt']['max_tokens'], $this->t('The model you have selected only supports a maximum of 8192 tokens. Please reduce the max token value to 8192 or lower.'));
         }
         break;
+
       case 'gpt-3.5-turbo':
       case 'gpt-3.5-turbo-0301':
         if ($max_tokens > 4096) {
           $form_state->setError($form['gpt']['max_tokens'], $this->t('The model you have selected only supports a maximum of 4096 tokens. Please reduce the max token value to 4096 or lower.'));
         }
         break;
+
       case 'gpt-3.5-turbo-16k':
         if ($max_tokens > 16384) {
           $form_state->setError($form['gpt']['max_tokens'], $this->t('The model you have selected only supports a maximum of 16384 tokens. Please reduce the max token value to 16384 or lower.'));
         }
         break;
+
       default:
         break;
     }
@@ -159,7 +154,7 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
   /**
    * {@inheritdoc}
    */
-  public function validateDrushParams(array $args, array $options = []) {
+  public function validateDrushParams(array $args, array $options = []): array {
     $values = parent::validateDrushParams($args, $options);
 
     $values['temperature'] = (float) $options['temperature'];
@@ -199,7 +194,7 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
   /**
    * Always batch the operations.
    */
-  protected function isBatch($content_count, $comment_count) {
+  protected function isBatch($content_count, $comment_count): bool {
     return TRUE;
   }
 
@@ -209,7 +204,7 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
    * @param array $results
    *   Results information.
    */
-  protected function develGenerateContentAddNode(array &$results) {
+  protected function develGenerateContentAddNode(array &$results): void {
     if (!isset($results['time_range'])) {
       $results['time_range'] = 0;
     }
@@ -230,11 +225,21 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
 
     if (!isset($results['messages'])) {
       $results['messages'] = [
-        ['role' => 'system', 'content' => trim($system)],
-        ['role' => 'user', 'content' => "Give me an example title for a/an $node_type page of content in less than 200 characters."]
+        [
+          'role' => 'system',
+          'content' => trim($system),
+        ],
+        [
+          'role' => 'user',
+          'content' => "Give me an example title for a/an $node_type page of content in less than 200 characters.",
+        ],
       ];
-    } else {
-      $results['messages'][] = ['role' => 'user', 'content' => "Give me completely different title for a/an $node_type page of content in less than 200 characters."];
+    }
+    else {
+      $results['messages'][] = [
+        'role' => 'user',
+        'content' => "Give me completely different title for a/an $node_type page of content in less than 200 characters.",
+      ];
     }
 
     $uid = $users[array_rand($users)];
@@ -242,21 +247,12 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
     // Add the content type label if required.
     $title_prefix = $results['add_type_label'] ? $this->nodeTypeStorage->load($node_type)->label() . ' - ' : '';
 
-    $response = $this->client->chat()->create(
-      [
-        'model' => $model,
-        'messages' => $results['messages'],
-        'temperature' => $temperature,
-        'max_tokens' => $max_tokens,
-      ],
-    );
-
-    $result = $response->toArray();
+    $response = $this->api->chat($model, $results['messages'], $temperature, $max_tokens);
 
     // Remove any double quoting GPT might return.
-    $title = str_replace('"', '', $result["choices"][0]["message"]["content"]);
+    $title = str_replace('"', '', $response);
 
-    $results['messages'][] = ['role' => 'assistant', 'content' => trim($result["choices"][0]["message"]["content"])];
+    $results['messages'][] = ['role' => 'assistant', 'content' => trim($response)];
 
     $values = [
       'nid' => NULL,
@@ -311,8 +307,8 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
   /**
    * Populate the fields on a given entity with sample values.
    *
-   * This is not the same as the parent method populateFields because we need to communicate
-   * options across to the client from user defined parameters.
+   * This is not the same as the parent method populateFields because we need to
+   * communicate options across to the client from user defined parameters.
    *
    * @param \Drupal\Core\Entity\EntityInterface $entity
    *   The entity to be enriched with sample field values.
@@ -327,7 +323,7 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
       return;
     }
 
-    $client = \Drupal::service('openai.client');
+    $api = \Drupal::service('openai.api');
 
     $valid_gpt_field_types = [
       'string',
@@ -357,12 +353,14 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
 
       if (!in_array($field_type, $valid_gpt_field_types) || !in_array($field_name, $results['base_fields'])) {
         $entity->$field_name->generateSampleItems($max);
-      } else {
+      }
+      else {
         $values = [];
 
         if (in_array($field_type, ['text_long', 'text_with_summary']) && $results['html']) {
           $ask = "Provide content for a page of titled \"$title\" in basic HTML markup.";
-        } else {
+        }
+        else {
           $ask = "Provide content for a page of titled \"$title\".";
         }
 
@@ -370,25 +368,29 @@ class ContentGPTDevelGenerate extends ContentDevelGenerate {
 
         $results['messages'][] = ['role' => 'user', 'content' => $ask];
 
-        $response = $client->chat()->create(
-          [
-            'model' => $results['model'],
-            'messages' => $results['messages'],
-            'temperature' => (float) $results['temperature'],
-            'max_tokens' => (int) $results['max_tokens'],
-          ],
-        );
-
-        $result = $response->toArray();
-
-        $text = $result["choices"][0]["message"]["content"];
+        $response = $api->chat($results['model'], $results['messages'], (float) $results['temperature'], (int) $results['max_tokens']);
 
         if ($results['html']) {
-          // @todo: any way of getting the list from the filter assigned to this entity/field?
-          $text = Xss::filter($text, ['p', 'h2', 'h3', 'h4', 'h5', 'h6', 'em', 'strong', 'cite', 'blockquote', 'code', 'ul', 'ol', 'li']);
+          // @todo any way to get the list from the field filter?
+          $text = Xss::filter($response, [
+            'p',
+            'h2',
+            'h3',
+            'h4',
+            'h5',
+            'h6',
+            'em',
+            'strong',
+            'cite',
+            'blockquote',
+            'code',
+            'ul',
+            'ol',
+            'li',
+          ]);
         }
 
-        $text = trim($text);
+        $text = trim($response);
         $results['messages'][] = ['role' => 'assistant', 'content' => $text];
         $values[] = $text;
 

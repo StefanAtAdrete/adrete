@@ -116,7 +116,7 @@
         "drupal/webform_views": "^5.2",
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^1.4",
-        "drush/drush": "^12"
+        "drush/drush": "^12.5"
     },
     "conflict": {
         "drupal/drupal": "*"

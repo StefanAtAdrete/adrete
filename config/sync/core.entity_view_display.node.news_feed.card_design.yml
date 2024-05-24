@@ -1,0 +1,448 @@
+uuid: 26cc21d2-953f-4710-b6fc-3c56c39261ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_design
+    - field.field.node.news_feed.body
+    - field.field.node.news_feed.feeds_item
+    - field.field.node.news_feed.field_date
+    - field.field.node.news_feed.field_guid
+    - field.field.node.news_feed.field_image
+    - field.field.node.news_feed.field_links
+    - field.field.node.news_feed.field_media
+    - field.field.node.news_feed.field_tags
+    - image.style.wide
+    - node.type.news_feed
+  module:
+    - bootstrap_layout_builder
+    - datetime
+    - layout_builder
+    - link
+    - svg_image
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'bootstrap_layout_builder:blb_col_1'
+        layout_settings:
+          label: 'Card bootstrap 1 col'
+          container_wrapper_classes: 'card d-none d-sm-block'
+          container_wrapper_attributes: null
+          container_wrapper:
+            bootstrap_styles:
+              background:
+                background_type: video
+              background_color:
+                class: null
+              background_media:
+                image:
+                  media_id: null
+                video:
+                  media_id: null
+                background_options:
+                  background_position: center
+                  background_repeat: no-repeat
+                  background_attachment: not_fixed
+                  background_size: cover
+              text_color:
+                class: null
+              padding:
+                class: _none
+              padding_left:
+                class: _none
+              padding_top:
+                class: _none
+              padding_right:
+                class: _none
+              padding_bottom:
+                class: _none
+              margin:
+                class: _none
+              margin_left:
+                class: _none
+              margin_top:
+                class: _none
+              margin_right:
+                class: _none
+              margin_bottom:
+                class: _none
+              border:
+                border_style:
+                  class: null
+                border_width:
+                  class: _none
+                border_color:
+                  class: null
+                rounded_corners:
+                  class: _none
+                border_left_style:
+                  class: null
+                border_left_width:
+                  class: _none
+                border_left_color:
+                  class: null
+                border_top_style:
+                  class: null
+                border_top_width:
+                  class: _none
+                border_top_color:
+                  class: null
+                border_right_style:
+                  class: null
+                border_right_width:
+                  class: _none
+                border_right_color:
+                  class: null
+                border_bottom_style:
+                  class: null
+                border_bottom_width:
+                  class: _none
+                border_bottom_color:
+                  class: null
+                rounded_corner_top_left:
+                  class: _none
+                rounded_corner_top_right:
+                  class: _none
+                rounded_corner_bottom_left:
+                  class: _none
+                rounded_corner_bottom_right:
+                  class: _none
+              scroll_effects:
+                class: null
+              text_alignment:
+                class: null
+              box_shadow:
+                class: null
+          container_wrapper_bg_color_class: ''
+          container_wrapper_bg_media: null
+          container: container
+          section_classes: ''
+          section_attributes: null
+          regions_classes:
+            blb_region_col_1: p-0
+          regions_attributes:
+            blb_region_col_1: null
+          breakpoints: {  }
+          layout_regions_classes: {  }
+          remove_gutters: '0'
+          context_mapping: {  }
+        components:
+          c6b7129c-c0c0-4cab-81c5-4c553f79ad79:
+            uuid: c6b7129c-c0c0-4cab-81c5-4c553f79ad79
+            region: blb_region_col_1
+            configuration:
+              id: 'field_block:node:news_feed:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                hero_title: 0
+                margin_bottom_4: 0
+                second_column_misc: 0
+          1b3df6c3-6466-4836-9421-e84e5accd732:
+            uuid: 1b3df6c3-6466-4836-9421-e84e5accd732
+            region: blb_region_col_1
+            configuration:
+              id: 'field_block:node:news_feed:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: responsive_image
+                label: hidden
+                settings:
+                  responsive_image_style: 1_1_autocrop
+                  image_link: content
+                  image_loading:
+                    attribute: lazy
+                  svg_attributes:
+                    width: null
+                    height: null
+                  svg_render_as_image: false
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                hero_title: 0
+                margin_bottom_4: 0
+                second_column_misc: 0
+        third_party_settings: {  }
+      -
+        layout_id: 'bootstrap_layout_builder:blb_col_2'
+        layout_settings:
+          label: Badge
+          container_wrapper_classes: 'd-block d-sm-none'
+          container_wrapper_attributes: null
+          container_wrapper:
+            bootstrap_styles:
+              background:
+                background_type: null
+              background_color:
+                class: null
+              background_media:
+                image:
+                  media_id: null
+                video:
+                  media_id: null
+                background_options:
+                  background_position: center
+                  background_repeat: no-repeat
+                  background_attachment: not_fixed
+                  background_size: cover
+              text_color:
+                class: null
+              padding:
+                class: _none
+              padding_left:
+                class: _none
+              padding_top:
+                class: _none
+              padding_right:
+                class: _none
+              padding_bottom:
+                class: _none
+              margin:
+                class: _none
+              margin_left:
+                class: _none
+              margin_top:
+                class: _none
+              margin_right:
+                class: _none
+              margin_bottom:
+                class: _none
+              border:
+                border_style:
+                  class: null
+                border_width:
+                  class: _none
+                border_color:
+                  class: null
+                rounded_corners:
+                  class: _none
+                border_left_style:
+                  class: null
+                border_left_width:
+                  class: _none
+                border_left_color:
+                  class: null
+                border_top_style:
+                  class: null
+                border_top_width:
+                  class: _none
+                border_top_color:
+                  class: null
+                border_right_style:
+                  class: null
+                border_right_width:
+                  class: _none
+                border_right_color:
+                  class: null
+                border_bottom_style:
+                  class: null
+                border_bottom_width:
+                  class: _none
+                border_bottom_color:
+                  class: null
+                rounded_corner_top_left:
+                  class: _none
+                rounded_corner_top_right:
+                  class: _none
+                rounded_corner_bottom_left:
+                  class: _none
+                rounded_corner_bottom_right:
+                  class: _none
+              scroll_effects:
+                class: null
+              text_alignment:
+                class: null
+              box_shadow:
+                class: null
+          container_wrapper_bg_color_class: ''
+          container_wrapper_bg_media: null
+          container: container
+          section_classes: ''
+          section_attributes: null
+          regions_classes:
+            blb_region_col_1: ''
+            blb_region_col_2: ''
+          regions_attributes:
+            blb_region_col_1: null
+            blb_region_col_2: null
+          breakpoints:
+            desktop: blb_col_3_9
+            tablet: blb_col_3_9
+            mobile: blb_col_3_9
+          layout_regions_classes:
+            blb_region_col_1:
+              - col-lg-3
+              - col-md-3
+              - col-3
+            blb_region_col_2:
+              - col-lg-9
+              - col-md-9
+              - col-9
+          remove_gutters: '0'
+          context_mapping: {  }
+        components:
+          c5bab987-5662-46b6-8e4d-3b5c0995eaa3:
+            uuid: c5bab987-5662-46b6-8e4d-3b5c0995eaa3
+            region: blb_region_col_1
+            configuration:
+              id: 'field_block:node:news_feed:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: responsive_image
+                label: hidden
+                settings:
+                  responsive_image_style: badges_1_1_autocrop
+                  image_link: content
+                  image_loading:
+                    attribute: lazy
+                  svg_attributes:
+                    width: 200
+                    height: 200
+                  svg_render_as_image: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                hero_title: 0
+                margin_bottom_4: 0
+                second_column_misc: 0
+          ccc59b2d-a4cd-4675-b960-3e5b49623182:
+            uuid: ccc59b2d-a4cd-4675-b960-3e5b49623182
+            region: blb_region_col_2
+            configuration:
+              id: 'field_block:node:news_feed:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                hero_title: 0
+                margin_bottom_4: 0
+                second_column_misc: 0
+        third_party_settings: {  }
+id: node.news_feed.card_design
+targetEntityType: node
+bundle: news_feed
+mode: card_design
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_guid:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_links:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  feeds_item: true
+  langcode: true
+  published_at: true

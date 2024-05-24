@@ -15,3 +15,14 @@ em {
     max-width: 100% !important;
   }
 }
+
+details {
+  &.card:not([open]) {
+    summary {
+      &.card-header {
+        @include border-radius(var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius));
+        border-bottom: 0;
+      }
+    }
+  }
+}

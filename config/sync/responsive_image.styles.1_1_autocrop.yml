@@ -5,7 +5,6 @@ dependencies:
   config:
     - image.style.1_1_crop
     - image.style.large
-    - image.style.max_325x325
   theme:
     - bootstrap_barrio
 id: 1_1_autocrop
@@ -23,7 +22,7 @@ image_style_mappings:
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: max_325x325
+    image_mapping: large
     breakpoint_id: bootstrap_barrio.small
     multiplier: 1x
 breakpoint_group: bootstrap_barrio
