@@ -238,15 +238,4 @@ main#content {
     height: 50px;
 }
 
-.flex-caption a {
-    position: absolute;
-    top: 10%;
-    color: #ffffff;
-    left: 20%;
-    font-size: xxx-large;
-    font-weight: 100;
-    width: 50rem;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.6839110644257703) 35%, rgba(0, 0, 0, 0.6811099439775911) 65%, rgba(82, 82, 82, 0) 90%);
-    padding: 0.5rem;
-}
+
